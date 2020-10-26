@@ -1,41 +1,61 @@
 ###################
 ## data_prep.R
 ## Reads in raw "long aggregate output" .csv files saved from master spreadsheet.
-## Rbinds the files together. 
-## Subsets by Treatment (sample site), Substrate, Insect and Stage. 
+## Adds a column for "Season". Rbinds the files together. Removes columns unnecessary
+## for calulating mean biomasses.Subsets by Treatment (sample site), Substrate, 
+## Insect and Stage. 
 ## Saves the subsets as .csv file in the DataRaw folder.
 ###################
 
 
 ###################
 ## Read in raw data
-###################
+#
 Raw_Data_2019_July<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/SFMR_Wisseman_Long_Aggregate_Output_2019_July.csv")
 Raw_Data_2019_October<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/SFMR_Wisseman_Long_Aggregate_Output_2019_October.csv")
 
 ################################
-## Rbind the dataframes together
-################################
-Raw_Data_2019_Jul_Oct<- rbind(Raw_Data_2019_July,Raw_Data_2019_October)
+## Adds A Column named "Season" to each seasonal data set
+# 
+Season <- rep("Summer",length(Raw_Data_2019_July$Date))
+Raw_Data_2019_July$Season<- cbind(Season)
 
-##################
+Season <- rep("Fall",length(Raw_Data_2019_October$Date))
+Raw_Data_2019_October$Season<- cbind(Season)
+
+################
+## Rbind the dataframes together
+#
+CombRawDat_2019<- rbind(Raw_Data_2019_July,Raw_Data_2019_October)
+
+############################################################
 ## Coerce the dates from factor to date in the "Date" column
-##################
-class(Raw_Data_2019_Jul_Oct$Date)
-Raw_Data_2019_Jul_Oct$Date<- as.Date(Raw_Data_2019_Jul_Oct$Date, format="%Y-%m-%d")
-class(Raw_Data_2019_Jul_Oct$Date)
+#
+class(CombRawDat_2019$Date)
+CombRawDat_2019$Date<- as.Date(CombRawDat_2019$Date, format="%Y-%m-%d")
+class(CombRawDat_2019$Date)
+
+################################
+## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance  
+#
+CombRawDat_2019<- CombRawDat_2019[,-c(1,10,13,14)]
+
 
 ##################
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
 ## Stage and Insect
-##################
+#
+Disturbed_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
+Flooded_Forest_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
+Relic_Channel_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
+Phase3_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Phase 3" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase3
+Phase4_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Phase 4" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase4
+Disturbed_WoodInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
+Relic_Channel_WoodInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
-Disturbed_BenthInsect_Data_2019_Jul_Oct<- subset(Raw_Data_2019_Jul_Oct, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-Flooded_Forest_BenthInsect_Data_2019_Jul_Oct<- subset(Raw_Data_2019_Jul_Oct, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
-Relic_Channel_BenthInsect_Data_2019_Jul_Oct<- subset(Raw_Data_2019_Jul_Oct, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-Phase3_BenthInsect_Data_2019_Jul_Oct<- subset(Raw_Data_2019_Jul_Oct, Treatment=="Phase 3" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase3
-Phase4_BenthInsect_Data_2019_Jul_Oct<- subset(Raw_Data_2019_Jul_Oct, Treatment=="Phase 4" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase4
-Disturbed_WoodInsect_Data_2019_Jul_Oct<- subset(Raw_Data_2019_Jul_Oct, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
-Relic_Channel_WoodInsect_Data_2019_Jul_Oct<- subset(Raw_Data_2019_Jul_Oct, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
+#################
+## Find the Taxa that are not present in every replicate, and add rows
+## in those replicates with zero biomass
+#
 
-
+str
