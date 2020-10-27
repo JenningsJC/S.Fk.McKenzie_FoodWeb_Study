@@ -45,17 +45,17 @@ CombRawDat_2019<- CombRawDat_2019[,-c(1,10,13,14)]
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
 ## Stage and Insect
 #
-Disturbed_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-Flooded_Forest_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
-Relic_Channel_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-Phase3_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Phase 3" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase3
-Phase4_BenthInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Phase 4" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase4
-Disturbed_WoodInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
-Relic_Channel_WoodInsect_Data_2019_Jul_Oct<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
+Disturbed_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
+Flooded_Forest_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
+Relic_Channel_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
+Phase3_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Phase 3" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase3
+Phase4_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Phase 4" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase4
+Disturbed_WoodInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
+Relic_Channel_WoodInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
 #################
 ## Find the Taxa that are not present in every replicate, and add rows
 ## in those replicates with zero biomass
 #
 
-str
+
