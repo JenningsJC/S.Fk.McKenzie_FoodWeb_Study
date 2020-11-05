@@ -1,0 +1,1 @@
+This folder contains individual folders for all scripts. Each folder is named for the task that the script within performs.
