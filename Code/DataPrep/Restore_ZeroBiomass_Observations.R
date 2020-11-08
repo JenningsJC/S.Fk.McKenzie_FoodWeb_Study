@@ -13,5 +13,11 @@ Disturb_BenthInsect_winter_2020<- subset(Raw_Biomass_winter_2020, Treatment=="Di
 library(tidyr)
 Dist_Benth_Winter_2020_Wider<- Disturb_BenthInsect_winter_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
-View(Disturb_BenthInsect_winter_2020)
+
+########
+## Pivots the individual replicate columns (1-5) back to long format, 
+## putting them back into "Replicate" and "Biomass" columns
+
+Dist_Benth_Winter_2020_Longer<- Dist_Benth_Winter_2020_Wider %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 10:14)
 
