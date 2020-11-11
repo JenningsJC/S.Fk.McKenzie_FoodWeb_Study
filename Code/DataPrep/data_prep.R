@@ -54,13 +54,13 @@ raw_benth_data_all_seasons_2019_2020<- raw_benth_data_all_seasons_2019_2020[,-c(
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
 ## Stage and Insect
 #
-Disturbed_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-Flooded_Forest_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
-Relic_Channel_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-Phase3_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Phase 3" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase3
-Phase4_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Phase 4" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase4
-Disturbed_WoodInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
-Relic_Channel_WoodInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
+disturbed_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
+flood_forest_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
+relic_chan_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
+phase3_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Phase 3" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase3
+phase4_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Phase 4" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase4
+disturbed_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
+relic_chan_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
 
 
