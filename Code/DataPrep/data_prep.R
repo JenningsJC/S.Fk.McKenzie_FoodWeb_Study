@@ -15,14 +15,21 @@ raw_benth_2019_jul<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mc
 raw_benth_2019_oct<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_oct.csv")
 raw_benth_2020_feb<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_feb.csv")
 raw_benth_2020_may<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_may.csv")
-################################
-## Adds A Column named "Season" to each seasonal data set
-# 
-Season <- rep("Summer",length(Raw_Data_2019_July$Date))
-Raw_Data_2019_July$Season<- cbind(Season)
 
-Season <- rep("Fall",length(Raw_Data_2019_October$Date))
-Raw_Data_2019_October$Season<- cbind(Season)
+################################
+## Add A Column named "Season" to each seasonal data set
+# 
+Season <- rep("Summer19",length(raw_benth_2019_jul$Date))
+raw_benth_2019_jul$Season<- cbind(Season)
+
+Season <- rep("Fall19",length(raw_benth_2019_oct$Date))
+raw_benth_2019_oct$Season<- cbind(Season)
+
+Season <- rep("Winter20",length(raw_benth_2020_feb$Date))
+raw_benth_2020_feb$Season<- cbind(Season)
+
+Season <- rep("Spring20",length(raw_benth_2020_may$Date))
+raw_benth_2020_may$Season<- cbind(Season)
 
 ################
 ## Rbind the dataframes together
