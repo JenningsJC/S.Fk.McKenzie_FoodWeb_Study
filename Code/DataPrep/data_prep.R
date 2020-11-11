@@ -63,4 +63,19 @@ disturbed_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019
 relic_chan_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
 
+#########
+## Pivots by the Replicate column, fills in the biomass values, replaces NA's
+## with zeroes
+
+library(tidyr)
+disturbed_benth_wider<- disturbed_benth_ins_clean_data_2019_2020 %>%
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+
+########
+## Pivots the individual replicate columns (1-5) back to long format, 
+## putting them back into "Replicate" and "Biomass" columns
+
+disturbed_benth_longer<- disturbed_benth_wider %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+
 
