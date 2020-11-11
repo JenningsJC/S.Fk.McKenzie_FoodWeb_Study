@@ -1,19 +1,20 @@
 ###################
 ## data_prep.R
-## Reads in raw "long aggregate output" .csv files saved from master spreadsheet.
-## Adds a column for "Season". Rbinds the files together. Removes columns unnecessary
-## for calulating mean biomasses.Subsets by Treatment (sample site), Substrate, 
-## Insect and Stage. 
-## Saves the subsets as .csv file in the DataRaw folder.
+## Reads in raw .csv files saved from DataRaw folder.
+## Adds a column for "Season". Removes columns that are not needed
+## for calulating annual mean biomass.
+## Subsets by Treatment (sample site),Substrate, Insect and Stage. 
+## Rbinds by Treatment. Outputs cleaned data to be saved as .csv in DataDerived.
 ###################
 
 
 ###################
 ## Read in raw data
 #
-Raw_Data_2019_July<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/SFMR_Wisseman_Long_Aggregate_Output_2019_July.csv")
-Raw_Data_2019_October<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/SFMR_Wisseman_Long_Aggregate_Output_2019_October.csv")
-
+raw_benth_2019_jul<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_jul.csv")
+raw_benth_2019_oct<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_oct.csv")
+raw_benth_2020_feb<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_feb.csv")
+raw_benth_2020_may<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_may.csv")
 ################################
 ## Adds A Column named "Season" to each seasonal data set
 # 
