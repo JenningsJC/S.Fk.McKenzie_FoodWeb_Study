@@ -38,16 +38,16 @@ raw_benth_2020_may$Season<- cbind(Season)
 raw_benth_data_all_seasons_2019_2020<- rbind(raw_benth_2019_jul,raw_benth_2019_oct,raw_benth_2020_feb,raw_benth_2020_may)
 
 ############################################################
-## Coerce the dates from factor to date in the "Date" column
+## Coerce dates from factor to date in the "Date" column
 #
-class(CombRawDat_2019$Date)
-CombRawDat_2019$Date<- as.Date(CombRawDat_2019$Date, format="%Y-%m-%d")
-class(CombRawDat_2019$Date)
+class(raw_benth_data_all_seasons_2019_2020$Date)
+raw_benth_data_all_seasons_2019_2020$Date<- as.Date(raw_benth_data_all_seasons_2019_2020$Date, format="%Y-%m-%d")
+class(raw_benth_data_all_seasons_2019_2020$Date)
 
 ################################
 ## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance  
 #
-CombRawDat_2019<- CombRawDat_2019[,-c(1,10,13,14)]
+raw_benth_data_all_seasons_2019_2020<- raw_benth_data_all_seasons_2019_2020[,-c(1,10,13,14)]
 
 
 ##################
