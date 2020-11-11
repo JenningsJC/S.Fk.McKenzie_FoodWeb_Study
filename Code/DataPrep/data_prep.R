@@ -94,7 +94,7 @@ disturbed_wood_ins_wider<- disturbed_wood_ins_clean_data_2019_2020 %>%
 relic_chan_wood_ins_wider<- relic_chan_wood_ins_clean_data_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-########
+################
 ## Pivots the individual replicate columns (1-5) back to long format, 
 ## putting them back into "Replicate" and "Biomass" columns
 
@@ -119,3 +119,19 @@ disturbed_wood_ins_longer<- disturbed_wood_ins_wider %>%
 relic_chan_wood_ins_longer<- relic_chan_wood_ins_wider %>%
   pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:13)
 
+#############################
+## Write the dataframes as .csv to the DataClean folder
+
+write.csv(disturbed_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_ins_clean_2019_2020.csv", row.names = F )
+
+write.csv(flood_forest_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/flood_forest_benth_ins_clean_2019_2020.csv", row.names = F)
+
+write.csv(relic_chan_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relic_chan_benth_ins_clean_2019_2020.csv", row.names = F)
+
+write.csv(phase3_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/phase3_benth_ins_clean_2019_2020.csv", row.names = F)
+
+write.csv(phase4_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/phase4_benth_ins_clean_2019_2020.csv", row.names = F)
+
+write.csv(disturbed_wood_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_ins_clean_2019_2020.csv", row.names = F)
+
+write.csv(relic_chan_wood_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relic_chan_wood_ins_clean_2019_2020.csv", row.names = F)
