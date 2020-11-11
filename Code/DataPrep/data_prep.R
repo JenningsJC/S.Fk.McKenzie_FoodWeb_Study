@@ -1,10 +1,11 @@
 ###################
 ## data_prep.R
 ## Reads in raw .csv files saved from DataRaw folder.
-## Adds a column for "Season". Removes columns that are not needed
-## for calulating annual mean biomass.
+## Adds a column for "Season". Rbinds all seasons together.
+## Coerces "Date" column from factor to date.
+## Removes columns not neededfor calculating mean biomass/year.
 ## Subsets by Treatment (sample site),Substrate, Insect and Stage. 
-## Rbinds by Treatment. Outputs cleaned data to be saved as .csv in DataDerived.
+## Saves cleaned raw data as .csv files in DataDerived.
 ###################
 
 
@@ -34,7 +35,7 @@ raw_benth_2020_may$Season<- cbind(Season)
 ################
 ## Rbind the dataframes together
 #
-CombRawDat_2019<- rbind(Raw_Data_2019_July,Raw_Data_2019_October)
+raw_benth_data_all_seasons_2019_2020<- rbind(raw_benth_2019_jul,raw_benth_2019_oct,raw_benth_2020_feb,raw_benth_2020_may)
 
 ############################################################
 ## Coerce the dates from factor to date in the "Date" column
@@ -61,9 +62,5 @@ Phase4_BenthInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Phase 4" & In
 Disturbed_WoodInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 Relic_Channel_WoodInsect_Data_2019<- subset(CombRawDat_2019, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
-#################
-## Find the Taxa that are not present in every replicate, and add rows
-## in those replicates with zero biomass
-#
 
 
