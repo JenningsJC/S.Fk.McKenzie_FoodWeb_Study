@@ -1,12 +1,13 @@
-###################
+#################################################################
 ## data_prep.R
 ## Reads in raw .csv files saved from DataRaw folder.
 ## Adds a column for "Season". Rbinds all seasons together.
 ## Coerces "Date" column from factor to date.
-## Removes columns not neededfor calculating mean biomass/year.
+## Removes columns not needed for calculating mean biomass/year.
 ## Subsets by Treatment (sample site),Substrate, Insect and Stage. 
-## Saves cleaned raw data as .csv files in DataDerived.
-###################
+## Restores missing observations of zero biomass to replicates.
+## Saves cleaned raw data as .csv files in DataClean folder.
+#################################################################
 
 
 ###################
@@ -62,28 +63,59 @@ phase4_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2
 disturbed_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 relic_chan_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
-#########################
+###################################################################
 ###Restoring observations of zero biomass missing from the datasets
-#########################
+###################################################################
 
 ###############
 ## Pivots by the Replicate column, fills in the biomass values, replaces NA's
 ## with zeroes
 
 library(tidyr)
-disturbed_benth_wider<- disturbed_benth_ins_clean_data_2019_2020 %>%
+
+disturbed_benth_ins_wider<- disturbed_benth_ins_clean_data_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-flood_forest_benth_wider<- flood_forest_benth_ins_clean_data_2019_2020 %>%
+flood_forest_benth_ins_wider<- flood_forest_benth_ins_clean_data_2019_2020 %>%
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+
+relic_chan_benth_ins_wider<- relic_chan_benth_ins_clean_data_2019_2020 %>%
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+
+phase3_benth_ins_wider<- phase3_benth_ins_clean_data_2019_2020 %>%
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+
+phase4_benth_ins_wider<- phase4_benth_ins_clean_data_2019_2020 %>%
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+
+disturbed_wood_ins_wider<- disturbed_wood_ins_clean_data_2019_2020 %>%
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+
+relic_chan_wood_ins_wider<- relic_chan_wood_ins_clean_data_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
 ########
 ## Pivots the individual replicate columns (1-5) back to long format, 
 ## putting them back into "Replicate" and "Biomass" columns
 
-disturbed_benth_longer<- disturbed_benth_wider %>%
+disturbed_benth_ins_longer<- disturbed_benth_ins_wider %>%
   pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
 
-flood_forest_benth_longer<- flood_forest_benth_wider %>%
+flood_forest_benth_ins_longer<- flood_forest_benth_ins_wider %>%
   pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+
+relic_chan_benth_ins_longer<- relic_chan_benth_ins_wider %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+
+phase3_benth_ins_longer<- phase3_benth_ins_wider %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+
+phase4_benth_ins_longer<- phase4_benth_ins_wider %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+
+disturbed_wood_ins_longer<- disturbed_wood_ins_wider %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:13)
+
+relic_chan_wood_ins_longer<- relic_chan_wood_ins_wider %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:13)
 
