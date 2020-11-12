@@ -63,12 +63,12 @@ phase4_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2
 disturbed_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 relic_chan_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
-###################################################################
-###Restoring observations of zero biomass missing from the datasets
-###################################################################
+#####################################################################
+### Restore the missing observations of zero biomass to Replicates
+#####################################################################
 
-###############
-## Pivots by the Replicate column, fills in the biomass values, replaces NA's
+######################
+### Pivots by the Replicate column, fills in the biomass values, replaces NA's
 ## with zeroes
 
 library(tidyr)
@@ -94,8 +94,8 @@ disturbed_wood_ins_wider<- disturbed_wood_ins_clean_data_2019_2020 %>%
 relic_chan_wood_ins_wider<- relic_chan_wood_ins_clean_data_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-################
-## Pivots the individual replicate columns (1-5) back to long format, 
+#######################
+### Pivots the individual replicate columns (1-5) back to long format, 
 ## putting them back into "Replicate" and "Biomass" columns
 
 disturbed_benth_ins_longer<- disturbed_benth_ins_wider %>%
@@ -119,8 +119,15 @@ disturbed_wood_ins_longer<- disturbed_wood_ins_wider %>%
 relic_chan_wood_ins_longer<- relic_chan_wood_ins_wider %>%
   pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:13)
 
-#############################
-## Write the dataframes as .csv to the DataClean folder
+#########################################################################
+### By taxon, restore any missing seasons of replicates an fill w/zeroes
+#########################################################################
+
+
+
+##########################################################
+### Write the dataframes as .csv to the DataClean folder
+##########################################################
 
 write.csv(disturbed_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_ins_clean_2019_2020.csv", row.names = F )
 
