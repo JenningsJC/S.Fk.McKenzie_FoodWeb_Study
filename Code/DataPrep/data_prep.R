@@ -126,6 +126,10 @@ relic_chan_wood_ins_longer<- relic_chan_wood_ins_wider %>%
 library(dplyr)
 missing_seasons<- expand(disturbed_benth_ins_longer, Taxon, nesting(Season, Replicate))
 disturb_left_join <-left_join(missing_seasons, disturbed_benth_ins_longer, by= c("Taxon","Replicate", "Season"))
+## Next task is to figure out how to fill in all the NAs with the appropriate
+## variable in each column, And check to make sure that the number of rows in
+## the completed dataset has the expected number of rows
+## The number should be: no. of unique taxa * no. seasons * no. replicates
 
 ##########################################################
 ### Write the dataframes as .csv to the DataClean folder
