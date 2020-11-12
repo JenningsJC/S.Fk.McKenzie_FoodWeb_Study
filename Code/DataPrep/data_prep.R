@@ -123,7 +123,9 @@ relic_chan_wood_ins_longer<- relic_chan_wood_ins_wider %>%
 ### By taxon, restore any missing seasons of replicates an fill w/zeroes
 #########################################################################
 
-
+library(dplyr)
+missing_seasons<- expand(disturbed_benth_ins_longer, Taxon, nesting(Season, Replicate))
+disturb_left_join <-left_join(missing_seasons, disturbed_benth_ins_longer, by= c("Taxon","Replicate", "Season"))
 
 ##########################################################
 ### Write the dataframes as .csv to the DataClean folder
