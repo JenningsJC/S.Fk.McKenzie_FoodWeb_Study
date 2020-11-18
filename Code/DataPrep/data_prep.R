@@ -23,16 +23,16 @@ raw_2020_may<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie
 ###################################################################
 ## Add A Column named "Season" to each seasonal data set
 ###################################################################
-Season <- rep("Summer19",length(raw_benth_2019_jul$Date))
+Season <- rep("Summer19",length(raw_2019_jul$Date))
 raw_2019_jul$Season<- cbind(Season)
 
-Season <- rep("Fall19",length(raw_benth_2019_oct$Date))
+Season <- rep("Fall19",length(raw_2019_oct$Date))
 raw_2019_oct$Season<- cbind(Season)
 
-Season <- rep("Winter20",length(raw_benth_2020_feb$Date))
+Season <- rep("Winter20",length(raw_2020_feb$Date))
 raw_2020_feb$Season<- cbind(Season)
 
-Season <- rep("Spring20",length(raw_benth_2020_may$Date))
+Season <- rep("Spring20",length(raw_2020_may$Date))
 raw_2020_may$Season<- cbind(Season)
 
 ####################################################################
