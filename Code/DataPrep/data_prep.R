@@ -1,4 +1,4 @@
-#################################################################
+#############################################################################
 ## data_prep.R
 ## Reads in raw .csv files saved from DataRaw folder.
 ## Adds a column for "Season". 
@@ -9,20 +9,20 @@
 ## & Stage (larvae & pupae). 
 ## Restores missing observations of zero biomass by replicate, and season.
 ## Saves prepped raw data as .csv files in DataClean folder.
-#################################################################
+#############################################################################
 
 
-###################
+###################################################################
 ## Read in raw data
-#
+###################################################################
 raw_2019_jul<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_jul.csv")
 raw_2019_oct<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_oct.csv")
 raw_2020_feb<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_feb.csv")
 raw_2020_may<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_may.csv")
 
-################################
+###################################################################
 ## Add A Column named "Season" to each seasonal data set
-# 
+###################################################################
 Season <- rep("Summer19",length(raw_benth_2019_jul$Date))
 raw_2019_jul$Season<- cbind(Season)
 
@@ -35,28 +35,28 @@ raw_2020_feb$Season<- cbind(Season)
 Season <- rep("Spring20",length(raw_benth_2020_may$Date))
 raw_2020_may$Season<- cbind(Season)
 
-################
+####################################################################
 ## Rbind the dataframes together
-#
+####################################################################
 raw_data_all_seasons_2019_2020<- rbind(raw_2019_jul,raw_2019_oct,raw_2020_feb,raw_2020_may)
 
-############################################################
+####################################################################
 ## Coerce dates from factor to date in the "Date" column
-#
+####################################################################
 class(raw_data_all_seasons_2019_2020$Date)
 raw_data_all_seasons_2019_2020$Date<- as.Date(raw_data_all_seasons_2019_2020$Date, format="%Y-%m-%d")
 class(raw_data_all_seasons_2019_2020$Date)
 
-################################
+#####################################################################
 ## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance  
-#
+#####################################################################
 raw_data__trim_all_seasons_2019_2020<- raw_data_all_seasons_2019_2020[,-c(1,10,13,14)]
 
 
-##################
+#####################################################################
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
 ## Stage and Insect
-#
+#####################################################################
 disturbed_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
 flood_forest_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
 relic_chan_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
@@ -65,14 +65,14 @@ phase4_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2
 disturbed_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 relic_chan_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
 
-#####################################################################
+######################################################################
 ### Restore the missing observations of zero biomass to Replicates
-#####################################################################
+######################################################################
 
-######################
+######################################################################
 ### Pivots by the Replicate column, fills in the biomass values, replaces NA's
 ## with zeroes
-
+######################################################################
 library(tidyr)
 
 disturbed_benth_ins_wider<- disturbed_benth_ins_clean_data_2019_2020 %>%
@@ -96,10 +96,10 @@ disturbed_wood_ins_wider<- disturbed_wood_ins_clean_data_2019_2020 %>%
 relic_chan_wood_ins_wider<- relic_chan_wood_ins_clean_data_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-#######################
+#######################################################################
 ### Pivots the individual replicate columns (1-5) back to long format, 
 ## putting them back into "Replicate" and "Biomass" columns
-
+#######################################################################
 disturbed_benth_ins_longer<- disturbed_benth_ins_wider %>%
   pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
 
@@ -121,9 +121,9 @@ disturbed_wood_ins_longer<- disturbed_wood_ins_wider %>%
 relic_chan_wood_ins_longer<- relic_chan_wood_ins_wider %>%
   pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:13)
 
-#########################################################################
+#######################################################################
 ### By taxon, restore any missing seasons of replicates an fill w/zeroes
-#########################################################################
+#######################################################################
 
 library(dplyr)
 missing_seasons<- expand(disturbed_benth_ins_longer, Taxon, nesting(Season, Replicate))
@@ -133,9 +133,9 @@ disturb_left_join <-left_join(missing_seasons, disturbed_benth_ins_longer, by= c
 ## the completed dataset has the expected number of rows
 ## The number should be: no. of unique taxa * no. seasons * no. replicates
 
-##########################################################
+#######################################################################
 ### Write the dataframes as .csv to the DataClean folder
-##########################################################
+#######################################################################
 
 write.csv(disturbed_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_ins_clean_2019_2020.csv", row.names = F )
 
