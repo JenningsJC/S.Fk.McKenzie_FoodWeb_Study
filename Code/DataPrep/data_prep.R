@@ -141,6 +141,26 @@ relic_chan_wood_ins_raw_2019_2020 <- subset(
 )
 
 ######################################################################
+### Pivot each sample site dataset by Stage & Biomass.
+### Sum the larvae, pupae, and unknown biomass estimates into a single
+### Biomass column.
+######################################################################
+library(tidyr)
+
+disturbed_benth_ins_wider_by_stage <-
+  disturbed_benth_ins_raw_2019_2020 %>%
+  pivot_wider(names_from = Stage,
+              values_from = Biomass,
+              values_fill = 0)
+
+disturbed_benth_ins_wider_summed_biomass <-
+  disturbed_benth_ins_wider_by_stage %>% mutate(sumrow = L + P + U)
+
+## To Do: remove the L,P,U columns and rename sumrow column to "Biomass",
+## and write code to do this to every subset
+
+
+######################################################################
 ### Restore the missing observations of zero biomass to Replicates
 ######################################################################
 
@@ -148,7 +168,6 @@ relic_chan_wood_ins_raw_2019_2020 <- subset(
 ### Pivots by the Replicate column, fills in the biomass values, replaces NA's
 ## with zeroes
 ######################################################################
-library(tidyr)
 
 disturbed_benth_ins_wider<- disturbed_benth_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
