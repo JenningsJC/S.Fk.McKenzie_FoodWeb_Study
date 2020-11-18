@@ -56,7 +56,7 @@ raw_data_trim_all_seasons_2019_2020<- raw_data_all_seasons_2019_2020[,-c(1,10,13
 
 #####################################################################
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
-## Stage, Origin and Insect
+## Stage and Origin
 #####################################################################
 disturbed_benth_ins_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -65,7 +65,9 @@ disturbed_benth_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" &
     Stage == "L" |
     Treatment == "Disturbed" &
-    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "P"
+    Substrate == "Benthic" &
+    Origin == "Aquatic" & Stage == "P" | Treatment == "Disturbed" &
+    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
 )
 flood_forest_benth_ins_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -74,7 +76,9 @@ flood_forest_benth_ins_raw_2019_2020 <- subset(
     Stage == "L" |
     Treatment == "Flooded Forest" &
     Origin == "Aquatic" &
-    Stage == "P"
+    Stage == "P" | Treatment == "Flooded Forest" &
+    Origin == "Aquatic" &
+    Stage == "U"
 ) ##Only benthic substrate was sampled
 relic_chan_benth_ins_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -83,7 +87,10 @@ relic_chan_benth_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" &
     Stage == "L" |
     Treatment == "Relic Floodplain Channel" &
-    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "P"
+    Substrate == "Benthic" &
+    Origin == "Aquatic" &
+    Stage == "P" | Treatment == "Relic Floodplain Channel" &
+    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
 )
 phase3_benth_ins_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -92,7 +99,9 @@ phase3_benth_ins_raw_2019_2020 <- subset(
     Stage == "L" |
     Treatment == "Phase 3" &
     Origin == "Aquatic" &
-    Stage == "P"
+    Stage == "P" | Treatment == "Phase 3" &
+    Origin == "Aquatic" &
+    Stage == "U"
 ) ##Only benthic substrate was sampled in Phase3
 phase4_benth_ins_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -101,7 +110,9 @@ phase4_benth_ins_raw_2019_2020 <- subset(
     Stage == "L" |
     Treatment == "Phase 4" &
     Origin == "Aquatic" &
-    Stage == "P"
+    Stage == "P" | Treatment == "Phase 4" &
+    Origin == "Aquatic" &
+    Stage == "U"
 ) ##Only benthic substrate was sampled in Phase4
 disturbed_wood_ins_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -110,7 +121,10 @@ disturbed_wood_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" &
     Stage == "L" |
     Treatment == "Disturbed" &
-    Substrate == "Submerged Wood" & Origin == "Aquatic" & Stage == "P"
+    Substrate == "Submerged Wood" &
+    Origin == "Aquatic" & Stage == "P" | Treatment == "Disturbed" &
+    Substrate == "Submerged Wood" &
+    Origin == "Aquatic" & Stage == "U"
 )
 relic_chan_wood_ins_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -119,7 +133,11 @@ relic_chan_wood_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" &
     Stage == "L" |
     Treatment == "Relic Floodplain Channel" &
-    Substrate == "Submerged Wood" & Origin == "Aquatic" & Stage == "P"
+    Substrate == "Submerged Wood" &
+    Origin == "Aquatic" &
+    Stage == "P" | Treatment == "Relic Floodplain Channel" &
+    Substrate == "Submerged Wood" &
+    Origin == "Aquatic" & Stage == "U"
 )
 
 ######################################################################
