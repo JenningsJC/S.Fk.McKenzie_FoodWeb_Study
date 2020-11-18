@@ -1,12 +1,14 @@
 #################################################################
 ## data_prep.R
 ## Reads in raw .csv files saved from DataRaw folder.
-## Adds a column for "Season". Rbinds all seasons together.
+## Adds a column for "Season". 
+## Rbinds all seasons together.
 ## Coerces "Date" column from factor to date.
 ## Removes columns not needed for calculating mean biomass/year.
-## Subsets by Treatment (sample site),Substrate, Insect and Stage. 
-## Restores missing observations of zero biomass to replicates.
-## Saves cleaned raw data as .csv files in DataClean folder.
+## Subsets by sample site ("Treatment"),Substrate,Insect (aquatic only),
+## & Stage (larvae & pupae). 
+## Restores missing observations of zero biomass by replicate, and season.
+## Saves prepped raw data as .csv files in DataClean folder.
 #################################################################
 
 
