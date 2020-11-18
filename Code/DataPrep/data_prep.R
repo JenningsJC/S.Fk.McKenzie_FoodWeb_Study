@@ -5,7 +5,7 @@
 ## Rbinds all seasons together.
 ## Coerces "Date" column from factor to date.
 ## Removes columns not needed for calculating mean biomass/year.
-## Subsets by sample site("Treatment"),Substrate, Insect(insects only),
+## Subsets by sample site("Treatment"),Substrate,
 ## Origin(Aquatic only) & Stage (larvae & pupae). 
 ## Restores missing observations of zero biomass by replicate, and season.
 ## Saves prepped raw data as .csv files in DataClean folder.
@@ -57,13 +57,13 @@ raw_data_trim_all_seasons_2019_2020<- raw_data_all_seasons_2019_2020[,-c(1,10,13
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
 ## Stage, Origin and Insect
 #####################################################################
-disturbed_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
-flood_forest_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Flooded Forest" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled
-relic_chan_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
-phase3_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Phase 3" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled in Phase3
-phase4_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Phase 4" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled in Phase4
-disturbed_wood_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
-relic_chan_wood_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
+disturbed_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Benthic" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
+flood_forest_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Flooded Forest" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled
+relic_chan_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
+phase3_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Phase 3" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled in Phase3
+phase4_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Phase 4" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled in Phase4
+disturbed_wood_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
+relic_chan_wood_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
 
 ######################################################################
 ### Restore the missing observations of zero biomass to Replicates
