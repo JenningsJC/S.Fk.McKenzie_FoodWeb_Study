@@ -5,8 +5,8 @@
 ## Rbinds all seasons together.
 ## Coerces "Date" column from factor to date.
 ## Removes columns not needed for calculating mean biomass/year.
-## Subsets by sample site ("Treatment"),Substrate,Insect (aquatic only),
-## & Stage (larvae & pupae). 
+## Subsets by sample site("Treatment"),Substrate, Insect(insects only),
+## Origin(Aquatic only) & Stage (larvae & pupae). 
 ## Restores missing observations of zero biomass by replicate, and season.
 ## Saves prepped raw data as .csv files in DataClean folder.
 #############################################################################
@@ -50,20 +50,20 @@ class(raw_data_all_seasons_2019_2020$Date)
 #####################################################################
 ## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance  
 #####################################################################
-raw_data__trim_all_seasons_2019_2020<- raw_data_all_seasons_2019_2020[,-c(1,10,13,14)]
+raw_data_trim_all_seasons_2019_2020<- raw_data_all_seasons_2019_2020[,-c(1,10,13,14)]
 
 
 #####################################################################
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
-## Stage and Insect
+## Stage, Origin and Insect
 #####################################################################
-disturbed_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-flood_forest_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Flooded Forest" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled
-relic_chan_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Stage=="L")
-phase3_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Phase 3" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase3
-phase4_benth_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Phase 4" & Insect=="insect" & Stage=="L") ##Only benthic substrate was sampled in Phase4
-disturbed_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
-relic_chan_wood_ins_clean_data_2019_2020<- subset(raw_benth_data_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Stage=="L")
+disturbed_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Benthic" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
+flood_forest_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Flooded Forest" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled
+relic_chan_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Benthic" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
+phase3_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Phase 3" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled in Phase3
+phase4_benth_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Phase 4" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P") ##Only benthic substrate was sampled in Phase4
+disturbed_wood_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Disturbed" & Substrate=="Submerged Wood" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
+relic_chan_wood_ins_raw_2019_2020<- subset(raw_data_trim_all_seasons_2019_2020, Treatment=="Relic Floodplain Channel" & Substrate=="Submerged Wood" & Insect=="insect" & Origin=="Aquatic" & Stage=="L" | Stage=="P")
 
 ######################################################################
 ### Restore the missing observations of zero biomass to Replicates
