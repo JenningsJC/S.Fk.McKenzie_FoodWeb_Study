@@ -15,42 +15,42 @@
 ###################
 ## Read in raw data
 #
-raw_benth_2019_jul<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_jul.csv")
-raw_benth_2019_oct<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_oct.csv")
-raw_benth_2020_feb<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_feb.csv")
-raw_benth_2020_may<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_may.csv")
+raw_2019_jul<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_jul.csv")
+raw_2019_oct<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_oct.csv")
+raw_2020_feb<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_feb.csv")
+raw_2020_may<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_may.csv")
 
 ################################
 ## Add A Column named "Season" to each seasonal data set
 # 
 Season <- rep("Summer19",length(raw_benth_2019_jul$Date))
-raw_benth_2019_jul$Season<- cbind(Season)
+raw_2019_jul$Season<- cbind(Season)
 
 Season <- rep("Fall19",length(raw_benth_2019_oct$Date))
-raw_benth_2019_oct$Season<- cbind(Season)
+raw_2019_oct$Season<- cbind(Season)
 
 Season <- rep("Winter20",length(raw_benth_2020_feb$Date))
-raw_benth_2020_feb$Season<- cbind(Season)
+raw_2020_feb$Season<- cbind(Season)
 
 Season <- rep("Spring20",length(raw_benth_2020_may$Date))
-raw_benth_2020_may$Season<- cbind(Season)
+raw_2020_may$Season<- cbind(Season)
 
 ################
 ## Rbind the dataframes together
 #
-raw_benth_data_all_seasons_2019_2020<- rbind(raw_benth_2019_jul,raw_benth_2019_oct,raw_benth_2020_feb,raw_benth_2020_may)
+raw_data_all_seasons_2019_2020<- rbind(raw_2019_jul,raw_2019_oct,raw_2020_feb,raw_2020_may)
 
 ############################################################
 ## Coerce dates from factor to date in the "Date" column
 #
-class(raw_benth_data_all_seasons_2019_2020$Date)
-raw_benth_data_all_seasons_2019_2020$Date<- as.Date(raw_benth_data_all_seasons_2019_2020$Date, format="%Y-%m-%d")
-class(raw_benth_data_all_seasons_2019_2020$Date)
+class(raw_data_all_seasons_2019_2020$Date)
+raw_data_all_seasons_2019_2020$Date<- as.Date(raw_data_all_seasons_2019_2020$Date, format="%Y-%m-%d")
+class(raw_data_all_seasons_2019_2020$Date)
 
 ################################
 ## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance  
 #
-raw_benth_data_all_seasons_2019_2020<- raw_benth_data_all_seasons_2019_2020[,-c(1,10,13,14)]
+raw_data__trim_all_seasons_2019_2020<- raw_data_all_seasons_2019_2020[,-c(1,10,13,14)]
 
 
 ##################
