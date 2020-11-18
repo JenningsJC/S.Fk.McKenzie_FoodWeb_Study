@@ -150,25 +150,25 @@ relic_chan_wood_ins_raw_2019_2020 <- subset(
 ######################################################################
 library(tidyr)
 
-disturbed_benth_ins_wider<- disturbed_benth_ins_clean_data_2019_2020 %>%
+disturbed_benth_ins_wider<- disturbed_benth_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-flood_forest_benth_ins_wider<- flood_forest_benth_ins_clean_data_2019_2020 %>%
+flood_forest_benth_ins_wider<- flood_forest_benth_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-relic_chan_benth_ins_wider<- relic_chan_benth_ins_clean_data_2019_2020 %>%
+relic_chan_benth_ins_wider<- relic_chan_benth_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-phase3_benth_ins_wider<- phase3_benth_ins_clean_data_2019_2020 %>%
+phase3_benth_ins_wider<- phase3_benth_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-phase4_benth_ins_wider<- phase4_benth_ins_clean_data_2019_2020 %>%
+phase4_benth_ins_wider<- phase4_benth_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-disturbed_wood_ins_wider<- disturbed_wood_ins_clean_data_2019_2020 %>%
+disturbed_wood_ins_wider<- disturbed_wood_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-relic_chan_wood_ins_wider<- relic_chan_wood_ins_clean_data_2019_2020 %>%
+relic_chan_wood_ins_wider<- relic_chan_wood_ins_raw_2019_2020 %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
 #######################################################################
