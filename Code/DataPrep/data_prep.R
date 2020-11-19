@@ -331,10 +331,16 @@ relic_chan_wood_zero_reps<- relic_chan_wood_wider_by_replicate %>%
 #######################################################################
 ### By taxon, restore any missing seasons of replicates and fill w/zeroes
 #######################################################################
-
 library(dplyr)
-missing_seasons<- expand(disturbed_benth_ins_longer, Taxon, nesting(Season, Replicate))
-disturb_left_join <-left_join(missing_seasons, disturbed_benth_ins_longer, by= c("Taxon","Replicate", "Season"))
+## expand generates a new dataframe consisting of combos of Season & Replicate, by
+## Taxon, that are not present in the dataframe
+missing_seasons <-
+  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
+## Then the missing combos are left-joined back into the original dataframe
+disturbed_benth_left_join <-
+  left_join(missing_seasons,
+            disturbed_benth_zero_reps,
+            by = c("Taxon", "Replicate", "Season"))
 ## Next task is to figure out how to fill in all the NAs with the appropriate
 ## variable in each column, And check to make sure that the number of rows in
 ## the completed dataset has the expected number of rows
