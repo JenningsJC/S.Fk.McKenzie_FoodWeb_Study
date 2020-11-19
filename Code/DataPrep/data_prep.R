@@ -50,28 +50,49 @@ raw_2020_may$Season <- cbind(Season)
 ####################################################################
 ## Rbind the dataframes together
 ####################################################################
-raw_data_all_seasons_2019_2020 <-
+raw_dat_allseasons_2019_2020 <-
   rbind(raw_2019_jul, raw_2019_oct, raw_2020_feb, raw_2020_may)
 
 ####################################################################
 ## Coerce dates from factor to date in the "Date" column
 ####################################################################
-class(raw_data_all_seasons_2019_2020$Date)
-raw_data_all_seasons_2019_2020$Date <- as.Date(raw_data_all_seasons_2019_2020$Date, format =
+class(raw_dat_allseasons_2019_2020$Date)
+raw_dat_allseasons_2019_2020$Date <- as.Date(raw_dat_allseasons_2019_2020$Date, format =
                                                  "%Y-%m-%d")
-class(raw_data_all_seasons_2019_2020$Date)
+class(raw_dat_allseasons_2019_2020$Date)
 
 #####################################################################
 ## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance
+## Writes the combined dataset as csv in DataRaw folder
 #####################################################################
-raw_data_trim_all_seasons_2019_2020 <-
-  raw_data_all_seasons_2019_2020[, -c(1, 10, 13, 14)]
+raw_dat_allseasons_2019_2020 <-
+  raw_dat_allseasons_2019_2020[, -c(1, 10, 13, 14)]
+
+write.csv(
+  raw_dat_allseasons_2019_2020,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_dat_allseasons_2019_2020.csv",
+  row.names = F
+)
+
+#####################################################################
+## Subset by Substrate (Benthic, Submerged Wood) 
+## 
+#####################################################################
+
+disturbed_benth_raw_2019_2020 <- subset(
+  raw_data_trim_all_seasons_2019_2020,
+  Treatment == "Disturbed" &
+    Substrate == "Benthic" &
+    Origin == "Aquatic" &
+    Stage == "L" |
+    Treatment == "Disturbed" &
+    Substrate == "Benthic" &
+    Origin == "Aquatic" & Stage == "P" | Treatment == "Disturbed" &
+    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
+)
 
 
-#####################################################################
-## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
-## Stage and Origin (exclude Adults)
-#####################################################################
+
 disturbed_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Disturbed" &
@@ -329,18 +350,70 @@ relic_chan_wood_zero_reps<- relic_chan_wood_wider_by_replicate %>%
   pivot_longer(names_to = "Replicate", values_to = "biomass", 10:12)
 
 #######################################################################
-### By taxon, restore any missing seasons of replicates and fill w/zeroes
+## By taxon, restore any missing seasons of replicates and fill w/zeroes
+##
+## Expand generates a new dataframe consisting of combos of Season & Replicate, by
+## Taxon, that are not present in the dataframe. The dataframe with
+## the missing seasons is then left-joined back into the original.
 #######################################################################
-library(dplyr)
-## expand generates a new dataframe consisting of combos of Season & Replicate, by
-## Taxon, that are not present in the dataframe
-missing_seasons <-
+
+miss_seasons_dist_benth <-
+  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
+
+dist_benth_left_join <-
+  left_join(miss_seasons_dist_benth,
+            disturbed_benth_zero_reps,
+            by = c("Taxon", "Replicate", "Season"))
+
+miss_seasons_flood_forest_benth <-
+  expand(flood_forest_benth_zero_reps, Taxon, nesting(Season, Replicate))
+
+flood_forest_benth_left_join <-
+  left_join(miss_seasons_flood_forest_benth,
+            flood_forest_benth_zero_reps,
+            by = c("Taxon", "Replicate", "Season"))
+
+miss_seasons_dist_benth <-
   expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
 ## Then the missing combos are left-joined back into the original dataframe
 disturbed_benth_left_join <-
   left_join(missing_seasons,
             disturbed_benth_zero_reps,
             by = c("Taxon", "Replicate", "Season"))
+
+miss_seasons_dist_benth <-
+  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
+## Then the missing combos are left-joined back into the original dataframe
+disturbed_benth_left_join <-
+  left_join(missing_seasons,
+            disturbed_benth_zero_reps,
+            by = c("Taxon", "Replicate", "Season"))
+
+miss_seasons_dist_benth <-
+  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
+## Then the missing combos are left-joined back into the original dataframe
+disturbed_benth_left_join <-
+  left_join(missing_seasons,
+            disturbed_benth_zero_reps,
+            by = c("Taxon", "Replicate", "Season"))
+
+miss_seasons_dist_benth <-
+  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
+## Then the missing combos are left-joined back into the original dataframe
+disturbed_benth_left_join <-
+  left_join(missing_seasons,
+            disturbed_benth_zero_reps,
+            by = c("Taxon", "Replicate", "Season"))
+
+miss_seasons_dist_benth <-
+  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
+## Then the missing combos are left-joined back into the original dataframe
+disturbed_benth_left_join <-
+  left_join(missing_seasons,
+            disturbed_benth_zero_reps,
+            by = c("Taxon", "Replicate", "Season"))
+
+
 ## Next task is to figure out how to fill in all the NAs with the appropriate
 ## variable in each column, And check to make sure that the number of rows in
 ## the completed dataset has the expected number of rows
