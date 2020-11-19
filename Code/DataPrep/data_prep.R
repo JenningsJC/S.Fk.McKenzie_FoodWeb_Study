@@ -244,9 +244,36 @@ phase4_benth_wider_summed_biomass <-
   phase4_benth_wider_summed_biomass[, -c(11:14)]
 
 ##disturbed wood subset
+disturbed_wood_wider_by_stage<-
+  disturbed_wood_raw_2019_2020 %>%
+  pivot_wider(names_from = Stage,
+              values_from = Biomass,
+              values_fill = 0)
 
-disturbed_wood_raw_2019_2020
-relic_chan_wood_raw_2019_2020
+disturbed_wood_wider_summed_biomass <-
+  disturbed_wood_wider_by_stage %>% mutate(sumrow = L + P + U)
+
+disturbed_wood_wider_summed_biomass$biomass <-
+  disturbed_wood_wider_summed_biomass$sumrow
+
+disturbed_wood_wider_summed_biomass <-
+  disturbed_wood_wider_summed_biomass[, -c(11:14)]
+
+##relic channel wood subset
+relic_chan_wood_wider_by_stage<-
+  relic_chan_wood_raw_2019_2020 %>%
+  pivot_wider(names_from = Stage,
+              values_from = Biomass,
+              values_fill = 0)
+
+relic_chan_wood_wider_summed_biomass <-
+  relic_chan_wood_wider_by_stage %>% mutate(sumrow = L + P + U)
+
+relic_chan_wood_wider_summed_biomass$biomass <-
+  relic_chan_wood_wider_summed_biomass$sumrow
+
+relic_chan_wood_wider_summed_biomass <-
+  relic_chan_wood_wider_summed_biomass[, -c(11:14)]
 
 ######################################################################
 ## Restore the missing observations of zero biomass to Replicates
