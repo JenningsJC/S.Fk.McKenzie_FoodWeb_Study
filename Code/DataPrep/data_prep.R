@@ -163,6 +163,7 @@ relic_chan_wood_raw_2019_2020 <- subset(
 library(tidyr)
 library(dplyr)
 
+##disturbed benthic subset
 disturbed_benth_wider_by_stage <-
   disturbed_benth_raw_2019_2020 %>%
   pivot_wider(names_from = Stage,
@@ -178,7 +179,27 @@ disturbed_benth_wider_summed_biomass$biomass <-
 disturbed_benth_wider_summed_biomass <-
   disturbed_benth_wider_summed_biomass[, -c(11:14)]
 
-flood_forest_benth_raw_2019_2020
+##flooded forest benthic subset
+flood_forest_benth_wider_by_stage<-
+  flood_forest_benth_raw_2019_2020 %>%
+  pivot_wider(names_from = Stage,
+              values_from = Biomass,
+              values_fill = 0)
+
+flood_forest_benth_wider_summed_biomass <-
+  flood_forest_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
+
+flood_forest_benth_wider_summed_biomass$biomass <-
+  flood_forest_benth_wider_summed_biomass$sumrow
+
+flood_forest_benth_wider_summed_biomass <-
+  flood_forest_benth_wider_summed_biomass[, -c(11:14)]
+
+##relic channel benthic subset
+
+
+
+
 relic_chan_benth_raw_2019_2020
 phase3_benth_raw_2019_2020
 phase4_benth_raw_2019_2020
