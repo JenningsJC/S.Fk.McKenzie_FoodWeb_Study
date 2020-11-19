@@ -15,50 +15,64 @@
 ###################################################################
 ## Read in raw data
 ###################################################################
-raw_2019_jul<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_jul.csv")
-raw_2019_oct<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_oct.csv")
-raw_2020_feb<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_feb.csv")
-raw_2020_may<- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_may.csv")
+raw_2019_jul <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_jul.csv"
+  )
+raw_2019_oct <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2019_oct.csv"
+  )
+raw_2020_feb <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_feb.csv"
+  )
+raw_2020_may <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/south_fk_mckenzie_benthic_raw_2020_may.csv"
+  )
 
 ###################################################################
 ## Add A Column named "Season" to each seasonal data set
 ###################################################################
-Season <- rep("Summer19",length(raw_2019_jul$Date))
-raw_2019_jul$Season<- cbind(Season)
+Season <- rep("Summer19", length(raw_2019_jul$Date))
+raw_2019_jul$Season <- cbind(Season)
 
-Season <- rep("Fall19",length(raw_2019_oct$Date))
-raw_2019_oct$Season<- cbind(Season)
+Season <- rep("Fall19", length(raw_2019_oct$Date))
+raw_2019_oct$Season <- cbind(Season)
 
-Season <- rep("Winter20",length(raw_2020_feb$Date))
-raw_2020_feb$Season<- cbind(Season)
+Season <- rep("Winter20", length(raw_2020_feb$Date))
+raw_2020_feb$Season <- cbind(Season)
 
-Season <- rep("Spring20",length(raw_2020_may$Date))
-raw_2020_may$Season<- cbind(Season)
+Season <- rep("Spring20", length(raw_2020_may$Date))
+raw_2020_may$Season <- cbind(Season)
 
 ####################################################################
 ## Rbind the dataframes together
 ####################################################################
-raw_data_all_seasons_2019_2020<- rbind(raw_2019_jul,raw_2019_oct,raw_2020_feb,raw_2020_may)
+raw_data_all_seasons_2019_2020 <-
+  rbind(raw_2019_jul, raw_2019_oct, raw_2020_feb, raw_2020_may)
 
 ####################################################################
 ## Coerce dates from factor to date in the "Date" column
 ####################################################################
 class(raw_data_all_seasons_2019_2020$Date)
-raw_data_all_seasons_2019_2020$Date<- as.Date(
-  raw_data_all_seasons_2019_2020$Date, format="%Y-%m-%d")
+raw_data_all_seasons_2019_2020$Date <- as.Date(raw_data_all_seasons_2019_2020$Date, format =
+                                                 "%Y-%m-%d")
 class(raw_data_all_seasons_2019_2020$Date)
 
 #####################################################################
-## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance  
+## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance
 #####################################################################
-raw_data_trim_all_seasons_2019_2020<- raw_data_all_seasons_2019_2020[,-c(1,10,13,14)]
+raw_data_trim_all_seasons_2019_2020 <-
+  raw_data_all_seasons_2019_2020[, -c(1, 10, 13, 14)]
 
 
 #####################################################################
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
 ## Stage and Origin
 #####################################################################
-disturbed_benth_ins_raw_2019_2020 <- subset(
+disturbed_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Disturbed" &
     Substrate == "Benthic" &
@@ -69,7 +83,7 @@ disturbed_benth_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" & Stage == "P" | Treatment == "Disturbed" &
     Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
 )
-flood_forest_benth_ins_raw_2019_2020 <- subset(
+flood_forest_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Flooded Forest" &
     Origin == "Aquatic" &
@@ -80,7 +94,7 @@ flood_forest_benth_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" &
     Stage == "U"
 ) ##Only benthic substrate was sampled
-relic_chan_benth_ins_raw_2019_2020 <- subset(
+relic_chan_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Relic Floodplain Channel" &
     Substrate == "Benthic" &
@@ -92,7 +106,7 @@ relic_chan_benth_ins_raw_2019_2020 <- subset(
     Stage == "P" | Treatment == "Relic Floodplain Channel" &
     Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
 )
-phase3_benth_ins_raw_2019_2020 <- subset(
+phase3_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Phase 3" &
     Origin == "Aquatic" &
@@ -103,7 +117,7 @@ phase3_benth_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" &
     Stage == "U"
 ) ##Only benthic substrate was sampled in Phase3
-phase4_benth_ins_raw_2019_2020 <- subset(
+phase4_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Phase 4" &
     Origin == "Aquatic" &
@@ -114,7 +128,7 @@ phase4_benth_ins_raw_2019_2020 <- subset(
     Origin == "Aquatic" &
     Stage == "U"
 ) ##Only benthic substrate was sampled in Phase4
-disturbed_wood_ins_raw_2019_2020 <- subset(
+disturbed_wood_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Disturbed" &
     Substrate == "Submerged Wood" &
@@ -126,7 +140,7 @@ disturbed_wood_ins_raw_2019_2020 <- subset(
     Substrate == "Submerged Wood" &
     Origin == "Aquatic" & Stage == "U"
 )
-relic_chan_wood_ins_raw_2019_2020 <- subset(
+relic_chan_wood_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Relic Floodplain Channel" &
     Substrate == "Submerged Wood" &
@@ -141,31 +155,40 @@ relic_chan_wood_ins_raw_2019_2020 <- subset(
 )
 
 ######################################################################
-### Pivot each sample site dataset by Stage & Biomass.
-### Sum the larvae, pupae, and unknown biomass estimates into a single
-### Biomass column.
+## Pivot wider each sample site dataset by Stage & Biomass.
+## Sum the larvae, pupae, and unknown biomass estimates into a single
+## column called "sumrow". Rename "sumrow" to "biomass".Delete columns
+## "L", "P", "U"
 ######################################################################
 library(tidyr)
+library(dplyr)
 
-disturbed_benth_ins_wider_by_stage <-
-  disturbed_benth_ins_raw_2019_2020 %>%
+disturbed_benth_wider_by_stage <-
+  disturbed_benth_raw_2019_2020 %>%
   pivot_wider(names_from = Stage,
               values_from = Biomass,
               values_fill = 0)
 
-disturbed_benth_ins_wider_summed_biomass <-
-  disturbed_benth_ins_wider_by_stage %>% mutate(sumrow = L + P + U)
+disturbed_benth_wider_summed_biomass <-
+  disturbed_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
 
-## To Do: remove the L,P,U columns and rename sumrow column to "Biomass",
-## and write code to do this to every subset
+disturbed_benth_wider_summed_biomass$biomass <-
+  disturbed_benth_wider_summed_biomass$sumrow
 
+disturbed_benth_wider_summed_biomass <-
+  disturbed_benth_wider_summed_biomass[, -c(11:14)]
+
+flood_forest_benth_raw_2019_2020
+relic_chan_benth_raw_2019_2020
+phase3_benth_raw_2019_2020
+phase4_benth_raw_2019_2020
+disturbed_wood_raw_2019_2020
+relic_chan_wood_raw_2019_2020
 
 ######################################################################
-### Restore the missing observations of zero biomass to Replicates
-######################################################################
-
-######################################################################
-### Pivots by the Replicate column, fills in the biomass values, replaces NA's
+## Restore the missing observations of zero biomass to Replicates
+##
+## Pivots by the Replicate column, fills in the biomass values, replaces NA's
 ## with zeroes
 ######################################################################
 
