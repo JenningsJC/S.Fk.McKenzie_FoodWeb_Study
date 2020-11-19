@@ -70,7 +70,7 @@ raw_data_trim_all_seasons_2019_2020 <-
 
 #####################################################################
 ## Subset by Treatment (Treatment = Site), Substrate (Benthic, Submerged Wood), 
-## Stage and Origin
+## Stage and Origin (exclude Adults)
 #####################################################################
 disturbed_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
@@ -93,7 +93,7 @@ flood_forest_benth_raw_2019_2020 <- subset(
     Stage == "P" | Treatment == "Flooded Forest" &
     Origin == "Aquatic" &
     Stage == "U"
-) ##Only benthic substrate was sampled
+) ##Only benthic substrate was sampled in flooded forest
 relic_chan_benth_raw_2019_2020 <- subset(
   raw_data_trim_all_seasons_2019_2020,
   Treatment == "Relic Floodplain Channel" &
@@ -282,26 +282,26 @@ relic_chan_wood_wider_summed_biomass <-
 ## with zeroes
 ######################################################################
 
-disturbed_benth_ins_wider<- disturbed_benth_ins_raw_2019_2020 %>%
-  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+disturbed_benth_wider_by_replicate<- disturbed_benth_wider_summed_biomass %>%
+  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-flood_forest_benth_ins_wider<- flood_forest_benth_ins_raw_2019_2020 %>%
-  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+flood_forest_benth_wider_by_replicate<- flood_forest_benth_wider_summed_biomass %>%
+  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-relic_chan_benth_ins_wider<- relic_chan_benth_ins_raw_2019_2020 %>%
-  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+relic_chan_benth_wider_by_replicate<- relic_chan_benth_wider_summed_biomass %>%
+  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-phase3_benth_ins_wider<- phase3_benth_ins_raw_2019_2020 %>%
-  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+phase3_benth_wider_by_replicate<- phase3_benth_wider_summed_biomass %>%
+  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-phase4_benth_ins_wider<- phase4_benth_ins_raw_2019_2020 %>%
-  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+phase4_benth_wider_by_replicate<- phase4_benth_wider_summed_biomass %>%
+  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-disturbed_wood_ins_wider<- disturbed_wood_ins_raw_2019_2020 %>%
-  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+disturbed_wood_wider_by_replicate<- disturbed_wood_wider_summed_biomass %>%
+  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-relic_chan_wood_ins_wider<- relic_chan_wood_ins_raw_2019_2020 %>%
-  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
+relic_chan_wood_wider_by_replicate<- relic_chan_wood_wider_summed_biomass %>%
+  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
 #######################################################################
 ### Pivots the individual replicate columns (1-5) back to long format, 
