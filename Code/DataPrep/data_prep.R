@@ -1,15 +1,17 @@
-#############################################################################
+###################################################################
 ## data_prep.R
 ## Reads in raw .csv files saved from DataRaw folder.
 ## Adds a column for "Season". 
 ## Rbinds all seasons together.
 ## Coerces "Date" column from factor to date.
 ## Removes columns not needed for calculating mean biomass/year.
-## Subsets by sample site("Treatment"),Substrate,
-## Origin(Aquatic only) & Stage (larvae & pupae). 
-## Restores missing observations of zero biomass by replicate, and season.
-## Saves prepped raw data as .csv files in DataClean folder.
-#############################################################################
+## Subsets by ,Substrate,
+## Origin(Aquatic only) & Stage = larvae, pupae, and 
+## unknown (because non-insect taxa are all stage=unkown). 
+## Restores missing observations of zero biomass by replicate, 
+## and season. Saves prepped raw data as .csv files
+##  in DataClean folder.
+###################################################################
 
 
 ###################################################################
@@ -57,8 +59,9 @@ raw_dat_allseasons_2019_2020 <-
 ## Coerce dates from factor to date in the "Date" column
 ####################################################################
 class(raw_dat_allseasons_2019_2020$Date)
-raw_dat_allseasons_2019_2020$Date <- as.Date(raw_dat_allseasons_2019_2020$Date, format =
-                                                 "%Y-%m-%d")
+raw_dat_allseasons_2019_2020$Date <-
+  as.Date(raw_dat_allseasons_2019_2020$Date, format =
+            "%Y-%m-%d")
 class(raw_dat_allseasons_2019_2020$Date)
 
 #####################################################################
@@ -75,106 +78,47 @@ write.csv(
 )
 
 #####################################################################
-## Subset by Substrate (Benthic, Submerged Wood) 
-## 
+## Subset by Substrate (Benthic, Submerged Wood), exclude non-aquatic,
+## exclude adult stage. Rationale = substrates have different sample
+## protocols
 #####################################################################
 
-disturbed_benth_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Disturbed" &
-    Substrate == "Benthic" &
+raw_benth_dat_allseasons_2019_2020 <- subset(
+  raw_dat_allseasons_2019_2020,
+  Substrate == "Benthic" &
     Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Disturbed" &
-    Substrate == "Benthic" &
-    Origin == "Aquatic" & Stage == "P" | Treatment == "Disturbed" &
-    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
-)
-
-
-
-disturbed_benth_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Disturbed" &
-    Substrate == "Benthic" &
+    Stage == "L" | Substrate == "Benthic" &
     Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Disturbed" &
-    Substrate == "Benthic" &
-    Origin == "Aquatic" & Stage == "P" | Treatment == "Disturbed" &
-    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
-)
-flood_forest_benth_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Flooded Forest" &
-    Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Flooded Forest" &
-    Origin == "Aquatic" &
-    Stage == "P" | Treatment == "Flooded Forest" &
+    Stage == "P" | Substrate == "Benthic" &
     Origin == "Aquatic" &
     Stage == "U"
-) ##Only benthic substrate was sampled in flooded forest
-relic_chan_benth_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Relic Floodplain Channel" &
-    Substrate == "Benthic" &
-    Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Relic Floodplain Channel" &
-    Substrate == "Benthic" &
-    Origin == "Aquatic" &
-    Stage == "P" | Treatment == "Relic Floodplain Channel" &
-    Substrate == "Benthic" & Origin == "Aquatic" & Stage == "U"
-)
-phase3_benth_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Phase 3" &
-    Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Phase 3" &
-    Origin == "Aquatic" &
-    Stage == "P" | Treatment == "Phase 3" &
-    Origin == "Aquatic" &
-    Stage == "U"
-) ##Only benthic substrate was sampled in Phase3
-phase4_benth_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Phase 4" &
-    Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Phase 4" &
-    Origin == "Aquatic" &
-    Stage == "P" | Treatment == "Phase 4" &
-    Origin == "Aquatic" &
-    Stage == "U"
-) ##Only benthic substrate was sampled in Phase4
-disturbed_wood_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Disturbed" &
-    Substrate == "Submerged Wood" &
-    Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Disturbed" &
-    Substrate == "Submerged Wood" &
-    Origin == "Aquatic" & Stage == "P" | Treatment == "Disturbed" &
-    Substrate == "Submerged Wood" &
-    Origin == "Aquatic" & Stage == "U"
-)
-relic_chan_wood_raw_2019_2020 <- subset(
-  raw_data_trim_all_seasons_2019_2020,
-  Treatment == "Relic Floodplain Channel" &
-    Substrate == "Submerged Wood" &
-    Origin == "Aquatic" &
-    Stage == "L" |
-    Treatment == "Relic Floodplain Channel" &
-    Substrate == "Submerged Wood" &
-    Origin == "Aquatic" &
-    Stage == "P" | Treatment == "Relic Floodplain Channel" &
-    Substrate == "Submerged Wood" &
-    Origin == "Aquatic" & Stage == "U"
+  
 )
 
+raw_wood_dat_allseasons_2019_2020 <- subset(
+  raw_dat_allseasons_2019_2020,
+  Substrate == "Submerged Wood" &
+    Origin == "Aquatic" &
+    Stage == "L" | Substrate == "Submerged Wood" &
+    Origin == "Aquatic" &
+    Stage == "P" | Substrate == "Submerged Wood" &
+    Origin == "Aquatic" &
+    Stage == "U"
+)
+
+## subset the rows excluded from above to make sure
+## the number of rows in all the subsets add up
+## to the number of rows in raw_dat_allseasons_2019_2020
+
+raw_terrestrial_dat_allseasons_2019_2020 <- subset(
+  raw_dat_allseasons_2019_2020,
+  Origin == "Terrestrial"
+)
+
+raw_adult_dat_allseasons_2019_2020 <- subset(
+  raw_dat_allseasons_2019_2020,
+  Stage == "A"
+)
 ######################################################################
 ## Pivot wider each sample site dataset by Stage & Biomass.
 ## Sum the larvae, pupae, and unknown biomass estimates into a single
