@@ -304,32 +304,32 @@ relic_chan_wood_wider_by_replicate<- relic_chan_wood_wider_summed_biomass %>%
   pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
 #######################################################################
-### Pivots the individual replicate columns (1-5) back to long format, 
-## putting them back into "Replicate" and "Biomass" columns
+## Pivots the individual replicate columns (1-5 for benthic, 1-3 for wood) 
+## back to long format, putting them back into "Replicate" and "Biomass" columns
 #######################################################################
-disturbed_benth_ins_longer<- disturbed_benth_ins_wider %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+disturbed_benth_zero_reps<- disturbed_benth_wider_by_replicate %>%
+  pivot_longer(names_to = "Replicate", values_to = "biomass", 10:14)
 
-flood_forest_benth_ins_longer<- flood_forest_benth_ins_wider %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+flood_forest_benth_zero_reps<- flood_forest_benth_wider_by_replicate %>%
+  pivot_longer(names_to = "Replicate", values_to = "biomass", 10:14)
 
-relic_chan_benth_ins_longer<- relic_chan_benth_ins_wider %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+relic_chan_benth_zero_reps<- relic_chan_benth_wider_by_replicate %>%
+  pivot_longer(names_to = "Replicate", values_to = "biomass", 10:14)
 
-phase3_benth_ins_longer<- phase3_benth_ins_wider %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+phase3_benth_zero_reps<- phase3_benth_wider_by_replicate %>%
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 10:14)
 
-phase4_benth_ins_longer<- phase4_benth_ins_wider %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:15)
+phase4_benth_zero_reps<- phase4_benth_wider_by_replicate %>%
+  pivot_longer(names_to = "Replicate", values_to = "biomass", 10:14)
 
-disturbed_wood_ins_longer<- disturbed_wood_ins_wider %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:13)
+disturbed_wood_zero_reps<- disturbed_wood_wider_by_replicate %>%
+  pivot_longer(names_to = "Replicate", values_to = "biomass", 10:12)
 
-relic_chan_wood_ins_longer<- relic_chan_wood_ins_wider %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 11:13)
+relic_chan_wood_zero_reps<- relic_chan_wood_wider_by_replicate %>%
+  pivot_longer(names_to = "Replicate", values_to = "biomass", 10:12)
 
 #######################################################################
-### By taxon, restore any missing seasons of replicates an fill w/zeroes
+### By taxon, restore any missing seasons of replicates and fill w/zeroes
 #######################################################################
 
 library(dplyr)
