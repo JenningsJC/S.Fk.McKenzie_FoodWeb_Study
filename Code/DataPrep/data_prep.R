@@ -196,11 +196,23 @@ flood_forest_benth_wider_summed_biomass <-
   flood_forest_benth_wider_summed_biomass[, -c(11:14)]
 
 ##relic channel benthic subset
+relic_chan_benth_wider_by_stage<-
+  relic_chan_benth_raw_2019_2020 %>%
+  pivot_wider(names_from = Stage,
+              values_from = Biomass,
+              values_fill = 0)
+
+relic_chan_benth_wider_summed_biomass <-
+  relic_chan_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
+
+relic_chan_benth_wider_summed_biomass$biomass <-
+  relic_chan_benth_wider_summed_biomass$sumrow
+
+relic_chan_benth_wider_summed_biomass <-
+  relic_chan_benth_wider_summed_biomass[, -c(11:14)]
 
 
 
-
-relic_chan_benth_raw_2019_2020
 phase3_benth_raw_2019_2020
 phase4_benth_raw_2019_2020
 disturbed_wood_raw_2019_2020
