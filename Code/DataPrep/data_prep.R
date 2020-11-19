@@ -211,10 +211,40 @@ relic_chan_benth_wider_summed_biomass$biomass <-
 relic_chan_benth_wider_summed_biomass <-
   relic_chan_benth_wider_summed_biomass[, -c(11:14)]
 
+##phase 3 benthic subset
+phase3_benth_wider_by_stage<-
+  phase3_benth_raw_2019_2020 %>%
+  pivot_wider(names_from = Stage,
+              values_from = Biomass,
+              values_fill = 0)
 
+phase3_benth_wider_summed_biomass <-
+  phase3_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
 
-phase3_benth_raw_2019_2020
-phase4_benth_raw_2019_2020
+phase3_benth_wider_summed_biomass$biomass <-
+  phase3_benth_wider_summed_biomass$sumrow
+
+phase3_benth_wider_summed_biomass <-
+  phase3_benth_wider_summed_biomass[, -c(11:14)]
+
+##phase 4 benthic subset
+phase4_benth_wider_by_stage<-
+  phase4_benth_raw_2019_2020 %>%
+  pivot_wider(names_from = Stage,
+              values_from = Biomass,
+              values_fill = 0)
+
+phase4_benth_wider_summed_biomass <-
+  phase4_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
+
+phase4_benth_wider_summed_biomass$biomass <-
+  phase4_benth_wider_summed_biomass$sumrow
+
+phase4_benth_wider_summed_biomass <-
+  phase4_benth_wider_summed_biomass[, -c(11:14)]
+
+##disturbed wood subset
+
 disturbed_wood_raw_2019_2020
 relic_chan_wood_raw_2019_2020
 
