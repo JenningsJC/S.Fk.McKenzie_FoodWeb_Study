@@ -119,6 +119,7 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
   raw_dat_allseasons_2019_2020,
   Stage == "A"
 )
+
 ######################################################################
 ## Pivot wider each sample site dataset by Stage & Biomass.
 ## Sum the larvae, pupae, and unknown biomass estimates into a single
