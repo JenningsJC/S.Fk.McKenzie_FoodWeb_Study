@@ -33,6 +33,6 @@ library(splitstackshape)
 
 stratified(
   dummy_benth_clean,
-  c("taxon", "season", "biomass"), 5 ,
+  c("taxon", "season", "biomass"), 1 ,
   replace = TRUE
 )
