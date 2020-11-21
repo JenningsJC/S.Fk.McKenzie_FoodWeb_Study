@@ -26,5 +26,6 @@ tapply(
   mean
 )
 
+install.packages("splitstackshape")
 #take a stratified sample grouped by character vector of column names
 stratified(dummy_benth_clean, )
