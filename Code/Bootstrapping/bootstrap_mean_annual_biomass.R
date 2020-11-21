@@ -26,6 +26,13 @@ tapply(
   mean
 )
 
-install.packages("splitstackshape")
 #take a stratified sample grouped by character vector of column names
-stratified(dummy_benth_clean, )
+
+install.packages("splitstackshape")
+library(splitstackshape)
+
+stratified(
+  dummy_benth_clean,
+  c("taxon", "season", "biomass"), 5 ,
+  replace = TRUE
+)
