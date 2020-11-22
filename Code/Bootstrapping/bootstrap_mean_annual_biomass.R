@@ -51,6 +51,7 @@ class(means)
 ## rbind into dataframe
 ##################################################################
 
+biomass_list <- list()
 means_list <- list()
 for(i in 1:3) {
   random_sample<- stratified(
@@ -58,7 +59,8 @@ for(i in 1:3) {
     c("taxon", "season", "biomass"), 1 ,
     replace = TRUE
     )
-
+  biomass_list[[i]] <- random_sample
+  
   means<- tapply(
     random_sample$biomass,
     list(random_sample$taxon),
@@ -68,3 +70,4 @@ for(i in 1:3) {
 }
 
 boot_means <- do.call(rbind, means_list)
+boot_bios <- do.call(cbind, biomass_list)
