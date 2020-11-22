@@ -40,22 +40,31 @@ boot_sample <- stratified(dummy_benth_clean,
 ## seasonal replicates
 ##################################################################
 
-tapply(
+means<- tapply(
   boot_sample$biomass,
   list(boot_sample$taxon),
   mean
 )
-
+class(means)
 ##################################################################
-## apply stratified() in a loop
+## apply stratified() and tapply()in a loop, output as a list,
+## rbind into dataframe
 ##################################################################
 
-boot_sample <- data.frame()
-for(i in 1:4) {
-  Y<- stratified(
+means_list <- list()
+for(i in 1:3) {
+  random_sample<- stratified(
     dummy_benth_clean,
     c("taxon", "season", "biomass"), 1 ,
     replace = TRUE
-  )
+    )
 
+  means<- tapply(
+    random_sample$biomass,
+    list(random_sample$taxon),
+    mean
+  )
+  means_list[[i]] <- means
 }
+
+boot_means <- do.call(rbind, means_list)
