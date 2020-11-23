@@ -53,21 +53,21 @@ class(means)
 
 biomass_list <- list()
 means_list <- list()
-for(i in 1:3) {
-  random_sample<- stratified(
-    dummy_benth_clean,
-    c("taxon", "season", "biomass"), 1 ,
-    replace = TRUE
-    )
+for (i in 1:3) {
+  random_sample <- stratified(dummy_benth_clean,
+                              c("taxon", "season", "biomass"),
+                              1 ,
+                              replace = TRUE)
   biomass_list[[i]] <- random_sample
   
-  means<- tapply(
-    random_sample$biomass,
-    list(random_sample$taxon),
-    mean
-  )
+  means <- tapply(random_sample$biomass,
+                  list(random_sample$taxon),
+                  mean)
   means_list[[i]] <- means
 }
 
 boot_means <- do.call(rbind, means_list)
-boot_bios <- do.call(cbind, biomass_list)
+boot_bios <- do.call(rbind, biomass_list)
+library(purrr)
+bio_df <- biomass_list %>%
+  reduce(left_join, by = c("site", "taxon", "season"))
