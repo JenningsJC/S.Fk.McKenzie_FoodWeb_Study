@@ -39,6 +39,8 @@ for (i in 1:5) {
 }
 
 boot_means <- do.call(rbind, means_list)
+boot_annual_means <- as.data.frame(boot_means)
+write.csv(boot_annual_means, "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distro_annual_means.csv", row.names = T )
 
 bio_df <- biomass_list %>%
   reduce(left_join, by = c("site", "taxon", "season"))
