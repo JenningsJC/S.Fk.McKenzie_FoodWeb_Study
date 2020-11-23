@@ -40,7 +40,7 @@ print(random_sample)
 means <- tapply(random_sample$biomass,
                   list(random_sample$taxon),
                   mean)
-print(mean)
+print(means)
 ```
 ## 4. Looping the functions across the raw data frame
 - placing both functions inside a "for loop" allows the user to iterate these operations "n" number of times ("for i in 1:n")
