@@ -38,9 +38,17 @@ for (i in 1:5) {
   means_list[[i]] <- means
 }
 
-boot_means <- do.call(rbind, means_list)
-boot_annual_means <- as.data.frame(boot_means)
-write.csv(boot_annual_means, "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distro_annual_means.csv", row.names = T )
+annual_means <- do.call(rbind, means_list)
+annual_benth_means <- as.data.frame(annual_means)
+write.csv(annual_benth_means, "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distro_annual_means.csv", row.names = T )
 
 bio_df <- biomass_list %>%
   reduce(left_join, by = c("site", "taxon", "season"))
+
+####################################################################
+## compute mean and 95% CI of bootstrap distribution of means
+####################################################################
+
+boot_means <- tapply(random_sample$biomass,
+                list(random_sample$taxon),
+                mean)
