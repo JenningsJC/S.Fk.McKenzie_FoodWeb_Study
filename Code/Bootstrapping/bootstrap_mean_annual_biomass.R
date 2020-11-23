@@ -11,37 +11,13 @@ install.packages("splitstackshape")
 library(splitstackshape)
 library(dplyr)
 library(tidyr)
-
+library(purrr)
 
 dummy_benth_clean <-
   read.csv(
     "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean.csv"
   )
 
-
-##################################################################
-## take a stratified random sample, grouped by character vector of 
-## specified columns
-##################################################################
-
-install.packages("splitstackshape")
-library(splitstackshape)
-
-boot_sample <- stratified(dummy_benth_clean,
-                          c("taxon", "season", "biomass"), 1 ,
-                          replace = TRUE)
-
-##################################################################
-## Calculate mean annual biomass for each taxon, from random samples of
-## seasonal replicates
-##################################################################
-
-means<- tapply(
-  boot_sample$biomass,
-  list(boot_sample$taxon),
-  mean
-)
-class(means)
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
 ## rbind into dataframe
@@ -49,7 +25,7 @@ class(means)
 
 biomass_list <- list()
 means_list <- list()
-for (i in 1:3) {
+for (i in 1:5) {
   random_sample <- stratified(dummy_benth_clean,
                               c("taxon", "season", "biomass"),
                               1 ,
@@ -63,7 +39,6 @@ for (i in 1:3) {
 }
 
 boot_means <- do.call(rbind, means_list)
-boot_bios <- do.call(rbind, biomass_list)
-library(purrr)
+
 bio_df <- biomass_list %>%
   reduce(left_join, by = c("site", "taxon", "season"))
