@@ -18,11 +18,6 @@ dummy_benth_clean <-
     "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean.csv"
   )
 
-
-
-dummy_benth_clean_wider<- dummy_benth_clean %>%
-  pivot_wider(names_from = season, values_from = biomass)
-
 ##################################################################
 ## take a stratified random sample, grouped by character vector of 
 ## specified columns
