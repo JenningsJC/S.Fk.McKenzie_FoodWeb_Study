@@ -46,7 +46,7 @@ bio_boot_samples <- biomass_list %>%
   reduce(left_join, by = c("site", "taxon", "season"))
 
 ####################################################################
-## compute mean and 95% CI of bootstrap distribution of means
+## compute mean and 95% CI of bootstrap distribution of annual means
 ####################################################################
 
 boot_means <- apply(annual_benth_means, 2, mean)
