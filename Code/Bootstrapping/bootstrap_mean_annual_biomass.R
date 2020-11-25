@@ -51,6 +51,6 @@ bio_boot_samples <- biomass_list %>%
 
 boot_means <- apply(annual_benth_means, 2, mean)
 means_of_bootdistro_of_means <- as.data.frame(boot_means)
+quants <- c(0.975, 0.025)
+quants_of_bootdistro_of_means <- apply(annual_benth_means , 2 , quantile , probs = quants)
 
-quantile(annual_benth_means$column, probs = 0.975)
-quantile(annual_benth_means$column, probs = 0.025)
