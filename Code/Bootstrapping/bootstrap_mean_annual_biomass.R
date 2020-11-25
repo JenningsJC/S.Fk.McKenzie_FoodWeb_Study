@@ -40,7 +40,11 @@ for (i in 1:5) {
 
 annual_means <- do.call(rbind, means_list)
 annual_benth_means <- as.data.frame(annual_means)
-write.csv(annual_benth_means, "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distro_annual_means.csv", row.names = T )
+write.csv(
+  annual_benth_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distro_annual_means.csv",
+  row.names = T
+)
 
 bio_boot_samples <- biomass_list %>%
   reduce(left_join, by = c("site", "taxon", "season"))
@@ -52,5 +56,6 @@ bio_boot_samples <- biomass_list %>%
 boot_means <- apply(annual_benth_means, 2, mean)
 means_of_bootdistro_of_means <- as.data.frame(boot_means)
 quants <- c(0.975, 0.025)
-quants_of_bootdistro_of_means <- apply(annual_benth_means , 2 , quantile , probs = quants)
+quants_of_bootdistro_of_means <-
+  apply(annual_benth_means , 2 , quantile , probs = quants)
 
