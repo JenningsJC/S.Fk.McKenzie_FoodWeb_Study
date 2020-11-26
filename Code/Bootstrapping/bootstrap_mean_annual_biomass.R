@@ -18,6 +18,11 @@ dummy_benth_clean2 <-
     "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean2.csv"
   )
 
+dummy_benth_clean3 <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean3.csv"
+  )
+
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
 ## rbind into dataframe
@@ -26,7 +31,7 @@ dummy_benth_clean2 <-
 biomass_list <- list()
 means_list <- list()
 for (i in 1:5) {
-  random_sample <- stratified(dummy_benth_clean2,
+  random_sample <- stratified(dummy_benth_clean3,
                               c("taxon", "season"),
                               1 ,
                               replace = TRUE)
@@ -42,7 +47,7 @@ annual_means <- do.call(rbind, means_list)
 annual_benth_means <- as.data.frame(annual_means)
 write.csv(
   annual_benth_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distrib_annual_mean_biomasses.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distrib_annual_mean_biomasses2.csv",
   row.names = T
 )
 
@@ -66,12 +71,12 @@ quants_of_bootdistro_of_means <-
 
 write.csv(
   means_of_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistrib_of_annual_mean_biomasses.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistrib_of_annual_mean_biomasses2.csv",
   row.names = T
 )
 
 write.csv(
   quants_of_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_quantiles_of_bootdistrib_of_annual_mean_biomasses.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_quantiles_of_bootdistrib_of_annual_mean_biomasses2.csv",
   row.names = T
 )
