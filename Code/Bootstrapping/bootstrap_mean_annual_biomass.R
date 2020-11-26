@@ -59,3 +59,19 @@ quants <- c(0.975, 0.025)
 quants_of_bootdistro_of_means <-
   apply(annual_benth_means , 2 , quantile , probs = quants)
 
+####################################################################
+## Write tables of means and 95%CI's of bootstrap distribution of 
+## annual means to csv files in DataDerived folder
+####################################################################
+
+write.csv(
+  means_of_bootdistro_of_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistribution_of_means.csv",
+  row.names = T
+)
+
+write.csv(
+  quants_of_bootdistro_of_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_quantiles_of_bootdistribution_of_means.csv",
+  row.names = T
+)
