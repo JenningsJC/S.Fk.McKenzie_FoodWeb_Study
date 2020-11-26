@@ -72,11 +72,11 @@ quants_of_bootdistro_of_means <-
 write.csv(
   means_of_bootdistro_of_means,
   "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistrib_of_annual_mean_biomasses2.csv",
-  row.names = T
+  row.names = F
 )
 
 write.csv(
   quants_of_bootdistro_of_means,
   "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_quantiles_of_bootdistrib_of_annual_mean_biomasses2.csv",
-  row.names = T
+  row.names = F
 )
