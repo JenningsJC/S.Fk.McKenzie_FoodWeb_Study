@@ -20,6 +20,7 @@ boot_dist_annualbiomass2 <- subset(boot_dist_annualbiomass2, select = -c(X))
 site <- rep("bravo", nrow(boot_dist_annualbiomass2))
 boot_dist_annualbiomass2$site <- cbind(site)
 
+par(mfcol,c(5,3))
 boxplot(
   boot_dist_annualbiomass1,
   boot_dist_annualbiomass2,
