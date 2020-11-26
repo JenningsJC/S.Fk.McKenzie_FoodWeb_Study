@@ -42,7 +42,7 @@ annual_means <- do.call(rbind, means_list)
 annual_benth_means <- as.data.frame(annual_means)
 write.csv(
   annual_benth_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distro_annual_means.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distrib_annual_mean_biomasses.csv",
   row.names = T
 )
 
@@ -66,12 +66,12 @@ quants_of_bootdistro_of_means <-
 
 write.csv(
   means_of_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistribution_of_means.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistrib_of_annual_mean_biomasses.csv",
   row.names = T
 )
 
 write.csv(
   quants_of_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_quantiles_of_bootdistribution_of_means.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_quantiles_of_bootdistrib_of_annual_mean_biomasses.csv",
   row.names = T
 )
