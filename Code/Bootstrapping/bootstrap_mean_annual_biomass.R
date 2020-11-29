@@ -54,6 +54,10 @@ write.csv(
   row.names = F
 )
 
+####################################################################
+## combine list of bootstrap sample sets into single object, save
+## for inspection and error checking
+####################################################################
 
 bio_boot_samples <- biomass_list %>%
   reduce(left_join, by = c("site", "taxon", "season"))
