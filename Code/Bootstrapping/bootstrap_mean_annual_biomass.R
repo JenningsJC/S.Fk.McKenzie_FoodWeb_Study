@@ -20,7 +20,7 @@ dummy_benth_clean2 <-
 head(dummy_benth_clean2)
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
-## rbind into dataframe
+## 
 ##################################################################
 
 biomass_list <- list()
@@ -37,6 +37,9 @@ for (i in 1:5) {
                   mean)
   means_list[[i]] <- means
 }
+###################################################################
+## rbind output list of means, coerce into dataframe
+###################################################################
 
 annual_means <- do.call(rbind, means_list)
 annual_benth_means <- as.data.frame(annual_means)
