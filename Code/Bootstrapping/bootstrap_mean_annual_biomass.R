@@ -17,12 +17,7 @@ dummy_benth_clean2 <-
   read.csv(
     "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean2.csv"
   )
-
-dummy_benth_clean3 <-
-  read.csv(
-    "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean3.csv"
-  )
-
+head(dummy_benth_clean2)
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
 ## rbind into dataframe
@@ -31,7 +26,7 @@ dummy_benth_clean3 <-
 biomass_list <- list()
 means_list <- list()
 for (i in 1:5) {
-  random_sample <- stratified(dummy_benth_clean3,
+  random_sample <- stratified(dummy_benth_clean2,
                               c("taxon", "season"),
                               1 ,
                               replace = TRUE)
