@@ -38,16 +38,22 @@ for (i in 1:5) {
   means_list[[i]] <- means
 }
 ###################################################################
-## rbind output list of means, coerce into dataframe
+## rbind output list of means, coerce into dataframe, 
+## add a column named "site", write to csv
 ###################################################################
 
 annual_means <- do.call(rbind, means_list)
 annual_benth_means <- as.data.frame(annual_means)
+
+site <- rep("alpha", nrow(annual_benth_means))
+annual_benth_means$site <- cbind(site)
+
 write.csv(
   annual_benth_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distrib_annual_mean_biomasses2.csv",
-  row.names = T
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_bootdistr_annual_means_alpha.csv",
+  row.names = F
 )
+
 
 bio_boot_samples <- biomass_list %>%
   reduce(left_join, by = c("site", "taxon", "season"))
