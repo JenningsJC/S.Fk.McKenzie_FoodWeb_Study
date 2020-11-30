@@ -18,7 +18,7 @@ dummy_benth_clean3 <-
   read.csv(
     "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean3.csv"
   )
-head(dummy_benth_clean2)
+
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
 ## 
