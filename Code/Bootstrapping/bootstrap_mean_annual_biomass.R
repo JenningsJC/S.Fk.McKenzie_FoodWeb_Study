@@ -101,14 +101,26 @@ means_of_bootdistro_of_means <-
   means_of_bootdistro_of_means %>%
   rename(mean = boot_means
   )
+## extract each list of bounds, remove "quantiles" column, pivot longer,
+## and merge with means_of_bootdistro_of_means to make single table
+
+upper_quant <- (subset(quants_of_bootdistro_of_means, quantiles == "97.5%") )
+upper_quant <- upper_quant[, -c(1)]
+
+lower_quant <- (subset(quants_of_bootdistro_of_means, quantiles == "2.5%") )
+lower_quant <- lower_quant[, -c(1)]
+
+upper_quant <- pivot_longer(upper_quant,1:3, names_to = "taxon", values_to = "97.5")
+lower_quant <- pivot_longer(lower_quant,1:3, names_to = "taxon", values_to = "2.5")
+
+mean_quant_bootdistro_of_means <- merge(means_of_bootdistro_of_means, upper_quant)
+mean_quant_bootdistro_of_means <- merge(mean_quant_bootdistro_of_means, lower_quant)
+
+## write the single table containing means and quantiles to  csv
+
 write.csv(
-  means_of_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistrib_of_annual_mean_biomasses2.csv",
+  mean_quant_bootdistro_of_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_alpha.csv",
   row.names = F
 )
 
-write.csv(
-  quants_of_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_quantiles_of_bootdistrib_of_annual_mean_biomasses2.csv",
-  row.names = F
-)
