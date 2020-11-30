@@ -75,6 +75,12 @@ quants_of_bootdistro_of_means <-
   apply(annual_means , 2 , quantile , probs = quants)
 quants_of_bootdistro_of_means <- as.data.frame(quants_of_bootdistro_of_means)
 
+####################################################################
+## Create tables of means and 95%CI's of bootstrap distribution of 
+## annual means. Combine into one. Write to csv file in 
+## DataDerived folder
+####################################################################
+
 ## add the quantile rownames as a column and rename "quantiles"
 quants_of_bootdistro_of_means <-
   rownames_to_column(quants_of_bootdistro_of_means, var = "rowname")
@@ -95,13 +101,6 @@ means_of_bootdistro_of_means <-
   means_of_bootdistro_of_means %>%
   rename(mean = boot_means
   )
-
-wide <- pivot_longer(quants_of_bootdistro_of_means, 1:4)
-####################################################################
-## Write tables of means and 95%CI's of bootstrap distribution of 
-## annual means to csv files in DataDerived folder
-####################################################################
-
 write.csv(
   means_of_bootdistro_of_means,
   "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_means_of_bootdistrib_of_annual_mean_biomasses2.csv",
