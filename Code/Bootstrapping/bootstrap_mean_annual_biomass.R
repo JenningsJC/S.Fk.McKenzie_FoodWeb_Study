@@ -14,9 +14,9 @@ library(tidyr)
 library(purrr)
 library(tibble)
 
-dummy_benth_clean2 <-
+dummy_benth_clean3 <-
   read.csv(
-    "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean2.csv"
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean3.csv"
   )
 head(dummy_benth_clean2)
 ##################################################################
@@ -27,7 +27,7 @@ head(dummy_benth_clean2)
 biomass_list <- list()
 means_list <- list()
 for (i in 1:5) {
-  random_sample <- stratified(dummy_benth_clean2,
+  random_sample <- stratified(dummy_benth_clean3,
                               c("taxon", "season"),
                               1 ,
                               replace = TRUE)
@@ -46,17 +46,17 @@ for (i in 1:5) {
 annual_means <- do.call(rbind, means_list)
 annual_benth_means <- as.data.frame(annual_means)
 
-site <- rep("alpha", nrow(annual_benth_means))
+site <- rep("bravo", nrow(annual_benth_means))
 annual_benth_means$site <- cbind(site)
 
 write.csv(
   annual_benth_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_bootdistr_annual_means_alpha.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_bootdistr_annual_means_bravo.csv",
   row.names = F
 )
 
 ####################################################################
-## combine list of bootstrap sample sets into single object, save
+## combine list of bootstrap sample sets into single dataframe
 ## for inspection and error checking
 ####################################################################
 
@@ -120,7 +120,7 @@ mean_quant_bootdistro_of_means <- merge(mean_quant_bootdistro_of_means, lower_qu
 
 write.csv(
   mean_quant_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_alpha.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_bravo.csv",
   row.names = F
 )
 
