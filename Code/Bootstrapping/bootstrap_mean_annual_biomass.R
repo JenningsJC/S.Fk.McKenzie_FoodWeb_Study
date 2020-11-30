@@ -73,7 +73,8 @@ means_of_bootdistro_of_means <- as.data.frame(boot_means)
 quants <- c(0.975, 0.025)
 quants_of_bootdistro_of_means <-
   apply(annual_means , 2 , quantile , probs = quants)
-quants_of_bootdistro_of_means <- as.data.frame(quants_of_bootdistro_of_means)
+quants_of_bootdistro_of_means <-
+  as.data.frame(quants_of_bootdistro_of_means)
 
 ####################################################################
 ## Create tables of means and 95%CI's of bootstrap distribution of 
@@ -104,17 +105,23 @@ means_of_bootdistro_of_means <-
 ## extract each list of bounds, remove "quantiles" column, pivot longer,
 ## and merge with means_of_bootdistro_of_means to make single table
 
-upper_quant <- (subset(quants_of_bootdistro_of_means, quantiles == "97.5%") )
-upper_quant <- upper_quant[, -c(1)]
+upper_quant <-
+  (subset(quants_of_bootdistro_of_means, quantiles == "97.5%"))
+upper_quant <- upper_quant[,-c(1)]
 
-lower_quant <- (subset(quants_of_bootdistro_of_means, quantiles == "2.5%") )
-lower_quant <- lower_quant[, -c(1)]
+lower_quant <-
+  (subset(quants_of_bootdistro_of_means, quantiles == "2.5%"))
+lower_quant <- lower_quant[,-c(1)]
 
-upper_quant <- pivot_longer(upper_quant,1:3, names_to = "taxon", values_to = "97.5")
-lower_quant <- pivot_longer(lower_quant,1:3, names_to = "taxon", values_to = "2.5")
+upper_quant <-
+  pivot_longer(upper_quant, 1:3, names_to = "taxon", values_to = "97.5")
+lower_quant <-
+  pivot_longer(lower_quant, 1:3, names_to = "taxon", values_to = "2.5")
 
-mean_quant_bootdistro_of_means <- merge(means_of_bootdistro_of_means, upper_quant)
-mean_quant_bootdistro_of_means <- merge(mean_quant_bootdistro_of_means, lower_quant)
+mean_quant_bootdistro_of_means <-
+  merge(means_of_bootdistro_of_means, upper_quant)
+mean_quant_bootdistro_of_means <-
+  merge(mean_quant_bootdistro_of_means, lower_quant)
 
 ## write the single table containing means and quantiles to  csv
 
