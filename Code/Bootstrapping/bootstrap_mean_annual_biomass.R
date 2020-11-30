@@ -12,6 +12,7 @@ library(splitstackshape)
 library(dplyr)
 library(tidyr)
 library(purrr)
+library(tibble)
 
 dummy_benth_clean2 <-
   read.csv(
@@ -66,12 +67,17 @@ bio_boot_samples <- biomass_list %>%
 ## compute mean and 95% CI of bootstrap distribution of annual means
 ####################################################################
 
-boot_means <- apply(annual_benth_means, 2, mean)
+boot_means <- apply(annual_means, 2, mean)
 means_of_bootdistro_of_means <- as.data.frame(boot_means)
+
 quants <- c(0.975, 0.025)
 quants_of_bootdistro_of_means <-
-  apply(annual_benth_means , 2 , quantile , probs = quants)
+  apply(annual_means , 2 , quantile , probs = quants)
+quants_of_bootdistro_of_means <- as.data.frame(quants_of_bootdistro_of_means)
+## add a column of rownames to pivot by
+quants_of_bootdistro_of_means <- rownames_to_column(quants_of_bootdistro_of_means, var = "rowname")
 
+long <- pivot_longer(quants_of_bootdistro_of_means, 0)
 ####################################################################
 ## Write tables of means and 95%CI's of bootstrap distribution of 
 ## annual means to csv files in DataDerived folder
