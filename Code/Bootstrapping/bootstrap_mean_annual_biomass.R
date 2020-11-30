@@ -75,7 +75,7 @@ quants_of_bootdistro_of_means <-
   apply(annual_means , 2 , quantile , probs = quants)
 quants_of_bootdistro_of_means <- as.data.frame(quants_of_bootdistro_of_means)
 
-## add a column of rownames to pivot by, and rename "quantiles"
+## add the quantile rownames as a column and rename "quantiles"
 quants_of_bootdistro_of_means <-
   rownames_to_column(quants_of_bootdistro_of_means, var = "rowname")
 quants_of_bootdistro_of_means <-
@@ -83,7 +83,20 @@ quants_of_bootdistro_of_means <-
   rename(quantiles = rowname
   )
 
-long <- pivot_longer(quants_of_bootdistro_of_means, )
+## add the bootmeans rownames as a column and rename "taxon"
+means_of_bootdistro_of_means <-
+  rownames_to_column(means_of_bootdistro_of_means, var = "rowname")
+means_of_bootdistro_of_means <-
+  means_of_bootdistro_of_means %>%
+  rename(taxon = rowname
+  )
+## rename boot_mean column to means
+means_of_bootdistro_of_means <-
+  means_of_bootdistro_of_means %>%
+  rename(mean = boot_means
+  )
+
+wide <- pivot_longer(quants_of_bootdistro_of_means, 1:4)
 ####################################################################
 ## Write tables of means and 95%CI's of bootstrap distribution of 
 ## annual means to csv files in DataDerived folder
