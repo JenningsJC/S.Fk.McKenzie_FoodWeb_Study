@@ -102,7 +102,19 @@ boot_means_quants_alpha_bravo <- rbind(boot_means_quants_alpha, boot_means_quant
 ## coerce "site" column from characters to factors
 boot_means_quants_alpha_bravo$site <- as.factor(boot_means_quants_alpha_bravo$site)
 
+##rename quantile columns
+boot_means_quants_alpha_bravo <- boot_means_quants_alpha_bravo %>%
+  rename("97.5" = X97.5,
+         "2.5" = X2.5)
 #########################################################
 ## make tables of means % 95% CI's of bootstrap
 ## distributions of means by taxon and site
 #########################################################
+table1 <- gt(data = boot_means_quants_alpha_bravo)
+table1
+table1 <- table1 %>%
+  tab_header(
+    title = "Estimated Annual Mean Biomass w/ 95% Confidence Intervals",
+    subtitle = "By Taxon & Sample Site (mg/m^2)"
+  )
+table1
