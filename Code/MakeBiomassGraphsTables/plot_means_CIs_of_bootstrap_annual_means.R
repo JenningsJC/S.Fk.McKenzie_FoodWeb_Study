@@ -1,5 +1,5 @@
 ###############################################################
-##  Plot bootstrap distribution of estimated
+##  Graph boxplots of bootstrap distributions of estimated
 ##  mean annual biomasses by taxa and site.
 ##  Make tables of means and confidence intervals.
 ###############################################################
