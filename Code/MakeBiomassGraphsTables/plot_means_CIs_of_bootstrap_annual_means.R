@@ -78,10 +78,10 @@ plot3 + stat_summary(
   shape = 1,
   size = 3
 )
-#########################################################
-## make tables of means % 95% CI's of bootstrap
-## distributions of means by taxon and site
-#########################################################
+#####################################################
+## Prep mean and quantile data for graphing
+## tables
+#####################################################
 install.packages('gt')
 library(gt)
 
@@ -96,3 +96,9 @@ boot_means_quants_bravo <- read.csv(
 )
 site <- rep("bravo", nrow(boot_means_quants_bravo))
 boot_means_quants_bravo$site <- cbind(site)
+
+
+#########################################################
+## make tables of means % 95% CI's of bootstrap
+## distributions of means by taxon and site
+#########################################################
