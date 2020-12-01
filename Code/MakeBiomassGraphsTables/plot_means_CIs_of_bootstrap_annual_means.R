@@ -6,19 +6,16 @@ rm(list = ls())
 
 library(ggplot2)
 
-boot_dist_annualbiomass1 <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distrib_annual_mean_biomasses2.csv"
+boot_dist_annl_bioms_alpha <- read.csv(
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distr_annual_means_alpha.csv"
 )
-boot_dist_annualbiomass1 <- subset(boot_dist_annualbiomass1, select = -c(X))
-site <- rep("alpha", nrow(boot_dist_annualbiomass1))
-boot_dist_annualbiomass1$site <- cbind(site)
+
+
 
 boot_dist_annualbiomass2 <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distrib_annual_mean_biomasses3.csv"
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_boot_distr_annual_means_bravo.csv"
 )
-boot_dist_annualbiomass2 <- subset(boot_dist_annualbiomass2, select = -c(X))
-site <- rep("bravo", nrow(boot_dist_annualbiomass2))
-boot_dist_annualbiomass2$site <- cbind(site)
+
 
 par(mfcol,c(5,3))
 boxplot(
