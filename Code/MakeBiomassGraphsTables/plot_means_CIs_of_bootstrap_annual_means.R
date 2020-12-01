@@ -18,8 +18,13 @@ boot_dist_annl_bioms_bravo <- read.csv(
 
 ## prep means data for boxplotting by pivoting longer
 boot_dist_alpha_long <- pivot_longer(boot_dist_annl_bioms_alpha, 1:3, names_to = "taxon", values_to = "means")
+
+boot_dist_bravo_long <- pivot_longer(boot_dist_annl_bioms_bravo, 1:3, names_to = "taxon", values_to = "means")
+
 ## coerce "taxon" column from characters to factors
 boot_dist_alpha_long$taxon <- as.factor(boot_dist_alpha_long$taxon)
+
+boot_dist_bravo_long$taxon <- as.factor(boot_dist_bravo_long$taxon)
 
 ## create boxplots of boot distributions of annual means
 plot1 <- ggplot(boot_dist_alpha_long, aes(x=taxon, y=means, color=taxon)) + geom_boxplot()
