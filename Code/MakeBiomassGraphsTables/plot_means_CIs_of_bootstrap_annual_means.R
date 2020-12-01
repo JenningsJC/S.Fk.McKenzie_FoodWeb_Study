@@ -78,3 +78,21 @@ plot3 + stat_summary(
   shape = 1,
   size = 3
 )
+#########################################################
+## make tables of means % 95% CI's of bootstrap
+## distributions of means by taxon and site
+#########################################################
+install.packages('gt')
+library(gt)
+
+boot_means_quants_alpha <- read.csv(
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_alpha.csv"
+)
+site <- rep("alpha", nrow(boot_means_quants_alpha))
+boot_means_quants_alpha$site <- cbind(site)
+
+boot_means_quants_bravo <- read.csv(
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_bravo.csv"
+)
+site <- rep("bravo", nrow(boot_means_quants_bravo))
+boot_means_quants_bravo$site <- cbind(site)
