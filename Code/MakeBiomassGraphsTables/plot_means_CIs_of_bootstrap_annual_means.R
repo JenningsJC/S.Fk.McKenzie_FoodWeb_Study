@@ -97,6 +97,10 @@ boot_means_quants_bravo <- read.csv(
 site <- rep("bravo", nrow(boot_means_quants_bravo))
 boot_means_quants_bravo$site <- cbind(site)
 
+boot_means_quants_alpha_bravo <- rbind(boot_means_quants_alpha, boot_means_quants_bravo)
+
+## coerce "site" column from characters to factors
+boot_means_quants_alpha_bravo$site <- as.factor(boot_means_quants_alpha_bravo$site)
 
 #########################################################
 ## make tables of means % 95% CI's of bootstrap
