@@ -1,6 +1,7 @@
 ###############################################################
-##  Plot means and 95% CI's of bootstrap distribution of estimated
-##  mean annual biomasses
+##  Plot bootstrap distribution of estimated
+##  mean annual biomasses by taxa and site.
+##  Make tables of means and confidence intervals.
 ###############################################################
 rm(list = ls())
 
