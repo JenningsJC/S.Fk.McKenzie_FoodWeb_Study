@@ -26,7 +26,15 @@ boot_dist_alpha_long$taxon <- as.factor(boot_dist_alpha_long$taxon)
 
 boot_dist_bravo_long$taxon <- as.factor(boot_dist_bravo_long$taxon)
 
-## create boxplots of boot distributions of annual means
+## create boxplots of boot distributions of annual means for each site, by taxon
 plot1 <- ggplot(boot_dist_alpha_long, aes(x=taxon, y=means, color=taxon)) + geom_boxplot()
 plot1 + stat_summary(fun=mean, geom="point", shape=1, size=3)
 
+plot2 <- ggplot(boot_dist_bravo_long, aes(x=taxon, y=means, color=taxon)) + geom_boxplot()
+plot2 + stat_summary(fun=mean, geom="point", shape=1, size=3)
+
+## creat boxplots of boot distributions of annual means by taxon, grouped by site
+boot_dist_alpha_bravo <- rbind(boot_dist_alpha_long, boot_dist_bravo_long)
+
+plot3 <- ggplot(boot_dist_alpha_bravo, aes(x=taxon, y=means, fill=site)) + geom_boxplot(position=position_dodge(1))
+plot3 + stat_summary(position=position_dodge(1),fun=mean, geom="point", shape=1, size=3)
