@@ -75,9 +75,9 @@ write.csv(
 )
 
 #####################################################################
-## Subset by Substrate (Benthic, Submerged Wood), exclude non-aquatic,
-## exclude adult stage. Rationale = substrates have different sample
-## protocols
+## Subset by Substrate (Benthic, Submerged Wood), exclude non-aquatic
+## taxa, exclude adult stage. 
+## Rationale = substrates have different sample protocols
 #####################################################################
 
 raw_benth_dat_allseasons_2019_2020 <- subset(
