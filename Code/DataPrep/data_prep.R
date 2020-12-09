@@ -136,11 +136,13 @@ benth_wider_by_stage <-
 benth_wider_summed_biomass <-
   benth_wider_by_stage %>% mutate(sumrow = L + P + U)
   
+
+####STUCK HERE NEED TO FIX: how to summ the L+P+U 
+####columns by taxon+treatment+replicate+season
 benth_wider_summed_biomass$biomass <-
   benth_wider_summed_biomass$sumrow
 ## Before deleting the Stage columns, check the sums of select taxa
 ## with a calculator
-
 benth_wider_summed_biomass <-
   benth_wider_summed_biomass[, -c(15:18)]
 
@@ -157,14 +159,14 @@ wood_wider_summed_biomass <-
 
 wood_wider_summed_biomass$biomass <-
   wood_wider_summed_biomass$sumrow
-
+## Before deleting the Stage columns, check the sums of select taxa
+## with a calculator
 wood_wider_summed_biomass <-
   wood_wider_summed_biomass[, -c(15:18)]
 
 ######################################################################
-## Restore the missing observations of zero biomass to Replicates
-##
-## Pivots by the Replicate column, fills in the biomass values, replaces NA's
+## Restore the missing observations of zero biomass to Replicates:
+## Pivot by the Replicate column, fill in the biomass values, replace NA's
 ## with zeroes
 ######################################################################
 
