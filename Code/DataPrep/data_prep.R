@@ -80,7 +80,7 @@ write.csv(
 ## Rationale = substrates have different sample protocols
 #####################################################################
 
-raw_benth_dat_allseasons_2019_2020 <- subset(
+raw_benth_allseasons_2019_2020 <- subset(
   raw_dat_allseasons_2019_2020,
   Substrate == "Benthic" &
     Origin == "Aquatic" &
@@ -92,7 +92,7 @@ raw_benth_dat_allseasons_2019_2020 <- subset(
   
 )
 
-raw_wood_dat_allseasons_2019_2020 <- subset(
+raw_wood_allseasons_2019_2020 <- subset(
   raw_dat_allseasons_2019_2020,
   Substrate == "Submerged Wood" &
     Origin == "Aquatic" &
@@ -118,7 +118,7 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 )
 
 ######################################################################
-## Pivot wider each sample site dataset by Stage & Biomass.
+## Pivot wider by Stage & Biomass.
 ## Sum the larvae, pupae, and unknown biomass estimates into a single
 ## column called "sumrow". Rename "sumrow" to "biomass".Delete columns
 ## "L", "P", "U"
@@ -126,117 +126,40 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 library(tidyr)
 library(dplyr)
 
-##disturbed benthic subset
-disturbed_benth_wider_by_stage <-
-  disturbed_benth_raw_2019_2020 %>%
+##combined benthic subset (all seasons and all treatments/sample sites)
+benth_wider_by_stage <-
+  raw_benth_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
               values_from = Biomass,
               values_fill = 0)
 
-disturbed_benth_wider_summed_biomass <-
-  disturbed_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
+benth_wider_summed_biomass <-
+  benth_wider_by_stage %>% mutate(sumrow = L + P + U)
+  
+benth_wider_summed_biomass$biomass <-
+  benth_wider_summed_biomass$sumrow
+## Before deleting the Stage columns, check the sums of select taxa
+## with a calculator
 
-disturbed_benth_wider_summed_biomass$biomass <-
-  disturbed_benth_wider_summed_biomass$sumrow
+benth_wider_summed_biomass <-
+  benth_wider_summed_biomass[, -c(15:18)]
 
-disturbed_benth_wider_summed_biomass <-
-  disturbed_benth_wider_summed_biomass[, -c(11:14)]
 
-##flooded forest benthic subset
-flood_forest_benth_wider_by_stage<-
-  flood_forest_benth_raw_2019_2020 %>%
+##combined wood subset (all seasons and all treatments/sample sites)
+wood_wider_by_stage<-
+  raw_wood_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
               values_from = Biomass,
               values_fill = 0)
 
-flood_forest_benth_wider_summed_biomass <-
-  flood_forest_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
+wood_wider_summed_biomass <-
+  wood_wider_by_stage %>% mutate(sumrow = L + P + U)
 
-flood_forest_benth_wider_summed_biomass$biomass <-
-  flood_forest_benth_wider_summed_biomass$sumrow
+wood_wider_summed_biomass$biomass <-
+  wood_wider_summed_biomass$sumrow
 
-flood_forest_benth_wider_summed_biomass <-
-  flood_forest_benth_wider_summed_biomass[, -c(11:14)]
-
-##relic channel benthic subset
-relic_chan_benth_wider_by_stage<-
-  relic_chan_benth_raw_2019_2020 %>%
-  pivot_wider(names_from = Stage,
-              values_from = Biomass,
-              values_fill = 0)
-
-relic_chan_benth_wider_summed_biomass <-
-  relic_chan_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
-
-relic_chan_benth_wider_summed_biomass$biomass <-
-  relic_chan_benth_wider_summed_biomass$sumrow
-
-relic_chan_benth_wider_summed_biomass <-
-  relic_chan_benth_wider_summed_biomass[, -c(11:14)]
-
-##phase 3 benthic subset
-phase3_benth_wider_by_stage<-
-  phase3_benth_raw_2019_2020 %>%
-  pivot_wider(names_from = Stage,
-              values_from = Biomass,
-              values_fill = 0)
-
-phase3_benth_wider_summed_biomass <-
-  phase3_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
-
-phase3_benth_wider_summed_biomass$biomass <-
-  phase3_benth_wider_summed_biomass$sumrow
-
-phase3_benth_wider_summed_biomass <-
-  phase3_benth_wider_summed_biomass[, -c(11:14)]
-
-##phase 4 benthic subset
-phase4_benth_wider_by_stage<-
-  phase4_benth_raw_2019_2020 %>%
-  pivot_wider(names_from = Stage,
-              values_from = Biomass,
-              values_fill = 0)
-
-phase4_benth_wider_summed_biomass <-
-  phase4_benth_wider_by_stage %>% mutate(sumrow = L + P + U)
-
-phase4_benth_wider_summed_biomass$biomass <-
-  phase4_benth_wider_summed_biomass$sumrow
-
-phase4_benth_wider_summed_biomass <-
-  phase4_benth_wider_summed_biomass[, -c(11:14)]
-
-##disturbed wood subset
-disturbed_wood_wider_by_stage<-
-  disturbed_wood_raw_2019_2020 %>%
-  pivot_wider(names_from = Stage,
-              values_from = Biomass,
-              values_fill = 0)
-
-disturbed_wood_wider_summed_biomass <-
-  disturbed_wood_wider_by_stage %>% mutate(sumrow = L + P + U)
-
-disturbed_wood_wider_summed_biomass$biomass <-
-  disturbed_wood_wider_summed_biomass$sumrow
-
-disturbed_wood_wider_summed_biomass <-
-  disturbed_wood_wider_summed_biomass[, -c(11:14)]
-
-##relic channel wood subset
-relic_chan_wood_wider_by_stage<-
-  relic_chan_wood_raw_2019_2020 %>%
-  pivot_wider(names_from = Stage,
-              values_from = Biomass,
-              values_fill = 0)
-
-relic_chan_wood_wider_summed_biomass <-
-  relic_chan_wood_wider_by_stage %>% mutate(sumrow = L + P + U)
-
-relic_chan_wood_wider_summed_biomass$biomass <-
-  relic_chan_wood_wider_summed_biomass$sumrow
-
-relic_chan_wood_wider_summed_biomass <-
-  relic_chan_wood_wider_summed_biomass[, -c(11:14)]
+wood_wider_summed_biomass <-
+  wood_wider_summed_biomass[, -c(15:18)]
 
 ######################################################################
 ## Restore the missing observations of zero biomass to Replicates
