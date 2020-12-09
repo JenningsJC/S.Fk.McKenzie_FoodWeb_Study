@@ -70,7 +70,7 @@ class(raw_dat_allseasons_2019_2020$Date)
 
 write.csv(
   raw_dat_allseasons_2019_2020,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_dat_allseasons_2019_2020.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_wood_dat_allseasons_2019_2020.csv",
   row.names = F
 )
 
