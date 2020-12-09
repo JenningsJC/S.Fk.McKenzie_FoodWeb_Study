@@ -65,15 +65,12 @@ raw_dat_allseasons_2019_2020$Date <-
 class(raw_dat_allseasons_2019_2020$Date)
 
 #####################################################################
-## Removes the columns: Waterbody, Higher.classification,Common.name, Abundance
-## Writes the combined dataset as csv in DataRaw folder
+## Write the combined dataset as csv to DataRaw folder
 #####################################################################
-raw_dat_allseasons_2019_2020 <-
-  raw_dat_allseasons_2019_2020[, -c(1, 10, 13, 14)]
 
 write.csv(
   raw_dat_allseasons_2019_2020,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_dat_allseasons_2019_2020.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_dat_allseasons_2019_2020.csv",
   row.names = F
 )
 
