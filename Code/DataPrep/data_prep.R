@@ -12,8 +12,8 @@
 ## and season. Saves prepped raw data as .csv files
 ##  in DataClean folder.
 ###################################################################
-
-
+## clear global environment of variables, levels, etc.
+rm(list=ls())
 ###################################################################
 ## Read in raw data
 ###################################################################
