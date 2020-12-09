@@ -133,12 +133,20 @@ benth_wider_by_stage <-
               values_from = Biomass,
               values_fill = 0)
 
+####STUCK HERE NEED TO FIX: how to sum the L+P+U 
+####columns by taxon+treatment+replicate+season
+benth_longer_by_stage <-
+  benth_wider_by_stage %>%
+  pivot_long
+
+
 benth_wider_summed_biomass <-
   benth_wider_by_stage %>% mutate(sumrow = L + P + U)
   
 
-####STUCK HERE NEED TO FIX: how to summ the L+P+U 
-####columns by taxon+treatment+replicate+season
+
+
+
 benth_wider_summed_biomass$biomass <-
   benth_wider_summed_biomass$sumrow
 ## Before deleting the Stage columns, check the sums of select taxa
