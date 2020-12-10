@@ -119,10 +119,9 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 
 ######################################################################
 ## Pivot wider, names from Stage & values from Biomass and Abundance.
-## Sum the larvae, pupae, and unknown biomass values into a single
-## column called "sumrow". Rename "sumrow" to "biomass".Delete columns
-## "L", "P", "U". Sum across the row of L, P, U abundance values and 
-## put in "abundance" column
+## Sum the larvae, pupae, and unknown biomass and abundance values into 
+## single columns respectively called "biomass" and "abundance". Delete 
+## biomass_stage, abundance_stage, & sumrow columns.
 ######################################################################
 library(tidyr)
 library(dplyr)
