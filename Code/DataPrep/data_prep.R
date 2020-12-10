@@ -134,27 +134,27 @@ benth_widerX_by_stage <-
               values_from = c(Biomass, Abundance),
               values_fill = 0)
 
-## sum the biomass values, by stage
+# sum the biomass values, by stage
 benth_wider_summed_biomass <-
   benth_widerX_by_stage %>% mutate(sumrow = Biomass_L + Biomass_P + Biomass_U)
 
-## add sums as a "Biomass" column
+# add sums as a "Biomass" column
 benth_wider_summed_biomass$Biomass <-
   benth_wider_summed_biomass$sumrow
 
-## delete biomass_stage and sumrow columns
+# delete biomass_stage and sumrow columns
 benth_wider_summed_biomass <-
   benth_wider_summed_biomass[, -c(14,15,16,20)]
 
-## sum the abundance values, by stage
+# sum the abundance values, by stage
 benth_wider_summed_biomass <-
   benth_wider_summed_biomass %>% mutate(sumrow = Abundance_L + Abundance_P + Abundance_U)
 
-## add abundance sums as an "Abundance" column
+# add abundance sums as an "Abundance" column
 benth_wider_summed_biomass$Abundance <-
   benth_wider_summed_biomass$sumrow
 
-## delete Abundance_stage and sumrow columns
+# delete Abundance_stage and sumrow columns
 benth_wider_summed_biomass <-
   benth_wider_summed_biomass[, -c(14,15,16,18)]
 
@@ -163,16 +163,20 @@ benth_wider_summed_biomass <-
 wood_wider_by_stage<-
   raw_wood_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
-              values_from = Biomass,
+              values_from = c(Biomass, Abundance),
               values_fill = 0)
+## There were no instances of one taxon having more than one stage in any replicates, so
+## the pivot wider only pivoted the biomass values and not the abundance values
 
+# sum the biomass values
 wood_wider_summed_biomass <-
   wood_wider_by_stage %>% mutate(sumrow = L + P + U)
 
-wood_wider_summed_biomass$biomass <-
+# add sums as a "Biomass" column
+wood_wider_summed_biomass$Biomass <-
   wood_wider_summed_biomass$sumrow
-## Before deleting the Stage columns, check the sums of select taxa
-## with a calculator
+
+# delete biomass_stage and sumrow columns
 wood_wider_summed_biomass <-
   wood_wider_summed_biomass[, -c(15:18)]
 
