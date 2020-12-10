@@ -180,6 +180,23 @@ wood_wider_summed_biomass$Biomass <-
 wood_wider_summed_biomass <-
   wood_wider_summed_biomass[, -c(15:18)]
 
+#####################################################################
+## Write the datasets of combined pupal/larval/unknown abundances
+## and biomasses as csv files to DataRaw folder
+#####################################################################
+
+write.csv(
+  benth_wider_summed_biomass,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_combined_stages_allseasons_2019_2020.csv",
+  row.names = F
+)
+
+write.csv(
+  wood_wider_summed_biomass,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_wood_combined_stages_allseasons_2019_2020.csv",
+  row.names = F
+)
+
 ######################################################################
 ## Restore the missing observations of zero biomass to Replicates:
 ## Pivot by the Replicate column, fill in the biomass values, replace NA's
