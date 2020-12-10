@@ -118,44 +118,49 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 )
 
 ######################################################################
-## Pivot wider by Stage & Biomass.
-## Sum the larvae, pupae, and unknown biomass estimates into a single
+## Pivot wider, names from Stage & values from Biomass and Abundance.
+## Sum the larvae, pupae, and unknown biomass values into a single
 ## column called "sumrow". Rename "sumrow" to "biomass".Delete columns
-## "L", "P", "U"
+## "L", "P", "U". Sum across the row of L, P, U abundance values and 
+## put in "abundance" column
 ######################################################################
 library(tidyr)
 library(dplyr)
 
-##combined benthic subset (all seasons and all treatments/sample sites)
-benth_wider_by_stage <-
+##1. pivot on the combined benthic subset (all seasons and all treatments/sample sites)
+
+benth_widerX_by_stage <-
   raw_benth_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
-              values_from = Biomass,
+              values_from = c(Biomass, Abundance),
               values_fill = 0)
 
-####STUCK HERE NEED TO FIX: how to sum the L+P+U 
-####columns by taxon+treatment+replicate+season
-benth_longer_by_stage <-
-  benth_wider_by_stage %>%
-  pivot_long
-
-
+## sum the biomass values, by stage
 benth_wider_summed_biomass <-
-  benth_wider_by_stage %>% mutate(sumrow = L + P + U)
-  
+  benth_widerX_by_stage %>% mutate(sumrow = Biomass_L + Biomass_P + Biomass_U)
 
-
-
-
-benth_wider_summed_biomass$biomass <-
+## add sums as a "Biomass" column
+benth_wider_summed_biomass$Biomass <-
   benth_wider_summed_biomass$sumrow
-## Before deleting the Stage columns, check the sums of select taxa
-## with a calculator
+
+## delete biomass_stage and sumrow columns
 benth_wider_summed_biomass <-
-  benth_wider_summed_biomass[, -c(15:18)]
+  benth_wider_summed_biomass[, -c(14,15,16,20)]
+
+## sum the abundance values, by stage
+benth_wider_summed_biomass <-
+  benth_wider_summed_biomass %>% mutate(sumrow = Abundance_L + Abundance_P + Abundance_U)
+
+## add abundance sums as an "Abundance" column
+benth_wider_summed_biomass$Abundance <-
+  benth_wider_summed_biomass$sumrow
+
+## delete Abundance_stage and sumrow columns
+benth_wider_summed_biomass <-
+  benth_wider_summed_biomass[, -c(14,15,16,18)]
 
 
-##combined wood subset (all seasons and all treatments/sample sites)
+##2. pivot on combined wood subset (all seasons and all treatments/sample sites)
 wood_wider_by_stage<-
   raw_wood_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
