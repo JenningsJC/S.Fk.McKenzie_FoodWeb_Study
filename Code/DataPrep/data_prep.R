@@ -203,6 +203,13 @@ write.csv(
 ## with zeroes
 ######################################################################
 
+## read in the csv files fromt he previous step
+raw_wood_combined_stages_allseasons <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_wood_combined_stages_allseasons_2019_2020.csv")
+
+raw_benth_combined_stages_allseasons <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_combined_stages_allseasons_2019_2020.csv")
+
+
+
 disturbed_benth_wider_by_replicate<- disturbed_benth_wider_summed_biomass %>%
   pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
