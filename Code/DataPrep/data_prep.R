@@ -207,14 +207,20 @@ raw_wood_combined_stages_allseasons <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/D
 
 raw_benth_combined_stages_allseasons <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_combined_stages_allseasons_2019_2020.csv")
 
+## remove the Abundance columns
+raw_wood_combined_biomass_allseasons <- raw_wood_combined_stages_allseasons[,-c(13)]
+
+raw_benth_combined_biomass_allseasons <- raw_benth_combined_stages_allseasons[,-c(15)]
 ######################################################################
 ## Pivot by the Replicate column, fill in the biomass values, replace NA's
 ## with zeroes
 #######################################################################
-raw_benth_wider_by_replicate<- raw_benth_combined_stages_allseasons %>%
+raw_benth_wider_by_replicate<- raw_benth_combined_biomass_allseasons %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-raw_wood_wider_by_replicate<- raw_wood_combined_stages_allseasons %>%
+
+
+raw_wood_wider_by_replicate<- raw_wood_combined_biomass_allseasons %>%
   pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
 
