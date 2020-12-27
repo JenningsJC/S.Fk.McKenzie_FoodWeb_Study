@@ -133,9 +133,9 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 library(tidyr)
 library(dplyr)
 
-#########################################
+########################################################################################
 ##1. pivot on the combined benthic subset (all seasons and all treatments/sample sites)
-#########################################
+########################################################################################
 benth_widerX_by_stage <-
   raw_benth_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
@@ -154,9 +154,9 @@ benth_wider_summed_biomass$Biomass <-
 benth_wider_summed_biomass <-
   benth_wider_summed_biomass[, -c(14,15,16,20)]
 
-#########################################
+#######################################################################################
 ##2. pivot on combined wood subset (all seasons and all treatments/sample sites)
-#########################################
+#######################################################################################
 
 wood_wider_by_stage<-
   raw_wood_allseasons_2019_2020 %>%
