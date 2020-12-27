@@ -144,7 +144,7 @@ benth_widerX_by_stage <-
 
 # sum the biomass values, by stage
 benth_wider_summed_biomass <-
-  benth_widerX_by_stage %>% mutate(sumrow = Biomass_L + Biomass_P + Biomass_U)
+  benth_widerX_by_stage %>% mutate(sumrow = L + P + U)
 
 # add sums as a "Biomass" column
 benth_wider_summed_biomass$Biomass <-
@@ -152,7 +152,7 @@ benth_wider_summed_biomass$Biomass <-
 
 # delete biomass_stage and sumrow columns
 benth_wider_summed_biomass <-
-  benth_wider_summed_biomass[, -c(14,15,16,20)]
+  benth_wider_summed_biomass[, -c(15:18)]
 
 #######################################################################################
 ##2. pivot on combined wood subset (all seasons and all treatments/sample sites)
