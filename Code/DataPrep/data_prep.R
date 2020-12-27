@@ -199,33 +199,24 @@ write.csv(
 
 ######################################################################
 ## Restore the missing observations of zero biomass to Replicates:
-## Pivot by the Replicate column, fill in the biomass values, replace NA's
-## with zeroes
+
 ######################################################################
 
-## read in the csv files fromt he previous step
+## read in the csv files from the previous step
 raw_wood_combined_stages_allseasons <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_wood_combined_stages_allseasons_2019_2020.csv")
 
 raw_benth_combined_stages_allseasons <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_combined_stages_allseasons_2019_2020.csv")
 
-
-
-disturbed_benth_wider_by_replicate<- disturbed_benth_wider_summed_biomass %>%
+######################################################################
+## Pivot by the Replicate column, fill in the biomass values, replace NA's
+## with zeroes
+#######################################################################
+raw_benth_wider_by_replicate<- raw_benth_combined_stages_allseasons %>%
   pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-flood_forest_benth_wider_by_replicate<- flood_forest_benth_wider_summed_biomass %>%
-  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-relic_chan_benth_wider_by_replicate<- relic_chan_benth_wider_summed_biomass %>%
-  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
-phase3_benth_wider_by_replicate<- phase3_benth_wider_summed_biomass %>%
-  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
-
-phase4_benth_wider_by_replicate<- phase4_benth_wider_summed_biomass %>%
-  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
-
-disturbed_wood_wider_by_replicate<- disturbed_wood_wider_summed_biomass %>%
+raw_wood_wider_by_replicate<- raw_wood_combined_stages_allseasons %>%
   pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
 relic_chan_wood_wider_by_replicate<- relic_chan_wood_wider_summed_biomass %>%
