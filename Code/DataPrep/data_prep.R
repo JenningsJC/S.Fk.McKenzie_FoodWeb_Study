@@ -212,15 +212,11 @@ raw_benth_combined_stages_allseasons <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/
 ## with zeroes
 #######################################################################
 raw_benth_wider_by_replicate<- raw_benth_combined_stages_allseasons %>%
-  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
-
-
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
 raw_wood_wider_by_replicate<- raw_wood_combined_stages_allseasons %>%
-  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
+  pivot_wider(names_from = Replicate, values_from = Biomass, values_fill = 0)
 
-relic_chan_wood_wider_by_replicate<- relic_chan_wood_wider_summed_biomass %>%
-  pivot_wider(names_from = Replicate, values_from = biomass, values_fill = 0)
 
 #######################################################################
 ## Pivots the individual replicate columns (1-5 for benthic, 1-3 for wood) 
