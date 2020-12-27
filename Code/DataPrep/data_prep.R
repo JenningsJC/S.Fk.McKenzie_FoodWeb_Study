@@ -161,7 +161,7 @@ benth_wider_summed_biomass <-
 wood_wider_by_stage<-
   raw_wood_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
-              values_from = c(Biomass, Abundance),
+              values_from = c(Biomass),
               values_fill = 0)
 
 # sum the biomass values
