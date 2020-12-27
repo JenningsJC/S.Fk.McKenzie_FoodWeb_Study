@@ -133,12 +133,13 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 library(tidyr)
 library(dplyr)
 
+#########################################
 ##1. pivot on the combined benthic subset (all seasons and all treatments/sample sites)
-
+#########################################
 benth_widerX_by_stage <-
   raw_benth_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
-              values_from = c(Biomass, Abundance),
+              values_from = c(Biomass),
               values_fill = 0)
 
 # sum the biomass values, by stage
@@ -153,27 +154,15 @@ benth_wider_summed_biomass$Biomass <-
 benth_wider_summed_biomass <-
   benth_wider_summed_biomass[, -c(14,15,16,20)]
 
-# sum the abundance values, by stage
-benth_wider_summed_biomass <-
-  benth_wider_summed_biomass %>% mutate(sumrow = Abundance_L + Abundance_P + Abundance_U)
-
-# add abundance sums as an "Abundance" column
-benth_wider_summed_biomass$Abundance <-
-  benth_wider_summed_biomass$sumrow
-
-# delete Abundance_stage and sumrow columns
-benth_wider_summed_biomass <-
-  benth_wider_summed_biomass[, -c(14,15,16,18)]
-
-
+#########################################
 ##2. pivot on combined wood subset (all seasons and all treatments/sample sites)
+#########################################
+
 wood_wider_by_stage<-
   raw_wood_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
               values_from = c(Biomass, Abundance),
               values_fill = 0)
-## There were no instances of one taxon having more than one stage in any replicates, so
-## the pivot wider only pivoted the biomass values and not the abundance values
 
 # sum the biomass values
 wood_wider_summed_biomass <-
