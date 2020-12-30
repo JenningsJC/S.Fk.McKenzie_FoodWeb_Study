@@ -67,7 +67,7 @@ class(raw_dat_allseasons_2019_2020$Date)
 #####################################################################
 ## Removes the columns: Waterbody, Abundance
 #####################################################################
-raw_dat_allseason_2019_2020 <-
+raw_dat_allseasons_2019_2020 <-
   raw_dat_allseasons_2019_2020[, -c(1,14)]
 #####################################################################
 ## Write the combined dataset as csv to DataRaw folder
@@ -139,7 +139,7 @@ library(dplyr)
 benth_widerX_by_stage <-
   raw_benth_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
-              values_from = c(Biomass),
+              values_from = Biomass,
               values_fill = 0)
 
 # sum the biomass values, by stage
@@ -152,7 +152,7 @@ benth_wider_summed_biomass$Biomass <-
 
 # delete biomass_stage and sumrow columns
 benth_wider_summed_biomass <-
-  benth_wider_summed_biomass[, -c(15:18)]
+  benth_wider_summed_biomass[, -c(13:16)]
 
 #######################################################################################
 ##2. pivot on combined wood subset (all seasons and all treatments/sample sites)
@@ -161,7 +161,7 @@ benth_wider_summed_biomass <-
 wood_wider_by_stage<-
   raw_wood_allseasons_2019_2020 %>%
   pivot_wider(names_from = Stage,
-              values_from = c(Biomass),
+              values_from = Biomass,
               values_fill = 0)
 
 # sum the biomass values
@@ -174,7 +174,7 @@ wood_wider_summed_biomass$Biomass <-
 
 # delete biomass_stage and sumrow columns
 wood_wider_summed_biomass <-
-  wood_wider_summed_biomass[, -c(15:18)]
+  wood_wider_summed_biomass[, -c(13:16)]
 
 #####################################################################
 ## Write the datasets of combined pupal/larval/unknown
