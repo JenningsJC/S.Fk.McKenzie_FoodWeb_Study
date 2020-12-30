@@ -214,7 +214,7 @@ write.csv(
 
 ######################################################################
 ## Restore the missing observations of zero biomass to Replicates:
-
+##
 ######################################################################
 
 ## read in the csv files from the previous step
@@ -262,7 +262,7 @@ miss_seasons_benth <-
 raw_benth_sxn_left_join <-
   left_join(miss_seasons_benth,
             rawbenth_restored_replicates,
-            by = c("Taxon", "Replicate", "Season"))
+            by = c("Treatment", "Taxon", "Replicate", "Season"))
 
 
 miss_seasons_wood <-
@@ -271,7 +271,7 @@ miss_seasons_wood <-
 raw_wood_sxn_left_join <-
   left_join(miss_seasons_wood,
             rawwood_restored_replicates,
-            by = c("Taxon", "Replicate", "Season"))
+            by = c("Treatment", "Taxon", "Replicate", "Season"))
 
 
 ## Next task is to figure out how to fill in all the NAs with the appropriate
@@ -280,10 +280,10 @@ raw_wood_sxn_left_join <-
 ## The number should be: no. of unique taxa * no. seasons * no. replicates
 
 #######################################################################
-### Write the dataframes as .csv to the DataClean folder
+### Write the dataframes as .csv to the DataRaw folder
 #######################################################################
 
-write.csv(disturbed_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_ins_clean_2019_2020.csv", row.names = F )
+write.csv(raw_benth_sxn_left_join, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/prepped_raw_benth_2019_2020.csv", row.names = F )
 
 
-write.csv(relic_chan_wood_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relic_chan_wood_ins_clean_2019_2020.csv", row.names = F)
+write.csv(raw_wood_sxn_left_join, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/prepped_raw_wood_2019_2020.csv", row.names = F)
