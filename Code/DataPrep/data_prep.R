@@ -221,10 +221,10 @@ raw_wood_wider_by_replicate<- raw_wood_combined_stages_allseasons %>%
 ## back to long format, putting them back into "Replicate" and "Biomass" columns
 #######################################################################
 rawbenth_restored_replicates <- raw_benth_wider_by_replicate %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 14:18)
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 12:16)
 
 rawwood_restored_replicates <- raw_wood_wider_by_replicate %>%
-  pivot_longer(names_to = "Replicate", values_to = "Biomass", 14:16)
+  pivot_longer(names_to = "Replicate", values_to = "Biomass", 12:14)
 ##remove Abundance columns, as they are no longer accurate
 
 
