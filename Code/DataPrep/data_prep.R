@@ -280,6 +280,17 @@ raw_wood_sxn_left_join <-
 ## The number should be: no. of unique taxa * no. seasons * no. replicates
 
 #######################################################################
+## Remove redundant columns: Date (translated to seasons for analysis),
+## Substrate (raw data is already split by substrate),
+## Origin (everything is aquatic in origin).
+#######################################################################
+
+raw_benth_sxn_left_join <- raw_benth_sxn_left_join[, -c(5,6,8)]
+
+raw_wood_sxn_left_join <- raw_wood_sxn_left_join[, -c(5,6,8)]
+
+
+#######################################################################
 ### Write the dataframes as .csv to the DataRaw folder
 #######################################################################
 
