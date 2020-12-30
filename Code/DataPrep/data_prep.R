@@ -69,6 +69,17 @@ class(raw_dat_allseasons_2019_2020$Date)
 #####################################################################
 raw_dat_allseasons_2019_2020 <-
   raw_dat_allseasons_2019_2020[, -c(1,14)]
+
+#####################################################################
+## Check unique values in "Treatment" column, so that all sample site
+## names are consistent
+#####################################################################
+
+unique(raw_dat_allseasons_2019_2020$Treatment)
+
+### There are two names in the raw files: "Relic Channel" and
+### Relic Floodplain Channel
+
 #####################################################################
 ## Write the combined dataset as csv to DataRaw folder
 #####################################################################
