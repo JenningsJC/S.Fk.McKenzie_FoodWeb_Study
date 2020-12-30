@@ -231,13 +231,14 @@ rawwood_restored_replicates <- raw_wood_wider_by_replicate %>%
 #######################################################################
 ## By taxon, restore any missing seasons of replicates and fill w/zeroes
 ##
-## Expand generates a new dataframe consisting of combos of Season & Replicate, by
-## Taxon, that are not present in the dataframe. The dataframe with
-## the missing seasons is then left-joined back into the original.
+## Expand generates a new dataframe consisting of all possible combos of 
+## Season & Replicate, by Taxon, that are not present in the dataframe. 
+## The dataframe with the missing seasons is then left-joined back into the original,
+## leaving rows with blanks where missing seasons are present.
 #######################################################################
 
 miss_seasons_benth <-
-  expand(rawbenth_restored_replicates, Taxon, nesting(Season, Replicate))
+  expand(rawbenth_restored_replicates, Taxon, nesting(Treatment, Season, Replicate))
 
 raw_benth_sxn_left_join <-
   left_join(miss_seasons_benth,
@@ -246,7 +247,7 @@ raw_benth_sxn_left_join <-
 
 
 miss_seasons_wood <-
-  expand(rawwood_restored_replicates, Taxon, nesting(Season, Replicate))
+  expand(rawwood_restored_replicates, Taxon, nesting(Treatment, Season, Replicate))
 
 raw_wood_sxn_left_join <-
   left_join(miss_seasons_wood,
