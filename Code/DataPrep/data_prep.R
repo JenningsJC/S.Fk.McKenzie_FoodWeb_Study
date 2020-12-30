@@ -225,7 +225,7 @@ rawbenth_restored_replicates <- raw_benth_wider_by_replicate %>%
 
 rawwood_restored_replicates <- raw_wood_wider_by_replicate %>%
   pivot_longer(names_to = "Replicate", values_to = "Biomass", 12:14)
-##remove Abundance columns, as they are no longer accurate
+
 
 
 #######################################################################
@@ -236,60 +236,21 @@ rawwood_restored_replicates <- raw_wood_wider_by_replicate %>%
 ## the missing seasons is then left-joined back into the original.
 #######################################################################
 
-miss_seasons_dist_benth <-
-  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
+miss_seasons_benth <-
+  expand(rawbenth_restored_replicates, Taxon, nesting(Season, Replicate))
 
-dist_benth_left_join <-
-  left_join(miss_seasons_dist_benth,
-            disturbed_benth_zero_reps,
+raw_benth_sxn_left_join <-
+  left_join(miss_seasons_benth,
+            rawbenth_restored_replicates,
             by = c("Taxon", "Replicate", "Season"))
 
-miss_seasons_flood_forest_benth <-
-  expand(flood_forest_benth_zero_reps, Taxon, nesting(Season, Replicate))
 
-flood_forest_benth_left_join <-
-  left_join(miss_seasons_flood_forest_benth,
-            flood_forest_benth_zero_reps,
-            by = c("Taxon", "Replicate", "Season"))
+miss_seasons_wood <-
+  expand(rawwood_restored_replicates, Taxon, nesting(Season, Replicate))
 
-miss_seasons_dist_benth <-
-  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
-## Then the missing combos are left-joined back into the original dataframe
-disturbed_benth_left_join <-
-  left_join(missing_seasons,
-            disturbed_benth_zero_reps,
-            by = c("Taxon", "Replicate", "Season"))
-
-miss_seasons_dist_benth <-
-  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
-## Then the missing combos are left-joined back into the original dataframe
-disturbed_benth_left_join <-
-  left_join(missing_seasons,
-            disturbed_benth_zero_reps,
-            by = c("Taxon", "Replicate", "Season"))
-
-miss_seasons_dist_benth <-
-  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
-## Then the missing combos are left-joined back into the original dataframe
-disturbed_benth_left_join <-
-  left_join(missing_seasons,
-            disturbed_benth_zero_reps,
-            by = c("Taxon", "Replicate", "Season"))
-
-miss_seasons_dist_benth <-
-  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
-## Then the missing combos are left-joined back into the original dataframe
-disturbed_benth_left_join <-
-  left_join(missing_seasons,
-            disturbed_benth_zero_reps,
-            by = c("Taxon", "Replicate", "Season"))
-
-miss_seasons_dist_benth <-
-  expand(disturbed_benth_zero_reps, Taxon, nesting(Season, Replicate))
-## Then the missing combos are left-joined back into the original dataframe
-disturbed_benth_left_join <-
-  left_join(missing_seasons,
-            disturbed_benth_zero_reps,
+raw_wood_sxn_left_join <-
+  left_join(miss_seasons_wood,
+            rawwood_restored_replicates,
             by = c("Taxon", "Replicate", "Season"))
 
 
@@ -304,14 +265,5 @@ disturbed_benth_left_join <-
 
 write.csv(disturbed_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_ins_clean_2019_2020.csv", row.names = F )
 
-write.csv(flood_forest_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/flood_forest_benth_ins_clean_2019_2020.csv", row.names = F)
-
-write.csv(relic_chan_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relic_chan_benth_ins_clean_2019_2020.csv", row.names = F)
-
-write.csv(phase3_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/phase3_benth_ins_clean_2019_2020.csv", row.names = F)
-
-write.csv(phase4_benth_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/phase4_benth_ins_clean_2019_2020.csv", row.names = F)
-
-write.csv(disturbed_wood_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_ins_clean_2019_2020.csv", row.names = F)
 
 write.csv(relic_chan_wood_ins_longer, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relic_chan_wood_ins_clean_2019_2020.csv", row.names = F)
