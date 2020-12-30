@@ -15,6 +15,10 @@
 ## clear global environment of variables, levels, etc.
 rm(list=ls())
 ###################################################################
+## read libraries in 
+library(tidyr)
+library(dplyr)
+###################################################################
 ## Read in raw data
 ###################################################################
 raw_2019_jul <-
@@ -71,16 +75,6 @@ raw_dat_allseasons_2019_2020 <-
   raw_dat_allseasons_2019_2020[, -c(1,14)]
 
 #####################################################################
-## Check unique values in "Treatment" column, so that all sample site
-## names are consistent
-#####################################################################
-
-unique(raw_dat_allseasons_2019_2020$Treatment)
-
-### There are two names in the raw files: "Relic Channel" and
-### Relic Floodplain Channel
-
-#####################################################################
 ## Write the combined dataset as csv to DataRaw folder
 #####################################################################
 
@@ -133,7 +127,34 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
   Stage == "A"
 )
 
+####################################################################
+## !!Benthic and wood raw datasets have two names for the same treatment.
+## Combine the "Relic Channel" & "Relic Floodplain Channel" sets.
+## Write to .csv and explore solutions in Excel
+####################################################################
 
+###Raw benthic subset
+relic_chan_benth <- subset(raw_benth_allseasons_2019_2020,
+                          Treatment == "Relic Channel")
+
+relic_flood_benth <- subset(raw_benth_allseasons_2019_2020, 
+                           Treatment == "Relic Floodplain Channel")
+
+####Raw wood subset
+relic_chan_wood <- subset(raw_wood_allseasons_2019_2020,
+                          Treatment == "Relic Channel")
+
+relic_flood_wood <- subset(raw_wood_allseasons_2019_2020, 
+                          Treatment == "Relic Floodplain Channel")
+
+## change "Relic Floodplain Channel" to "Relic Channel"
+relic_flood_woodX <-
+  relic_flood_wood %>% 
+  mutate(Treatment = ifelse(as.factor(Treatment) == "Relic Floodplain Channel",
+                            "Relic Channel", as.factor(Treatment)))
+
+## rbind the two dasets and look for duplicate replicates that need to be summed
+relic_combo_wood <- rbind(relic_chan_wood, relic_flood_woodX)
 
 ######################################################################
 ## Pivot wider, names from Stage & values from Biomass.
@@ -141,8 +162,7 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 ## single column called "biomass". Delete 
 ## biomass_stage & sumrow columns.
 ######################################################################
-library(tidyr)
-library(dplyr)
+
 
 ########################################################################################
 ##1. pivot on the combined benthic subset (all seasons and all treatments/sample sites)
