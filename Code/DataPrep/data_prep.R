@@ -86,6 +86,9 @@ class(raw_dat_allseasons_2019_2020$Date)
 raw_dat_allseasons_2019_2020 <-
   raw_dat_allseasons_2019_2020[, -c(1,14)]
 
+### check Treatment factor levels
+unique(raw_dat_allseasons_2019_2020$Treatment)
+## combined raw dataset has 5 factor levels for Treatment, as it should
 #####################################################################
 ## Write the combined dataset as csv to DataRaw folder
 #####################################################################
@@ -95,7 +98,6 @@ write.csv(
   "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/raw_benth_wood_dat_allseasons_2019_2020.csv",
   row.names = F
 )
-
 
 #####################################################################
 ## Subset by Substrate (Benthic, Submerged Wood), exclude non-aquatic
