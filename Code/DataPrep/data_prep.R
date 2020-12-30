@@ -289,12 +289,22 @@ raw_benth_sxn_left_join <- raw_benth_sxn_left_join[, -c(5,6,8)]
 
 raw_wood_sxn_left_join <- raw_wood_sxn_left_join[, -c(5,6,8)]
 
+#######################################################################
+## Replace NA's in Biomass column with zeroes.
+##
+#######################################################################
+
+raw_benth_sxn_left_joinX <-
+  raw_benth_sxn_left_join %>% replace_na(list(Biomass = 0))
+
+raw_wood_sxn_left_joinX <-
+  raw_wood_sxn_left_join %>% replace_na(list(Biomass = 0))
 
 #######################################################################
 ### Write the dataframes as .csv to the DataRaw folder
 #######################################################################
 
-write.csv(raw_benth_sxn_left_join, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/prepped_raw_benth_2019_2020.csv", row.names = F )
+write.csv(raw_benth_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/forExcel_raw_benth_2019_2020.csv", row.names = F )
 
 
-write.csv(raw_wood_sxn_left_join, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/prepped_raw_wood_2019_2020.csv", row.names = F)
+write.csv(raw_wood_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/forExcel_raw_wood_2019_2020.csv", row.names = F)
