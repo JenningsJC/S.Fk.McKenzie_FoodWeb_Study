@@ -18,6 +18,7 @@ rm(list=ls())
 ## read libraries in 
 library(tidyr)
 library(dplyr)
+library(forcats)
 ###################################################################
 ## Read in raw data
 ###################################################################
@@ -53,11 +54,22 @@ raw_2020_feb$Season <- cbind(Season)
 Season <- rep("Spring20", length(raw_2020_may$Date))
 raw_2020_may$Season <- cbind(Season)
 
+############################################################################
+## raw_2019_jul dataset has two names for the same treatment:
+## "Relic Channel" & "Relic Floodplain Channel" are the same sample site/
+##  Treatment. In the Treatment column, change the factor
+## "Relic Floodplain Channel" to "Relic Channel".
+#############################################################################
+unique(raw_2019_jul$Treatment)
+
+raw_2019_julx <-
+  raw_2019_jul %>% 
+  mutate(Treatment = fct_recode(Treatment, "Relic Channel" = "Relic Floodplain Channel"))
 ####################################################################
 ## Rbind the dataframes together
 ####################################################################
 raw_dat_allseasons_2019_2020 <-
-  rbind(raw_2019_jul, raw_2019_oct, raw_2020_feb, raw_2020_may)
+  rbind(raw_2019_julx, raw_2019_oct, raw_2020_feb, raw_2020_may)
 
 ####################################################################
 ## Coerce dates from factor to date in the "Date" column
@@ -84,18 +96,6 @@ write.csv(
   row.names = F
 )
 
-############################################################################
-## !!Benthic and wood raw datasets have two names for the same treatment:
-## "Relic Channel" & "Relic Floodplain Channel" are the same sample site/
-##  Treatment. In the Treatment column, change the factor
-## "Relic Floodplain Channel" to "Relic Channel": those samples
-##  are all from Summer 2019, so no need to worry about duplicate replicates)
-#############################################################################
-
-raw_dat_allseasons_2019_2020 <-
-  raw_dat_allseasons_2019_2020 %>% 
-  mutate(Treatment = ifelse(as.factor(Treatment) == "Relic Floodplain Channel",
-                            "Relic Channel", as.factor(Treatment)))
 
 #####################################################################
 ## Subset by Substrate (Benthic, Submerged Wood), exclude non-aquatic
