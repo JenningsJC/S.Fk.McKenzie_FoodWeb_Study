@@ -84,6 +84,19 @@ write.csv(
   row.names = F
 )
 
+############################################################################
+## !!Benthic and wood raw datasets have two names for the same treatment:
+## "Relic Channel" & "Relic Floodplain Channel" are the same sample site/
+##  Treatment. In the Treatment column, change the factor
+## "Relic Floodplain Channel" to "Relic Channel": those samples
+##  are all from Summer 2019, so no need to worry about duplicate replicates)
+#############################################################################
+
+raw_dat_allseasons_2019_2020 <-
+  raw_dat_allseasons_2019_2020 %>% 
+  mutate(Treatment = ifelse(as.factor(Treatment) == "Relic Floodplain Channel",
+                            "Relic Channel", as.factor(Treatment)))
+
 #####################################################################
 ## Subset by Substrate (Benthic, Submerged Wood), exclude non-aquatic
 ## taxa, exclude adult stage. 
@@ -127,34 +140,7 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
   Stage == "A"
 )
 
-####################################################################
-## !!Benthic and wood raw datasets have two names for the same treatment.
-## Combine the "Relic Channel" & "Relic Floodplain Channel" sets.
-## Write to .csv and explore solutions in Excel
-####################################################################
 
-###Raw benthic subset
-relic_chan_benth <- subset(raw_benth_allseasons_2019_2020,
-                          Treatment == "Relic Channel")
-
-relic_flood_benth <- subset(raw_benth_allseasons_2019_2020, 
-                           Treatment == "Relic Floodplain Channel")
-
-####Raw wood subset
-relic_chan_wood <- subset(raw_wood_allseasons_2019_2020,
-                          Treatment == "Relic Channel")
-
-relic_flood_wood <- subset(raw_wood_allseasons_2019_2020, 
-                          Treatment == "Relic Floodplain Channel")
-
-## change "Relic Floodplain Channel" to "Relic Channel"
-relic_flood_woodX <-
-  relic_flood_wood %>% 
-  mutate(Treatment = ifelse(as.factor(Treatment) == "Relic Floodplain Channel",
-                            "Relic Channel", as.factor(Treatment)))
-
-## rbind the two dasets and look for duplicate replicates that need to be summed
-relic_combo_wood <- rbind(relic_chan_wood, relic_flood_woodX)
 
 ######################################################################
 ## Pivot wider, names from Stage & values from Biomass.
