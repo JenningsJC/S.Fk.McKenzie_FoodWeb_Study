@@ -125,10 +125,10 @@ raw_adult_dat_allseasons_2019_2020 <- subset(
 
 
 ######################################################################
-## Pivot wider, names from Stage & values from Biomass and Abundance.
-## Sum the larvae, pupae, and unknown biomass and abundance values into 
-## single columns respectively called "biomass" and "abundance". Delete 
-## biomass_stage, abundance_stage, & sumrow columns.
+## Pivot wider, names from Stage & values from Biomass.
+## Sum the larvae, pupae, and unknown biomass values into 
+## single column called "biomass". Delete 
+## biomass_stage & sumrow columns.
 ######################################################################
 library(tidyr)
 library(dplyr)
@@ -177,8 +177,8 @@ wood_wider_summed_biomass <-
   wood_wider_summed_biomass[, -c(15:18)]
 
 #####################################################################
-## Write the datasets of combined pupal/larval/unknown abundances
-## and biomasses as csv files to DataRaw folder
+## Write the datasets of combined pupal/larval/unknown
+## biomasses as csv file to DataRaw folder
 #####################################################################
 
 write.csv(
