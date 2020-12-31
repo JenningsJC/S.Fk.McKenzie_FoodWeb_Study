@@ -14,10 +14,17 @@ library(tidyr)
 library(purrr)
 library(tibble)
 
-dummy_benth_clean3 <-
+################################################################
+## Read in datasets for analysis
+#################################################################
+
+disturbed_wood_ <-
   read.csv(
     "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean3.csv"
   )
+Test_Dummy1 <- read.csv(
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/Test_Dummy1.csv"
+)
 
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
@@ -26,15 +33,15 @@ dummy_benth_clean3 <-
 
 biomass_list <- list()
 means_list <- list()
-for (i in 1:5) {
-  random_sample <- stratified(dummy_benth_clean3,
-                              c("taxon", "season"),
+for (i in 1:3) {
+  random_sample <- stratified(real_test_set1,
+                              c("Taxon", "Season"),
                               1 ,
                               replace = TRUE)
   biomass_list[[i]] <- random_sample
   
-  means <- tapply(random_sample$biomass,
-                  list(random_sample$taxon),
+  means <- tapply(random_sample$Biomass,
+                  list(random_sample$Taxon),
                   mean)
   means_list[[i]] <- means
 }
