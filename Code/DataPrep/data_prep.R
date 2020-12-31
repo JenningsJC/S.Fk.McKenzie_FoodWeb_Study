@@ -374,4 +374,24 @@ write.csv(
 )
 
 #### Wood Surfaces #############
+unique(raw_wood_sxn_left_joinX$Treatment)
 
+##
+disturbed_wood_clean <-
+  subset(raw_wood_sxn_left_joinX, Treatment == "Disturbed")
+
+write.csv(
+  disturbed_wood_clean,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_clean.csv",
+  row.names = F
+)
+
+##
+relicChannel_wood_clean <-
+  subset(raw_wood_sxn_left_joinX, Treatment == "Relic Channel")
+
+write.csv(
+  relicChannel_wood_clean,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relicChannel_wood_clean.csv",
+  row.names = F
+)
