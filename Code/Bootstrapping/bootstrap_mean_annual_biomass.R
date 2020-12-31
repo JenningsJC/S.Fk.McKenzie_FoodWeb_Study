@@ -135,7 +135,7 @@ mean_quant_bootdistro_of_means <-
 
 write.csv(
   mean_quant_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_bravo.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_disturbed_wood.csv",
   row.names = F
 )
 
