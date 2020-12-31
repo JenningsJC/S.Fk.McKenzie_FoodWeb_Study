@@ -280,14 +280,12 @@ raw_wood_sxn_left_join <-
 ## The number should be: no. of unique taxa * no. seasons * no. replicates
 
 #######################################################################
-## Remove redundant columns: Date (translated to seasons for analysis),
-## Substrate (raw data is already split by substrate),
-## Origin (everything is aquatic in origin).
+## Remove the columns not needed for Biomass bootstrapping.
 #######################################################################
 
-raw_benth_sxn_left_join <- raw_benth_sxn_left_join[, -c(5,6,8)]
+raw_benth_sxn_left_join <- raw_benth_sxn_left_join[, -c(5:12)]
 
-raw_wood_sxn_left_join <- raw_wood_sxn_left_join[, -c(5,6,8)]
+raw_wood_sxn_left_join <- raw_wood_sxn_left_join[, -c(5:12)]
 
 #######################################################################
 ## Replace NA's in Biomass column with zeroes.
@@ -301,10 +299,19 @@ raw_wood_sxn_left_joinX <-
   raw_wood_sxn_left_join %>% replace_na(list(Biomass = 0))
 
 #######################################################################
-### Write the dataframes as .csv to the DataRaw folder
+### Write prepped dataframes as .csv to the DataClean folder, as 
+### backups.
 #######################################################################
 
-write.csv(raw_benth_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/forExcel_raw_benth_2019_2020.csv", row.names = F )
+write.csv(raw_benth_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/prepped_all_benth_2019_2020.csv", row.names = F )
 
 
-write.csv(raw_wood_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/forExcel_raw_wood_2019_2020.csv", row.names = F)
+write.csv(raw_wood_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/prepped_all_wood_2019_2020.csv", row.names = F)
+
+#######################################################################
+### Subset the benthic and wood surface datasets by Treatment.
+#######################################################################
+
+
+
+
