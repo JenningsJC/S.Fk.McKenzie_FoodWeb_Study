@@ -18,12 +18,8 @@ library(tibble)
 ## Read in datasets for analysis
 #################################################################
 
-disturbed_wood_ <-
-  read.csv(
-    "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/dummy_benth_clean3.csv"
-  )
-Test_Dummy1 <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/Test_Dummy1.csv"
+disturbed_wood <- read.csv(
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_clean.csv"
 )
 
 ##################################################################
@@ -33,8 +29,10 @@ Test_Dummy1 <- read.csv(
 
 biomass_list <- list()
 means_list <- list()
-for (i in 1:3) {
-  random_sample <- stratified(Test_Dummy1,
+
+tic()
+for (i in 1:10000) {
+  random_sample <- stratified(disturbed_wood,
                               c("Taxon", "Season"),
                               1 ,
                               replace = TRUE)
@@ -45,6 +43,7 @@ for (i in 1:3) {
                   mean)
   means_list[[i]] <- means
 }
+toc()
 ###################################################################
 ## rbind output list of means, coerce into dataframe, 
 ## add a column named "site", write to csv
@@ -53,12 +52,10 @@ for (i in 1:3) {
 annual_means <- do.call(rbind, means_list)
 annual_wood_means <- as.data.frame(annual_means)
 
-site <- rep("Disturbed", nrow(annual_wood_means))
-annual_wood_means$Site <- cbind(site)
 
 write.csv(
-  annual_benth_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_bootdistr_annual_means_bravo.csv",
+  annual_wood_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_wood.csv",
   row.names = F
 )
 
@@ -122,9 +119,9 @@ lower_quant <- lower_quant[,-c(1)]
 
 ## The columns 1:n, n should = no. taxa in the dataset
 upper_quant <-
-  pivot_longer(upper_quant, 1:2, names_to = "taxon", values_to = "97.5")
+  pivot_longer(upper_quant, 1:153, names_to = "taxon", values_to = "97.5")
 lower_quant <-
-  pivot_longer(lower_quant, 1:2, names_to = "taxon", values_to = "2.5")
+  pivot_longer(lower_quant, 1:153, names_to = "taxon", values_to = "2.5")
 
 mean_quant_bootdistro_of_means <-
   merge(means_of_bootdistro_of_means, upper_quant)
