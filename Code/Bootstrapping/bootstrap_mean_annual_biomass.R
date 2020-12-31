@@ -34,7 +34,7 @@ Test_Dummy1 <- read.csv(
 biomass_list <- list()
 means_list <- list()
 for (i in 1:3) {
-  random_sample <- stratified(real_test_set1,
+  random_sample <- stratified(Test_Dummy1,
                               c("Taxon", "Season"),
                               1 ,
                               replace = TRUE)
@@ -51,10 +51,10 @@ for (i in 1:3) {
 ###################################################################
 
 annual_means <- do.call(rbind, means_list)
-annual_benth_means <- as.data.frame(annual_means)
+annual_wood_means <- as.data.frame(annual_means)
 
-site <- rep("bravo", nrow(annual_benth_means))
-annual_benth_means$site <- cbind(site)
+site <- rep("Disturbed", nrow(annual_wood_means))
+annual_wood_means$Site <- cbind(site)
 
 write.csv(
   annual_benth_means,
@@ -68,7 +68,7 @@ write.csv(
 ####################################################################
 
 bio_boot_samples <- biomass_list %>%
-  reduce(left_join, by = c("site", "taxon", "season"))
+  reduce(left_join, by = c("Treatment", "Taxon", "Season"))
 
 ####################################################################
 ## compute mean and 95% CI of bootstrap distribution of annual means
