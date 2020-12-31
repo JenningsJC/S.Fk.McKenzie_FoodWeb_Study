@@ -312,6 +312,14 @@ write.csv(raw_wood_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/prep
 ### Subset the benthic and wood surface datasets by Treatment.
 #######################################################################
 
+unique(raw_benth_sxn_left_joinX$Treatment)
 
+disturbed_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Disturbed")
 
+floodForest_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Flooded Forest")
 
+phase3_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Phase 3")
+
+phase4_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Phase 4")
+
+relicChannel_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Relic Channel")
