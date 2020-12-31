@@ -303,23 +303,75 @@ raw_wood_sxn_left_joinX <-
 ### backups.
 #######################################################################
 
-write.csv(raw_benth_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/prepped_all_benth_2019_2020.csv", row.names = F )
+write.csv(
+  raw_benth_sxn_left_joinX,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/prepped_all_benth_2019_2020.csv",
+  row.names = F
+)
 
 
-write.csv(raw_wood_sxn_left_joinX, "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/prepped_all_wood_2019_2020.csv", row.names = F)
+write.csv(
+  raw_wood_sxn_left_joinX,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/prepped_all_wood_2019_2020.csv",
+  row.names = F
+)
 
 #######################################################################
 ### Subset the benthic and wood surface datasets by Treatment.
+### Write to DataClean folder.
 #######################################################################
 
+#### BENTHIC ############
 unique(raw_benth_sxn_left_joinX$Treatment)
 
-disturbed_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Disturbed")
+disturbed_benth_clean <-
+  subset(raw_benth_sxn_left_joinX, Treatment == "Disturbed")
+##
+write.csv(
+  disturbed_benth_clean,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_clean.csv",
+  row.names = F
+)
 
-floodForest_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Flooded Forest")
+##
+floodForest_benth_clean <-
+  subset(raw_benth_sxn_left_joinX, Treatment == "Flooded Forest")
 
-phase3_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Phase 3")
+write.csv(
+  floodForest_benth_clean,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/floodForest_benth_clean.csv",
+  row.names = F
+)
 
-phase4_benth_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Phase 4")
+##
+phase3_benth_clean <-
+  subset(raw_benth_sxn_left_joinX, Treatment == "Phase 3")
 
-relicChannel_clean <- subset(raw_benth_sxn_left_joinX, Treatment == "Relic Channel")
+write.csv(
+  phase3_benth_clean,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/phase3_benth_clean.csv",
+  row.names = F
+)
+
+##
+phase4_benth_clean <-
+  subset(raw_benth_sxn_left_joinX, Treatment == "Phase 4")
+
+write.csv(
+  phase4_benth_clean,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/phase4_benth_clean.csv",
+  row.names = F
+)
+
+##
+relicChannel_benth_clean <-
+  subset(raw_benth_sxn_left_joinX, Treatment == "Relic Channel")
+
+write.csv(
+  relicChannel_benth_clean,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relicChannel_benth_clean.csv",
+  row.names = F
+)
+
+#### Wood Surfaces #############
+
