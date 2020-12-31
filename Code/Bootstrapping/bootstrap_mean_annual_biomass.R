@@ -120,17 +120,21 @@ lower_quant <-
   (subset(quants_of_bootdistro_of_means, quantiles == "2.5%"))
 lower_quant <- lower_quant[,-c(1)]
 
+## The columns 1:n, n should = no. taxa in the dataset
 upper_quant <-
-  pivot_longer(upper_quant, 1:3, names_to = "taxon", values_to = "97.5")
+  pivot_longer(upper_quant, 1:2, names_to = "taxon", values_to = "97.5")
 lower_quant <-
-  pivot_longer(lower_quant, 1:3, names_to = "taxon", values_to = "2.5")
+  pivot_longer(lower_quant, 1:2, names_to = "taxon", values_to = "2.5")
 
 mean_quant_bootdistro_of_means <-
   merge(means_of_bootdistro_of_means, upper_quant)
 mean_quant_bootdistro_of_means <-
   merge(mean_quant_bootdistro_of_means, lower_quant)
 
-## write the single table containing means and quantiles to  csv
+##########################################################################
+## write the merged table containing annual means and quantiles, by taxon, 
+## as csv file to the DataDerived folder
+##########################################################################
 
 write.csv(
   mean_quant_bootdistro_of_means,
