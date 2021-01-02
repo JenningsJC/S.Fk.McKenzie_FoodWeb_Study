@@ -5,7 +5,7 @@
 ## calculate annual mean biomass estimates
 ##
 #####################################################################
-rm(list=ls())
+rm(list = ls())
 
 install.packages("splitstackshape")
 library(splitstackshape)
@@ -18,13 +18,11 @@ library(tibble)
 ## Read in datasets for analysis
 #################################################################
 
-disturbed_wood <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_clean.csv"
-)
+disturbed_wood <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_clean.csv")
 
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
-## 
+##
 ##################################################################
 
 biomass_list <- list()
@@ -45,7 +43,7 @@ for (i in 1:10000) {
 }
 toc()
 ###################################################################
-## rbind output list of means, coerce into dataframe, 
+## rbind output list of means, coerce into dataframe,
 ## add a column named "site", write to csv
 ###################################################################
 
@@ -81,8 +79,8 @@ quants_of_bootdistro_of_means <-
   as.data.frame(quants_of_bootdistro_of_means)
 
 ####################################################################
-## Create tables of means and 95%CI's of bootstrap distribution of 
-## annual means. Combine into one. Write to csv file in 
+## Create tables of means and 95%CI's of bootstrap distribution of
+## annual means. Combine into one. Write to csv file in
 ## DataDerived folder
 ####################################################################
 
@@ -91,33 +89,30 @@ quants_of_bootdistro_of_means <-
   rownames_to_column(quants_of_bootdistro_of_means, var = "rowname")
 quants_of_bootdistro_of_means <-
   quants_of_bootdistro_of_means %>%
-  rename(quantiles = rowname
-  )
+  rename(quantiles = rowname)
 
 ## add the bootmeans rownames as a column and rename "taxon"
 means_of_bootdistro_of_means <-
   rownames_to_column(means_of_bootdistro_of_means, var = "rowname")
 means_of_bootdistro_of_means <-
   means_of_bootdistro_of_means %>%
-  rename(taxon = rowname
-  )
+  rename(taxon = rowname)
 ## rename boot_mean column to means
 means_of_bootdistro_of_means <-
   means_of_bootdistro_of_means %>%
-  rename(mean = boot_means
-  )
+  rename(mean = boot_means)
 ## extract each list of bounds, remove "quantiles" column, pivot longer,
 ## and merge with means_of_bootdistro_of_means to make single table
 
 upper_quant <-
   (subset(quants_of_bootdistro_of_means, quantiles == "97.5%"))
-upper_quant <- upper_quant[,-c(1)]
+upper_quant <- upper_quant[, -c(1)]
 
 lower_quant <-
   (subset(quants_of_bootdistro_of_means, quantiles == "2.5%"))
-lower_quant <- lower_quant[,-c(1)]
+lower_quant <- lower_quant[, -c(1)]
 
-## The columns 1:n, n should = no. taxa in the dataset
+## To define columns 1:n, n should = no. taxa/columns in the dataset
 upper_quant <-
   pivot_longer(upper_quant, 1:153, names_to = "taxon", values_to = "97.5")
 lower_quant <-
@@ -129,7 +124,7 @@ mean_quant_bootdistro_of_means <-
   merge(mean_quant_bootdistro_of_means, lower_quant)
 
 ##########################################################################
-## write the merged table containing annual means and quantiles, by taxon, 
+## write the merged table containing annual means and quantiles, by taxon,
 ## as csv file to the DataDerived folder
 ##########################################################################
 
