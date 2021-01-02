@@ -19,6 +19,7 @@ library(tibble)
 #################################################################
 
 disturbed_wood <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_clean.csv")
+Relic_Chan_wood <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relicChannel_wood_clean.csv")
 
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
@@ -30,7 +31,7 @@ means_list <- list()
 
 tic()
 for (i in 1:10000) {
-  random_sample <- stratified(disturbed_wood,
+  random_sample <- stratified(Relic_Chan_wood,
                               c("Taxon", "Season"),
                               1 ,
                               replace = TRUE)
@@ -48,12 +49,12 @@ toc()
 ###################################################################
 
 annual_means <- do.call(rbind, means_list)
-annual_wood_means <- as.data.frame(annual_means)
+annual_RelicChan_wood_means <- as.data.frame(annual_means)
 
 
 write.csv(
-  annual_wood_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_wood.csv",
+  annual_RelicChan_wood_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_RelicChan_wood.csv",
   row.names = F
 )
 
@@ -130,7 +131,7 @@ mean_quant_bootdistro_of_means <-
 
 write.csv(
   mean_quant_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_disturbed_wood.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_RelicChan_wood.csv",
   row.names = F
 )
 
