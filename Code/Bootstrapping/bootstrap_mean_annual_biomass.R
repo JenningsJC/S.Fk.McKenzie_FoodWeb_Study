@@ -21,6 +21,8 @@ library(tibble)
 disturbed_wood <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_clean.csv")
 Relic_Chan_wood <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relicChannel_wood_clean.csv")
 disturbed_benth <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_clean.csv")
+floodforest_benth <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/floodForest_benth_clean.csv")
+
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
 ##
@@ -31,7 +33,7 @@ means_list <- list()
 
 tic()
 for (i in 1:10000) {
-  random_sample <- stratified(disturbed_benth,
+  random_sample <- stratified(floodforest_benth,
                               c("Taxon", "Season"),
                               1 ,
                               replace = TRUE)
@@ -49,12 +51,12 @@ toc()
 ###################################################################
 
 annual_means <- do.call(rbind, means_list)
-annual_disturbed_benth_means <- as.data.frame(annual_means)
+annual_floodforest_benth_means <- as.data.frame(annual_means)
 
 
 write.csv(
-  annual_disturbed_benth_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_benth.csv",
+  annual_floodforest_benth_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_floodforest_benth.csv",
   row.names = F
 )
 
@@ -135,7 +137,7 @@ mean_quant_bootdistro_of_means <-
 
 write.csv(
   mean_quant_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_disturbed_benth.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_floodforest_benth.csv",
   row.names = F
 )
 
