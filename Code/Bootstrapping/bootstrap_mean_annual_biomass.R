@@ -20,7 +20,7 @@ library(tibble)
 
 disturbed_wood <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_wood_clean.csv")
 Relic_Chan_wood <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/relicChannel_wood_clean.csv")
-
+disturbed_benth <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataClean/disturbed_benth_clean.csv")
 ##################################################################
 ## apply stratified() and tapply()in a loop, output as a list,
 ##
@@ -31,7 +31,7 @@ means_list <- list()
 
 tic()
 for (i in 1:10000) {
-  random_sample <- stratified(Relic_Chan_wood,
+  random_sample <- stratified(disturbed_benth,
                               c("Taxon", "Season"),
                               1 ,
                               replace = TRUE)
@@ -49,12 +49,12 @@ toc()
 ###################################################################
 
 annual_means <- do.call(rbind, means_list)
-annual_RelicChan_wood_means <- as.data.frame(annual_means)
+annual_disturbed_benth_means <- as.data.frame(annual_means)
 
 
 write.csv(
-  annual_RelicChan_wood_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_RelicChan_wood.csv",
+  annual_disturbed_benth_means,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_benth.csv",
   row.names = F
 )
 
@@ -70,12 +70,16 @@ bio_boot_samples <- biomass_list %>%
 ## compute mean and 95% CI of bootstrap distribution of annual means
 ####################################################################
 
+tic()
 boot_means <- apply(annual_means, 2, mean)
+toc()
 means_of_bootdistro_of_means <- as.data.frame(boot_means)
 
+tic()
 quants <- c(0.975, 0.025)
 quants_of_bootdistro_of_means <-
   apply(annual_means , 2 , quantile , probs = quants)
+toc()
 quants_of_bootdistro_of_means <-
   as.data.frame(quants_of_bootdistro_of_means)
 
@@ -115,9 +119,9 @@ lower_quant <- lower_quant[, -c(1)]
 
 ## To define columns 1:n, n should = no. taxa/columns in the dataset
 upper_quant <-
-  pivot_longer(upper_quant, 1:153, names_to = "taxon", values_to = "97.5")
+  pivot_longer(upper_quant, 1:229, names_to = "taxon", values_to = "97.5")
 lower_quant <-
-  pivot_longer(lower_quant, 1:153, names_to = "taxon", values_to = "2.5")
+  pivot_longer(lower_quant, 1:229, names_to = "taxon", values_to = "2.5")
 
 mean_quant_bootdistro_of_means <-
   merge(means_of_bootdistro_of_means, upper_quant)
@@ -131,7 +135,7 @@ mean_quant_bootdistro_of_means <-
 
 write.csv(
   mean_quant_bootdistro_of_means,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_RelicChan_wood.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_disturbed_benth.csv",
   row.names = F
 )
 
