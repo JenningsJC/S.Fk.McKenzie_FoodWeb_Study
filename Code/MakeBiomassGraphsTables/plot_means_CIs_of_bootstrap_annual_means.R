@@ -74,8 +74,7 @@ plot3 + stat_summary(
 ## Prep mean and quantile data for graphing
 ## tables
 #####################################################
-install.packages('gt')
-library(gt)
+
 
 
 ## Rename quantile columns
@@ -95,12 +94,20 @@ disturb_benth_quant_bigs<- filter(disturb_benth_quantiles, `2.5` > 0)
 ##
 ############################################################################
 
+plot1 <- ggplot(df3, disturb_benth_quant_bigs(x=taxon, y=mean)) + 
+  geom_bar(stat="identity", position=position_dodge()) +
+  geom_errorbar(aes(ymin= `2.5`, ymax= `97.5`), width=.2,
+                position=position_dodge(.9))
 
 
 #########################################################
 ## make tables of means % 95% CI's of bootstrap
 ## distributions of means by taxon and site
 #########################################################
+
+install.packages('gt')
+library(gt)
+
 table1 <- gt(data = boot_means_quants_alpha_bravo)
 table1
 table1 <- table1 %>%
