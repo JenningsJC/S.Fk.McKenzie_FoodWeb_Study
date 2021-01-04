@@ -1,64 +1,56 @@
 ###############################################################
+###############################################################
 ##  Graph boxplots of bootstrap distributions of estimated
 ##  mean annual biomasses by taxa and site.
 ##  Make tables of means and confidence intervals.
 ###############################################################
+###############################################################
+
 rm(list = ls())
 
 library(ggplot2)
 library(dplyr)
 library(tidyr)
 
-boot_dist_annl_bioms_alpha <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_bootdistr_annual_means_alpha.csv"
-)
+disturb_benth_quantiles <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_disturbed_benth.csv"
+  )
+bootdistro_disturb_benth_annual_means <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_benth.csv"
+  )
 
-boot_dist_annl_bioms_bravo <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_bootdistr_annual_means_bravo.csv"
-)
+
 ########################################################
 ## prep bootstrap distribution of means data for 
 ## boxplotting by pivoting longer
 ########################################################
-
-boot_dist_alpha_long <-
-  pivot_longer(boot_dist_annl_bioms_alpha,
-               1:3,
-               names_to = "taxon",
-               values_to = "means")
-
-boot_dist_bravo_long <-
-  pivot_longer(boot_dist_annl_bioms_bravo,
-               1:3,
-               names_to = "taxon",
-               values_to = "means")
+## 1:n below, n = number of taxa/columns in data frame
+bootdistro_disturbed_benth_long <-
+  pivot_longer(bootdistro_disturb_benth_annual_means,
+               1:229,
+               names_to = "Taxon",
+               values_to = "Means")
 
 ## coerce "taxon" column from characters to factors
-boot_dist_alpha_long$taxon <- as.factor(boot_dist_alpha_long$taxon)
-
-boot_dist_bravo_long$taxon <- as.factor(boot_dist_bravo_long$taxon)
+bootdistro_disturbed_benth_long$Taxon <- as.factor(bootdistro_disturbed_benth_long$Taxon)
 
 ########################################################
 ## create boxplots of boot distributions of annual means 
 ## for each site, by taxon
 ########################################################
+tic()
 plot1 <-
-  ggplot(boot_dist_alpha_long, aes(x = taxon, y = means, color = taxon)) + geom_boxplot()
+  ggplot(bootdistro_disturbed_benth_long, aes(x = Taxon, y = Means, color = Taxon)) + geom_boxplot()
 plot1 + stat_summary(
   fun = mean,
   geom = "point",
   shape = 1,
   size = 3
 )
+toc()
 
-plot2 <-
-  ggplot(boot_dist_bravo_long, aes(x = taxon, y = means, color = taxon)) + geom_boxplot()
-plot2 + stat_summary(
-  fun = mean,
-  geom = "point",
-  shape = 1,
-  size = 3
-)
 ########################################################
 ## creat boxplots of boot distributions of annual means 
 ## by taxon, grouped by site
