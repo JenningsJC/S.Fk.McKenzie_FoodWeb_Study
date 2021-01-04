@@ -77,27 +77,24 @@ plot3 + stat_summary(
 install.packages('gt')
 library(gt)
 
-boot_means_quants_alpha <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_alpha.csv"
-)
-site <- rep("alpha", nrow(boot_means_quants_alpha))
-boot_means_quants_alpha$site <- cbind(site)
 
-boot_means_quants_bravo <- read.csv(
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/dummy_mean_quant_of_bootdistr_bravo.csv"
-)
-site <- rep("bravo", nrow(boot_means_quants_bravo))
-boot_means_quants_bravo$site <- cbind(site)
-
-boot_means_quants_alpha_bravo <- rbind(boot_means_quants_alpha, boot_means_quants_bravo)
-
-## coerce "site" column from characters to factors
-boot_means_quants_alpha_bravo$site <- as.factor(boot_means_quants_alpha_bravo$site)
-
-##rename quantile columns
-boot_means_quants_alpha_bravo <- boot_means_quants_alpha_bravo %>%
+## Rename quantile columns
+disturb_benth_quantiles <- disturb_benth_quantiles %>%
   rename("97.5" = X97.5,
          "2.5" = X2.5)
+
+## Remove taxa with annual means of zero
+disturb_benth_quant_AllZero <- filter(disturb_benth_quantiles, mean == 0)
+disturb_benth_quant_NoZero <- filter(disturb_benth_quantiles, mean > 0)
+
+## Remove taxa with 95% CI that includes zero
+disturb_benth_quant_bigs<- filter(disturb_benth_quantiles, `2.5` > 0)
+
+############################################################################
+##
+##
+############################################################################
+
 #########################################################
 ## make tables of means % 95% CI's of bootstrap
 ## distributions of means by taxon and site
