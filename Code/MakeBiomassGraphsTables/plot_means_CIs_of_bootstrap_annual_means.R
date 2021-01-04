@@ -91,9 +91,11 @@ disturb_benth_quant_NoZero <- filter(disturb_benth_quantiles, mean > 0)
 disturb_benth_quant_bigs<- filter(disturb_benth_quantiles, `2.5` > 0)
 
 ############################################################################
-##
+## Make bargraphs with error bars showing CI's
 ##
 ############################################################################
+
+
 
 #########################################################
 ## make tables of means % 95% CI's of bootstrap
