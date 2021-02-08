@@ -7,7 +7,7 @@
 ###############################################################
 
 rm(list = ls())
-
+library(tictoc)
 library(ggplot2)
 library(dplyr)
 library(tidyr)
@@ -15,10 +15,6 @@ library(tidyr)
 disturb_benth_quantiles <-
   read.csv(
     "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_disturbed_benth.csv"
-  )
-bootdistro_disturb_benth_annual_means <-
-  read.csv(
-    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_benth.csv"
   )
 
 
@@ -33,43 +29,7 @@ bootdistro_disturbed_benth_long <-
                names_to = "Taxon",
                values_to = "Means")
 
-## coerce "taxon" column from characters to factors
-bootdistro_disturbed_benth_long$Taxon <- as.factor(bootdistro_disturbed_benth_long$Taxon)
 
-########################################################
-## create boxplots of boot distributions of annual means 
-## for each site, by taxon
-########################################################
-tic()
-plot1 <-
-  ggplot(bootdistro_disturbed_benth_long, aes(x = Taxon, y = Means, color = Taxon)) + geom_boxplot()
-plot1 + stat_summary(
-  fun = mean,
-  geom = "point",
-  shape = 1,
-  size = 3
-)
-toc()
-
-########################################################
-## creat boxplots of boot distributions of annual means 
-## by taxon, grouped by site
-########################################################
-boot_dist_alpha_bravo <-
-  rbind(boot_dist_alpha_long, boot_dist_bravo_long)
-
-plot3 <-
-  ggplot(boot_dist_alpha_bravo, aes(x = taxon, y = means, fill = site)) 
-  + geom_boxplot(position =
-    position_dodge(1)
-)
-plot3 + stat_summary(
-  position = position_dodge(1),
-  fun = mean,
-  geom = "point",
-  shape = 1,
-  size = 3
-)
 #####################################################
 ## Prep mean and quantile data for graphing
 ## tables
