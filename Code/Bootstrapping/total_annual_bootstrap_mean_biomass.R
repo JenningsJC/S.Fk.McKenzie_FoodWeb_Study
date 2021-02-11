@@ -23,6 +23,35 @@ bootdistr_annual_mean_disturbed_benth <-
     "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_benth.csv"
   )
 
+bootdistr_annual_mean_disturbed_wood <- read.csv(
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_wood.csv"
+)
+
+bootdistr_annual_mean_floodforest_benth <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_floodforest_benth.csv"
+  )
+
+bootdistr_annual_mean_phase3_benth <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_phase3_benth.csv"
+  )
+
+bootdistr_annual_mean_phase4_benth <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_phase4_benth.csv"
+  )
+
+bootdistr_annual_mean_relic_chan_benth <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_relic_chan_benth.csv"
+  )
+
+bootdistr_annual_mean_relicchan_wood <-
+  read.csv(
+    "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_RelicChan_wood.csv"
+  )
+
 ##############################################################
 ## Sum across columns, row by row
 ##############################################################
