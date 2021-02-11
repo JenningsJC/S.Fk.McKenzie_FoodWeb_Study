@@ -59,6 +59,9 @@ bootdistr_annual_mean_relicchan_wood <-
 total_means_disturbed_benth <-
   bootdistr_annual_mean_disturbed_benth %>% mutate(sum = rowSums(.[1:229]))
 
+tot_biomass_distro_disturbed_benth <- total_means_disturbed_benth$sum
+
+
 total_means_disturbed_wood <-
   bootdistr_annual_mean_disturbed_wood %>% mutate(sum = rowSums(.[1:153]))
 
@@ -96,17 +99,15 @@ phase3_mean_total <-
 phase4_mean_total <-
   mean(total_means_phase4_benth[["sum"]])
 
-relic_chan_benth <-
+relic_chan_benth_mean_total<-
   mean(total_means_relic_chan_benth[["sum"]])
 
-relic_chan_wood <-
+relic_chan_wood_mean_total <-
   mean(total_means_relicchan_wood[["sum"]])
 
 # calculate the 95% CI using the percentile method
 quants <- c(0.975, 0.025)
 tot_disturb_benth_quantiles <-
-  apply(tot_disturb_benth_meanof_distro , 2 , quantile , probs = quants)
+  apply(total_means_disturbed_benth[,230, drop=F ], 2 , quantile , probs = quants)
 
 
-quants_of_bootdistro_of_means <-
-  as.data.frame(quants_of_bootdistro_of_means)
