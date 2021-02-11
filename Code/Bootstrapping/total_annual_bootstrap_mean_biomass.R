@@ -72,7 +72,7 @@ total_means_phase4_benth <-
   bootdistr_annual_mean_phase4_benth %>% mutate(sum = rowSums(.[1:229]))
 
 total_means_relic_chan_benth <-
-  bootdistr_annual_mean_relic_chane_benth %>% mutate(sum = rowSums(.[1:229]))
+  bootdistr_annual_mean_relic_chan_benth %>% mutate(sum = rowSums(.[1:229]))
 
 total_means_relicchan_wood <-
   bootdistr_annual_mean_relicchan_wood %>% mutate(sum = rowSums(.[1:153]))
@@ -80,14 +80,27 @@ total_means_relicchan_wood <-
 ## compute mean and 95% CI of bootstrap distribution of annual means
 ####################################################################
 
-# calculate the mean of the distribution of total mean biomasses
-tot_disturb_benth_meanof_distro <-
+# calculate the means of the distributions of total annual mean biomasses
+disturb_benth_mean_total <-
   mean(total_means_disturbed_benth[["sum"]])
 
+disturb_wood_mean_total <-
+  mean(total_means_disturbed_wood[["sum"]])
 
+floodforest_benth_mean_total <-
+  mean(total_means_flooforest_benth[["sum"]])
 
+phase3_mean_total <-
+  mean(total_means_phase3_benth[["sum"]])
 
+phase4_mean_total <-
+  mean(total_means_phase4_benth[["sum"]])
 
+relic_chan_benth <-
+  mean(total_means_relic_chan_benth[["sum"]])
+
+relic_chan_wood <-
+  mean(total_means_relicchan_wood[["sum"]])
 
 # calculate the 95% CI using the percentile method
 quants <- c(0.975, 0.025)
