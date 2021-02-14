@@ -117,28 +117,33 @@ quants <- c(0.975, 0.025)
 tot_disturb_benth_quantiles <-
   as.data.frame(apply(total_means_disturbed_benth[, 230, drop = F], 2 , quantile , probs = quants))
 
+#DISTURBED BENTHIC
 disturb_benth <-
   rownames_to_column(tot_disturb_benth_quantiles, var = "rowname")
 disturb_benth <-
   pivot_wider(disturb_benth, names_from = rowname, values_from = sum)
 
-####### CONTINUE FROM HERE!!!
+#DISTURBED WOOD
 disturb_wood_quantiles <-
   apply(total_means_disturbed_wood[,154, drop=F ], 2, quantile, probs = quants)
 
-
+#FLOODED FOREST BENTHIC
 tot_floodforest_benth_quantiles <-
   apply(total_means_floodforest_benth [,230, drop=F ], 2 , quantile , probs = quants)
 
+#PHASE3 BENTHIC
 tot_phase3_benth_quantiles <-
   apply(total_means_phase3_benth [,230, drop=F ], 2 , quantile , probs = quants)
 
+#PHASE4 BENTHIC
 tot_phase4_benth_quantiles <-
   apply(total_means_phase4_benth [,230, drop=F ], 2 , quantile , probs = quants)
 
+#RELICCHAN BENTH
 tot_relic_chan_benth_quantiles <-
   apply(total_means_relic_chan_benth [,230, drop=F ], 2 , quantile , probs = quants)
 
+#RELICCHAN WOOD
 tot_relicchan_wood_quantiles <-
   apply(total_means_relicchan_wood [, 154, drop = F], 2, quantile, probs = quants)
 
