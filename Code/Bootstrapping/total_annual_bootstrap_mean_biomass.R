@@ -107,14 +107,22 @@ relic_chan_wood_mean_total <-
   mean(total_means_relicchan_wood[["sum"]])
 
 ########################3
-# calculate the 95% CI using the percentile method
+## Calculate the 95% CI using the percentile method.
+## Add rownames as a column, and pivot longer so it can be rbound
+## to the resto of the quatiles, and merged with the table of means
+## called "tot_mass" below
 
 quants <- c(0.975, 0.025)
 tot_disturb_benth_quantiles <-
-  apply(total_means_disturbed_benth[,230, drop=F ], 2 , quantile , probs = quants)
+  as.data.frame(apply(total_means_disturbed_benth[,230, drop=F ], 2 , quantile , probs = quants))
 
-tot_disturb_wood_quantiles <-
+disturb_benth <- rownames_to_column(tot_disturb_benth_quantiles, var = "rowname")
+disturb_benth <- pivot_wider(disturb_benth, names_from = rowname, values_from = sum)
+
+####### CONTINUE FROM HERE!!!
+disturb_wood_quantiles <-
   apply(total_means_disturbed_wood[,154, drop=F ], 2, quantile, probs = quants)
+
 
 tot_floodforest_benth_quantiles <-
   apply(total_means_floodforest_benth [,230, drop=F ], 2 , quantile , probs = quants)
@@ -131,6 +139,11 @@ tot_relic_chan_benth_quantiles <-
 tot_relicchan_wood_quantiles <-
   apply(total_means_relicchan_wood [,154, drop=F ], 2, quantile, probs = quants)
 
+tot_quantiles <- rbind.data.frame(disturb_benth, disturb_wood,
+                                  floodforest_benth, phase3_benth,
+                                  phase4_benth, relic_chan_benth,
+                                  relicchan_wood_quantiles)
+
 ########################################################
 # Merge the means and quantiles into a single dataframe
 
@@ -146,6 +159,7 @@ Treatment <- c("disturb_benth", "disturb_wood",
                               "floodforest_benth", "phase3",
                               "phase4", "relic_chan_benth", 
                               "relic_chan_wood")
+
 # combine treatment column with  the means column, and keep means numeric values by
 # using cbind.data.frame
 
