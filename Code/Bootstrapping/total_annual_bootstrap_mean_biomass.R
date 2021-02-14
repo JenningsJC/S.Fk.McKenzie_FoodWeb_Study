@@ -54,15 +54,13 @@ bootdistr_annual_mean_relicchan_wood <-
   )
 
 ##############################################################
-## Sum across columns, row by row
+## Sum across taxa columns, for all 10k rows. Results are
+## stored in a new column called "sum", which is the boot
+## distribution of total annual biomass for the sample site
 ##############################################################
 
 total_means_disturbed_benth <-
   bootdistr_annual_mean_disturbed_benth %>% mutate(sum = rowSums(.[1:229]))
-
-############ 
-tot_biomass_distro_disturbed_benth <- total_means_disturbed_benth$sum
-##########
 
 total_means_disturbed_wood <-
   bootdistr_annual_mean_disturbed_wood %>% mutate(sum = rowSums(.[1:153]))
@@ -112,4 +110,20 @@ quants <- c(0.975, 0.025)
 tot_disturb_benth_quantiles <-
   apply(total_means_disturbed_benth[,230, drop=F ], 2 , quantile , probs = quants)
 
+tot_disturb_wood_quantiles <-
+  apply(total_means_disturbed_wood[,154, drop=F ], 2, quantile, probs = quants)
 
+tot_floodforest_benth_quantiles <-
+  apply(total_means_floodforest_benth [,230, drop=F ], 2 , quantile , probs = quants)
+
+tot_phase3_benth_quantiles <-
+  apply(total_means_phase3_benth [,230, drop=F ], 2 , quantile , probs = quants)
+
+tot_phase4_benth_quantiles <-
+  apply(total_means_phase4_benth [,230, drop=F ], 2 , quantile , probs = quants)
+
+tot_relic_chan_benth_quantiles <-
+  apply(total_means_relic_chan_benth [,230, drop=F ], 2 , quantile , probs = quants)
+
+tot_relicchan_wood_quantiles <-
+  apply(total_means_relicchan_wood [,154, drop=F ], 2, quantile, probs = quants)
