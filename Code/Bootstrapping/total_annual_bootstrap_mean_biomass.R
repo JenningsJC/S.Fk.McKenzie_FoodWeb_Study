@@ -139,8 +139,15 @@ tot_annual_mass_allsites <- c(disturb_benth_mean_total, disturb_wood_mean_total,
                                   floodforest_benth_mean_total, phase3_mean_total,
                                   phase4_mean_total, relic_chan_benth_mean_total, 
                                   relic_chan_wood_mean_total)
+Mean <- as.numeric(tot_annual_mass_allsites)
+
 # create a vector of Treatments for the means
 Treatment <- c("disturb_benth", "disturb_wood", 
                               "floodforest_benth", "phase3",
                               "phase4", "relic_chan_benth", 
                               "relic_chan_wood")
+# combine treatment column with  the means column, and keep means numeric values by
+# using cbind.data.frame
+
+tot_mass <- cbind.data.frame(Treatment, Mean)
+
