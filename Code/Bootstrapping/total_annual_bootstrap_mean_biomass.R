@@ -91,7 +91,7 @@ disturb_wood_mean_total <-
   mean(total_means_disturbed_wood[["sum"]])
 
 floodforest_benth_mean_total <-
-  mean(total_means_flooforest_benth[["sum"]])
+  mean(total_means_floodforest_benth[["sum"]])
 
 phase3_mean_total <-
   mean(total_means_phase3_benth[["sum"]])
