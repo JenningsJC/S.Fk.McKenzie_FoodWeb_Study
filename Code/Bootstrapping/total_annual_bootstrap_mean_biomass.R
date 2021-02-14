@@ -83,6 +83,7 @@ total_means_relicchan_wood <-
 ## compute mean and 95% CI of bootstrap distribution of annual means
 ####################################################################
 
+#######################
 # calculate the means of the distributions of total annual mean biomasses
 disturb_benth_mean_total <-
   mean(total_means_disturbed_benth[["sum"]])
@@ -99,13 +100,15 @@ phase3_mean_total <-
 phase4_mean_total <-
   mean(total_means_phase4_benth[["sum"]])
 
-relic_chan_benth_mean_total<-
+relic_chan_benth_mean_total <-
   mean(total_means_relic_chan_benth[["sum"]])
 
 relic_chan_wood_mean_total <-
   mean(total_means_relicchan_wood[["sum"]])
 
+########################3
 # calculate the 95% CI using the percentile method
+
 quants <- c(0.975, 0.025)
 tot_disturb_benth_quantiles <-
   apply(total_means_disturbed_benth[,230, drop=F ], 2 , quantile , probs = quants)
@@ -127,3 +130,17 @@ tot_relic_chan_benth_quantiles <-
 
 tot_relicchan_wood_quantiles <-
   apply(total_means_relicchan_wood [,154, drop=F ], 2, quantile, probs = quants)
+
+########################################################
+# Merge the means and quantiles into a single dataframe
+
+# merge the means into a single vector
+tot_annual_mass_allsites <- c(disturb_benth_mean_total, disturb_wood_mean_total, 
+                                  floodforest_benth_mean_total, phase3_mean_total,
+                                  phase4_mean_total, relic_chan_benth_mean_total, 
+                                  relic_chan_wood_mean_total)
+# create a vector of Treatments for the means
+Treatment <- c("disturb_benth", "disturb_wood", 
+                              "floodforest_benth", "phase3",
+                              "phase4", "relic_chan_benth", 
+                              "relic_chan_wood")
