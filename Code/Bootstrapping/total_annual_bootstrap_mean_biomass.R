@@ -5,6 +5,7 @@
 ##  distribution of total biomass for each sample site
 ##############################################################
 
+
 rm(list = ls())
 
 library(tictoc)
@@ -114,10 +115,12 @@ relic_chan_wood_mean_total <-
 
 quants <- c(0.975, 0.025)
 tot_disturb_benth_quantiles <-
-  as.data.frame(apply(total_means_disturbed_benth[,230, drop=F ], 2 , quantile , probs = quants))
+  as.data.frame(apply(total_means_disturbed_benth[, 230, drop = F], 2 , quantile , probs = quants))
 
-disturb_benth <- rownames_to_column(tot_disturb_benth_quantiles, var = "rowname")
-disturb_benth <- pivot_wider(disturb_benth, names_from = rowname, values_from = sum)
+disturb_benth <-
+  rownames_to_column(tot_disturb_benth_quantiles, var = "rowname")
+disturb_benth <-
+  pivot_wider(disturb_benth, names_from = rowname, values_from = sum)
 
 ####### CONTINUE FROM HERE!!!
 disturb_wood_quantiles <-
@@ -137,31 +140,46 @@ tot_relic_chan_benth_quantiles <-
   apply(total_means_relic_chan_benth [,230, drop=F ], 2 , quantile , probs = quants)
 
 tot_relicchan_wood_quantiles <-
-  apply(total_means_relicchan_wood [,154, drop=F ], 2, quantile, probs = quants)
+  apply(total_means_relicchan_wood [, 154, drop = F], 2, quantile, probs = quants)
 
-tot_quantiles <- rbind.data.frame(disturb_benth, disturb_wood,
-                                  floodforest_benth, phase3_benth,
-                                  phase4_benth, relic_chan_benth,
-                                  relicchan_wood_quantiles)
+tot_quantiles <- rbind.data.frame(
+  disturb_benth,
+  disturb_wood,
+  floodforest_benth,
+  phase3_benth,
+  phase4_benth,
+  relic_chan_benth,
+  relicchan_wood_quantiles
+)
 
 ########################################################
 # Merge the means and quantiles into a single dataframe
 
 # merge the means into a single vector
-tot_annual_mass_allsites <- c(disturb_benth_mean_total, disturb_wood_mean_total, 
-                                  floodforest_benth_mean_total, phase3_mean_total,
-                                  phase4_mean_total, relic_chan_benth_mean_total, 
-                                  relic_chan_wood_mean_total)
+tot_annual_mass_allsites <-
+  c(
+    disturb_benth_mean_total,
+    disturb_wood_mean_total,
+    floodforest_benth_mean_total,
+    phase3_mean_total,
+    phase4_mean_total,
+    relic_chan_benth_mean_total,
+    relic_chan_wood_mean_total
+  )
 Mean <- as.numeric(tot_annual_mass_allsites)
 
 # create a vector of Treatments for the means
-Treatment <- c("disturb_benth", "disturb_wood", 
-                              "floodforest_benth", "phase3",
-                              "phase4", "relic_chan_benth", 
-                              "relic_chan_wood")
+Treatment <- c(
+  "disturb_benth",
+  "disturb_wood",
+  "floodforest_benth",
+  "phase3",
+  "phase4",
+  "relic_chan_benth",
+  "relic_chan_wood"
+)
 
 # combine treatment column with  the means column, and keep means numeric values by
 # using cbind.data.frame
 
 tot_mass <- cbind.data.frame(Treatment, Mean)
-
