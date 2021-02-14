@@ -114,10 +114,11 @@ relic_chan_wood_mean_total <-
 ## called "tot_mass" below
 
 quants <- c(0.975, 0.025)
+
+#DISTURBED BENTHIC
 tot_disturb_benth_quantiles <-
   as.data.frame(apply(total_means_disturbed_benth[, 230, drop = F], 2 , quantile , probs = quants))
 
-#DISTURBED BENTHIC
 disturb_benth <-
   rownames_to_column(tot_disturb_benth_quantiles, var = "rowname")
 disturb_benth <-
@@ -125,27 +126,32 @@ disturb_benth <-
 
 #DISTURBED WOOD
 disturb_wood_quantiles <-
-  apply(total_means_disturbed_wood[,154, drop=F ], 2, quantile, probs = quants)
+  as.data.frame(apply(total_means_disturbed_wood[,154, drop=F ], 2, quantile, probs = quants))
+
+disturb_wood <-
+  rownames_to_column(disturb_wood_quantiles, var = "rowname")
+disturb_wood <-
+  pivot_wider(disturb_wood, names_from = rowname, values_from = sum)
 
 #FLOODED FOREST BENTHIC
 tot_floodforest_benth_quantiles <-
-  apply(total_means_floodforest_benth [,230, drop=F ], 2 , quantile , probs = quants)
+  as.data.frame(apply(total_means_floodforest_benth [,230, drop=F ], 2 , quantile , probs = quants))
 
 #PHASE3 BENTHIC
 tot_phase3_benth_quantiles <-
-  apply(total_means_phase3_benth [,230, drop=F ], 2 , quantile , probs = quants)
+  as.data.frame(apply(total_means_phase3_benth [,230, drop=F ], 2 , quantile , probs = quants))
 
 #PHASE4 BENTHIC
 tot_phase4_benth_quantiles <-
-  apply(total_means_phase4_benth [,230, drop=F ], 2 , quantile , probs = quants)
+  as.data.frame(apply(total_means_phase4_benth [,230, drop=F ], 2 , quantile , probs = quants))
 
 #RELICCHAN BENTH
 tot_relic_chan_benth_quantiles <-
-  apply(total_means_relic_chan_benth [,230, drop=F ], 2 , quantile , probs = quants)
+  as.data.frame(apply(total_means_relic_chan_benth [,230, drop=F ], 2 , quantile , probs = quants))
 
 #RELICCHAN WOOD
 tot_relicchan_wood_quantiles <-
-  apply(total_means_relicchan_wood [, 154, drop = F], 2, quantile, probs = quants)
+  as.data.frame(apply(total_means_relicchan_wood [, 154, drop = F], 2, quantile, probs = quants))
 
 tot_quantiles <- rbind.data.frame(
   disturb_benth,
