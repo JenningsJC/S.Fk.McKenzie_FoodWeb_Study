@@ -1,7 +1,8 @@
 ##############################################################
-##  Bootstrap Distribution of Total Annual Biomass per 
+##  Derive Bootstrap Distribution of Total Annual Biomass per 
 ##  unit area: Sum each row of the boostrap distribution of 
-##  mean biomass by taxon
+##  mean biomass by taxon, compute mean & 95% CIs of boot 
+##  distribution of total biomass for each sample site
 ##############################################################
 
 rm(list = ls())
@@ -59,8 +60,9 @@ bootdistr_annual_mean_relicchan_wood <-
 total_means_disturbed_benth <-
   bootdistr_annual_mean_disturbed_benth %>% mutate(sum = rowSums(.[1:229]))
 
+############ 
 tot_biomass_distro_disturbed_benth <- total_means_disturbed_benth$sum
-
+##########
 
 total_means_disturbed_wood <-
   bootdistr_annual_mean_disturbed_wood %>% mutate(sum = rowSums(.[1:153]))
