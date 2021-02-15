@@ -234,3 +234,20 @@ write.csv(
   means_quantiles_all_treatments,
   "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/total_means_quantiles_all_treatments.csv"
 )
+
+#################################################
+### Make barplot of total annual biomass for 
+### each treatment
+##################################################
+
+ggplot(means_quantiles_all_treatments,
+       mapping = aes(x = Treatment, y = Mean, fill = Treatment)) +
+  geom_bar(stat = "identity", position = position_dodge()) +
+  geom_errorbar(aes(ymin = `2.5%`, ymax = `97.5%`),
+                width = .2,
+                position = position_dodge(.9)) +
+  geom_text(aes(label = sprintf("%0.0f", round(Mean, digits = 4))), vjust = -2.7, size = 3.5) +
+  theme(axis.title.y = element_text(angle = 0, vjust = 0.5), axis.ticks.x = element_blank(), axis.text.x = element_blank())+
+  ggtitle("Mean Annual Biomass of Inverts")+
+  theme(plot.title = element_text(hjust = 0.5))+
+  ylab(expression(mg/m^2))
