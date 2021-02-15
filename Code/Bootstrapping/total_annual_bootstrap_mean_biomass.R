@@ -229,6 +229,10 @@ means_quantiles_all_treatments <-
   means_quantiles_all_treatments %>%
   relocate(Treatment, .before = Mean)
 
+# arrange means/rows from biggest to smallest
+means_quantiles_all_treatments <-
+  arrange(means_quantiles_all_treatments,-Mean)
+
 ## write the data frame to a csv
 write.csv(
   means_quantiles_all_treatments,
@@ -241,7 +245,7 @@ write.csv(
 ##################################################
 
 ggplot(means_quantiles_all_treatments,
-       mapping = aes(x = Treatment, y = Mean, fill = Treatment)) +
+       mapping = aes(reorder(Treatment, -Mean, sum), Mean, fill = Treatment)) +
   geom_bar(stat = "identity", position = position_dodge()) +
   geom_errorbar(aes(ymin = `2.5%`, ymax = `97.5%`),
                 width = .2,
