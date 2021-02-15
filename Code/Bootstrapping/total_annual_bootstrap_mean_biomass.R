@@ -178,6 +178,7 @@ relicchan_wood <-
 relicchan_wood <-
   pivot_wider(relicchan_wood, names_from = rowname, values_from = sum)
 
+## Rbind the quantiles using rbind.data.frame to keep the values numeric
 tot_quantiles <- rbind.data.frame(
   disturb_benth,
   disturb_wood,
@@ -185,13 +186,10 @@ tot_quantiles <- rbind.data.frame(
   phase3_benth,
   phase4_benth,
   relic_chan_benth,
-  relicchan_wood_quantiles
+  relicchan_wood
 )
 
-########################################################
-# Merge the means and quantiles into a single dataframe
-
-# merge the means into a single vector
+## merge the means into a single vector
 tot_annual_mass_allsites <-
   c(
     disturb_benth_mean_total,
@@ -204,7 +202,14 @@ tot_annual_mass_allsites <-
   )
 Mean <- as.numeric(tot_annual_mass_allsites)
 
-# create a vector of Treatments for the means
+## Merge the quantiles and means
+tot_quantiles$Mean <- c(Mean)
+
+means_quantiles_all_treatments <-
+  tot_quantiles %>%
+  relocate(Mean, .before = `97.5%`)
+
+# create a vector of Treatments for the names of means
 Treatment <- c(
   "disturb_benth",
   "disturb_wood",
@@ -218,4 +223,14 @@ Treatment <- c(
 # combine treatment column with  the means column, and keep means numeric values by
 # using cbind.data.frame
 
-tot_mass <- cbind.data.frame(Treatment, Mean)
+means_quantiles_all_treatments$Treatment <- c(Treatment)
+
+means_quantiles_all_treatments <-
+  means_quantiles_all_treatments %>%
+  relocate(Treatment, .before = Mean)
+
+## write the data frame to a csv
+write.csv(
+  means_quantiles_all_treatments,
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/total_means_quantiles_all_treatments.csv"
+)
