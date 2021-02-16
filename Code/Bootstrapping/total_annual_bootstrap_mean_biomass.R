@@ -244,14 +244,18 @@ write.csv(
 ### each treatment
 ##################################################
 
-ggplot(means_quantiles_all_treatments,
-       mapping = aes(reorder(Treatment, -Mean, sum), Mean, fill = Treatment)) +
+plot1 <-
+  ggplot(means_quantiles_all_treatments,
+         mapping = aes(reorder(Treatment,-Mean, sum), Mean, fill = Treatment)) +
   geom_bar(stat = "identity", position = position_dodge()) +
   geom_errorbar(aes(ymin = `2.5%`, ymax = `97.5%`),
-                width = .2,
-                position = position_dodge(.9)) +
+                width = .4) +
   geom_text(aes(label = sprintf("%0.0f", round(Mean, digits = 4))), vjust = -2.7, size = 3.5) +
-  theme(axis.title.y = element_text(angle = 0, vjust = 0.5), axis.ticks.x = element_blank(), axis.text.x = element_blank())+
-  ggtitle("Mean Annual Biomass of Inverts")+
-  theme(plot.title = element_text(hjust = 0.5))+
-  ylab(expression(mg/m^2))
+  theme(
+    axis.title.y = element_text(angle = 0, vjust = 0.5),
+    axis.ticks.x = element_blank(),
+    axis.text.x = element_blank()
+  ) +
+  ggtitle("Mean Annual Biomass of Inverts") +
+  theme(plot.title = element_text(hjust = 0.5)) +
+  ylab(expression(mg / m ^ 2)) + xlab("") 
