@@ -223,7 +223,7 @@ Treatment <- c(
   "relic_chan_wood"
 )
 
-# combine treatment column with  the means column, and keep means numeric values by
+# combine treatment column with  the means column, and keep mean values numeric by
 # using cbind.data.frame
 
 means_quantiles_all_treatments$Treatment <- c(Treatment)
