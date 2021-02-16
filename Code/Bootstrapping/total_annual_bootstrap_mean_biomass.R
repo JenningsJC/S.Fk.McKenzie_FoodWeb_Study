@@ -15,6 +15,7 @@ library(tidyr)
 library(purrr)
 library(tibble)
 library(forcats)
+library(coxed)
 
 ##############################################################
 ## Read-in bootdistro_means for each Treatment/sample site
@@ -57,7 +58,7 @@ bootdistr_annual_mean_relicchan_wood <-
 ##############################################################
 ## Sum across taxa columns, for all 10k rows. Results are
 ## stored in a new column called "sum", which is the boot
-## distribution of total annual biomass for the sample site
+## distribution of total mean annual biomass for the sample site
 ##############################################################
 
 total_means_disturbed_benth <-
@@ -110,9 +111,10 @@ relic_chan_wood_mean_total <-
 ########################3
 ## Calculate the 95% CI using the percentile method.
 ## Add rownames as a column, and pivot longer so it can be rbound
-## to the resto of the quatiles, and merged with the table of means
+## to the resto of the quantiles, and merged with the table of means
 ## called "tot_mass" below
 
+# quantiles for percentile method
 quants <- c(0.975, 0.025)
 
 #DISTURBED BENTHIC
