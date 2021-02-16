@@ -17,15 +17,10 @@ disturb_benth_quantiles <-
     "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/annual_meanquant_bootdistr_disturbed_benth.csv"
   )
 
-
-
-
 #####################################################
 ## Prep mean and quantile data for graphing
 ## tables
 #####################################################
-
-
 
 ## Rename quantile columns
 disturb_benth_quantiles <- disturb_benth_quantiles %>%
@@ -51,6 +46,7 @@ lowest <- subset(disturb_benth_quant_bigs, mean <= 1, select = c(taxon, mean, `9
 ##
 ############################################################################
 
+##START HERE##################
 
 ggplot(disturb_benth_quant_bigs, mapping = aes(x=taxon, y=mean)) + 
   geom_bar(stat="identity", position=position_dodge()) +
