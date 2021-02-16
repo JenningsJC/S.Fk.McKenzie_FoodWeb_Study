@@ -2,7 +2,8 @@
 ##  Derive Bootstrap Distribution of Total Annual Biomass per 
 ##  unit area: Sum each row of the boostrap distribution of 
 ##  mean biomass by taxon, compute mean & 95% CIs of boot 
-##  distribution of total biomass for each sample site
+##  distribution of total biomass for each sample site,
+##  create barplot
 ##############################################################
 
 
