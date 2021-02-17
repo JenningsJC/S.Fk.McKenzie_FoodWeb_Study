@@ -100,5 +100,5 @@ disturb_benth_omnivores <-
 ## distribution of total mean annual biomass for each feeding group
 ############################################################################
 
-total_means_disturbed_benth <-
-  bootdistr_annual_mean_disturbed_benth %>% mutate(sum = rowSums(.[1:229]))
+total_means_disturbed_benth_omnivores <-
+  disturb_benth_omnivores %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_omnivores)]))
