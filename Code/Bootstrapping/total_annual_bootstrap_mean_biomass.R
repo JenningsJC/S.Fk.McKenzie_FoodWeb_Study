@@ -82,12 +82,10 @@ total_means_relic_chan_benth <-
 
 total_means_relicchan_wood <-
   bootdistr_annual_mean_relicchan_wood %>% mutate(sum = rowSums(.[1:153]))
-####################################################################
-## compute mean and 95% CI of bootstrap distribution of annual means
-####################################################################
 
-#######################
+##################################################################
 # calculate the means of the distributions of total annual mean biomasses
+
 disturb_benth_mean_total <-
   mean(total_means_disturbed_benth[["sum"]])
 
@@ -109,10 +107,10 @@ relic_chan_benth_mean_total <-
 relic_chan_wood_mean_total <-
   mean(total_means_relicchan_wood[["sum"]])
 
-########################3
+####################################################################
 ## Calculate the 95% CI using the percentile method.
 ## Add rownames as a column, and pivot longer so it can be rbound
-## to the resto of the quantiles, and merged with the table of means
+## to the rest of the quantiles, and merged with the table of means
 ## called "tot_mass" below
 
 # quantiles for percentile method
