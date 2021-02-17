@@ -16,15 +16,15 @@ library(forcats)
 library(coxed)
 
 ##############################################################
-## Read-in bootdistro_means for each Treatment/sample site
-## Read-in 
+## Read-in taxa traits
 ##############################################################
 
 taxa_traits <- read.csv(
   "~/S.Fk.McKenzie_FoodWeb_Study/DataRaw/wisseman_taxa_traits_regress_coeff_2020.csv"
 )
 
-##csubset the traits by functional feeding groups to use for grouping
+####################################################################
+## subset the traits by functional feeding groups to use for grouping
 
 piercer_herbivores <- subset.data.frame(taxa_traits, Feeding.Group == "PH")
 collector_gatherers <- subset.data.frame(taxa_traits, Feeding.Group == "CG")
@@ -74,7 +74,7 @@ bootdistr_annual_mean_relicchan_wood <-
     "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_RelicChan_wood.csv"
   )
 
-#######################################################
+###########################################################################
 ## create a vector of names for each functional feeding group
 
 piercer_herbivore_taxa <- piercer_herbivores$Taxon
@@ -86,12 +86,19 @@ shredder_taxa <- shredders$Taxon
 omnivore_taxa <- omnivores$Taxon
 parasite_taxa <- parasites$Taxon
 
-# use the vectors of names of feeding groups to select the bootstrap
-# distributions
+###########################################################################
+# subsample the bootstrap distributions by feeding groups
+# 
 
 disturb_benth_omnivores <-
   bootdistr_annual_mean_disturbed_benth %>% 
   select(one_of(omnivore_taxa))
 
-# sum the rows to get bootstrap distribution of estimated annual means
-# for each feeding group
+############################################################################
+## Sum across taxa columns, for all 10k rows. Results are
+## stored in a new column called "sum", the bootstrap
+## distribution of total mean annual biomass for each feeding group
+############################################################################
+
+total_means_disturbed_benth <-
+  bootdistr_annual_mean_disturbed_benth %>% mutate(sum = rowSums(.[1:229]))
