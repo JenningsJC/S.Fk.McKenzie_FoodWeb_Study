@@ -102,3 +102,78 @@ disturb_benth_omnivores <-
 
 total_means_disturbed_benth_omnivores <-
   disturb_benth_omnivores %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_omnivores)]))
+
+##################################################################
+# calculate the means of the distributions of annual mean biomasses
+# for each feeding group
+
+disturb_benth_omnivores_mean <-
+  mean(total_means_disturbed_benth_omnivore[["sum"]])
+
+####################################################################
+## Calculate the 95% CI's using the percentile method.
+## Add rownames as a column, and pivot longer so it can be rbound
+## to the rest of the quantiles, and merged with the table of means
+## called "tot_mass" below
+
+# quantiles for percentile method
+quants <- c(0.975, 0.025)
+
+#DISTURBED BENTHIC
+disturb_benth_omnivores_quantiles <-
+  as.data.frame(apply(total_means_disturbed_benth_omnivore[, 3, drop = F], 2 , quantile , probs = quants))
+
+disturb_benth_omni_quants <-
+  rownames_to_column(disturb_benth_omnivores_quantiles, var = "rowname")
+disturb_benth_omni_quants <-
+  pivot_wider(disturb_benth_omni_quants, names_from = rowname, values_from = sum)
+## Rbind the quantiles using rbind.data.frame to keep the values numeric
+tot_quantiles <- rbind.data.frame(
+  disturb_benth,
+  disturb_wood,
+  floodforest_benth,
+  phase3_benth,
+  phase4_benth,
+  relic_chan_benth,
+  relicchan_wood
+)
+
+## merge the means into a single vector
+tot_annual_mass_allsites <-
+  c(
+    disturb_benth_mean_total,
+    disturb_wood_mean_total,
+    floodforest_benth_mean_total,
+    phase3_mean_total,
+    phase4_mean_total,
+    relic_chan_benth_mean_total,
+    relic_chan_wood_mean_total
+  )
+Mean <- as.numeric(tot_annual_mass_allsites)
+
+## Merge the quantiles and means
+tot_quantiles$Mean <- c(Mean)
+
+means_quantiles_all_treatments <-
+  tot_quantiles %>%
+  relocate(Mean, .before = `97.5%`)
+
+# create a vector of Treatments for the names of means
+Treatment <- c(
+  "disturb_benth",
+  "disturb_wood",
+  "floodforest_benth",
+  "phase3",
+  "phase4",
+  "relic_chan_benth",
+  "relic_chan_wood"
+)
+
+# combine treatment column with  the means column, and keep mean values numeric by
+# using cbind.data.frame
+
+means_quantiles_all_treatments$Treatment <- c(Treatment)
+
+means_quantiles_all_treatments <-
+  means_quantiles_all_treatments %>%
+  relocate(Treatment, .before = Mean)
