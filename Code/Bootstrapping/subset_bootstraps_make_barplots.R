@@ -94,6 +94,35 @@ disturb_benth_omnivores <-
   bootdistr_annual_mean_disturbed_benth %>% 
   select(one_of(omnivore_taxa))
 
+disturb_benth_piercer_herbivores <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(piercer_herbivore_taxa))
+
+disturb_benth_collector_gatherers <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(collector_gatherer_taxa))
+
+disturb_benth_collector_filterers <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(collector_filterer_taxa))
+
+disturb_benth_predators <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(predator_taxa))
+
+disturb_benth_scrapers <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(scraper_taxa))
+
+disturb_benth_shredders <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(shredder_taxa))
+
+disturb_benth_parasites <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(parasite_taxa))
+
+
 ############################################################################
 ## Sum across taxa columns, for all 10k rows. Results are
 ## stored in a new column called "sum", the bootstrap
@@ -102,6 +131,27 @@ disturb_benth_omnivores <-
 
 total_means_disturbed_benth_omnivores <-
   disturb_benth_omnivores %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_omnivores)]))
+
+total_means_disturbed_piercer_herbivores <-
+  disturb_benth_piercer_herbivores %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_piercer_herbivores)]))
+
+total_means_disturbed_collector_gatherers <-
+  disturb_benth_collector_gatherers %>% mutate(sume = rowSums(.[1:ncol(disturb_benth_collector_gatherers)]))
+
+total_means_disturbed_benth_collector_filterers <-
+  disturb_benth_collector_filterers %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_collector_filterers)]))
+
+total_means_disturbed_benth_predators <-
+  disturb_benth_predators %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_predators)]))
+
+total_means_disturbed_benth_scrapers <-
+  disturb_benth_scrapers %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_scrapers)]))
+
+total_means_disturbed_benth_shredders <-
+  disturb_benth_shredders %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_shredders)]))
+
+total_means_disturbed_benth_parasitess <-
+  disturb_benth_parasites %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_parasites)]))
 
 ##################################################################
 # calculate the means of the distributions of annual mean biomasses
