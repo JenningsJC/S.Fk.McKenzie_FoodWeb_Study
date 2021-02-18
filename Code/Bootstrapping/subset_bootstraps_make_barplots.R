@@ -136,7 +136,7 @@ total_means_disturbed_piercer_herbivores <-
   disturb_benth_piercer_herbivores %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_piercer_herbivores)]))
 
 total_means_disturbed_collector_gatherers <-
-  disturb_benth_collector_gatherers %>% mutate(sume = rowSums(.[1:ncol(disturb_benth_collector_gatherers)]))
+  disturb_benth_collector_gatherers %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_collector_gatherers)]))
 
 total_means_disturbed_benth_collector_filterers <-
   disturb_benth_collector_filterers %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_collector_filterers)]))
@@ -150,7 +150,7 @@ total_means_disturbed_benth_scrapers <-
 total_means_disturbed_benth_shredders <-
   disturb_benth_shredders %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_shredders)]))
 
-total_means_disturbed_benth_parasitess <-
+total_means_disturbed_benth_parasites <-
   disturb_benth_parasites %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_parasites)]))
 
 ##################################################################
@@ -158,7 +158,28 @@ total_means_disturbed_benth_parasitess <-
 # for each feeding group
 
 disturb_benth_omnivores_mean <-
-  mean(total_means_disturbed_benth_omnivore[["sum"]])
+  mean(total_means_disturbed_benth_omnivores[["sum"]])
+
+disturb_benth_piercer_herbivores_mean <-
+  mean(total_means_disturbed_piercer_herbivores[["sum"]])
+
+disturb_benth_collector_gatherers_mean <-
+  mean(total_means_disturbed_collector_gatherers[["sum"]])
+
+disturb_benth_collector_filterers_mean <-
+  mean(total_means_disturbed_benth_collector_filterers[["sum"]])
+
+disturb_benth_predators_mean <-
+  mean(total_means_disturbed_benth_predators[["sum"]])
+
+disturb_benth_scrapers_mean <-
+  mean(total_means_disturbed_benth_scrapers[["sum"]])
+
+disturb_benth_shredders_mean <-
+  mean(total_means_disturbed_benth_shredders[["sum"]])
+
+disturb_benth_parasites_mean <-
+  mean(total_means_disturbed_benth_parasites[["sum"]])
 
 ####################################################################
 ## Calculate the 95% CI's using the percentile method.
@@ -169,7 +190,7 @@ disturb_benth_omnivores_mean <-
 # quantiles for percentile method
 quants <- c(0.975, 0.025)
 
-#DISTURBED BENTHIC
+#DISTURBED OMNIVORES
 disturb_benth_omnivores_quantiles <-
   as.data.frame(apply(total_means_disturbed_benth_omnivore[, 3, drop = F], 2 , quantile , probs = quants))
 
@@ -177,6 +198,7 @@ disturb_benth_omni_quants <-
   rownames_to_column(disturb_benth_omnivores_quantiles, var = "rowname")
 disturb_benth_omni_quants <-
   pivot_wider(disturb_benth_omni_quants, names_from = rowname, values_from = sum)
+
 ## Rbind the quantiles using rbind.data.frame to keep the values numeric
 tot_quantiles <- rbind.data.frame(
   disturb_benth,
