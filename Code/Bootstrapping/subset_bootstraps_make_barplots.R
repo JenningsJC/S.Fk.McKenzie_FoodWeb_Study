@@ -80,16 +80,15 @@ bootdistr_annual_mean_relicchan_wood <-
 ## create a vector of names for each functional feeding group
 
 piercer_herbivore_taxa <- as.vector(piercer_herbivores$Taxon)
-
-collector_gatherer_taxa <- as.vectorcollector_gatherers$Taxon
-collector_filterer_taxa <- as.vectorcollector_filterers$Taxon
-predator_taxa <- as.vectorpredators$Taxon
-scraper_taxa <- as.vectorscrapers$Taxon
-shredder_taxa <- as.vectorshredders$Taxon
-omnivore_taxa <- as.vectoromnivores$Taxon
-parasite_taxa <- as.vectorparasites$Taxon
-macrophyte_herbivore_taxa <- as.vectormacrophyte_herbivores$Taxon
-unknown_taxa <- as.vectorunknowns$Taxon
+collector_gatherer_taxa <- as.vector(collector_gatherers$Taxon)
+collector_filterer_taxa <- as.vector(collector_filterers$Taxon)
+predator_taxa <- as.vector(predators$Taxon)
+scraper_taxa <- as.vector(scrapers$Taxon)
+shredder_taxa <- as.vector(shredders$Taxon)
+omnivore_taxa <- as.vector(omnivores$Taxon)
+parasite_taxa <- as.vector(parasites$Taxon)
+macrophyte_herbivore_taxa <- as.vector(macrophyte_herbivores$Taxon)
+unknown_taxa <- as.vector(unknowns$Taxon)
 
 ###########################################################################
 # subsample the bootstrap distributions by feeding groups
@@ -131,6 +130,9 @@ disturb_benth_macrophyte_herbivores <-
   bootdistr_annual_mean_disturbed_benth %>% 
   select(one_of(macrophyte_herbivore_taxa))
 
+disturb_benth_unknownFFG <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(unknown_taxa))
 
 ############################################################################
 ## Sum across taxa columns, for all 10k rows. Results are
@@ -165,6 +167,9 @@ total_means_disturbed_benth_parasites <-
 total_means_disturbed_benth_macrophyte_herbivores <-
   disturb_benth_macrophyte_herbivores %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_macrophyte_herbivores)]))
 
+total_means_disturbed_benth_unknownFFG <-
+  disturb_benth_unknownFFG %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_unknownFFG)]))
+
 ##################################################################
 # calculate the means of the distributions of annual mean biomasses
 # for each feeding group
@@ -195,6 +200,9 @@ disturb_benth_parasites_mean <-
 
 disturb_benth_macrophyte_herbivores_mean <-
   mean(total_means_disturbed_benth_macrophyte_herbivores[["sum"]])
+
+disturb_benth_unknownFFG_mean <-
+  mean(total_means_disturbed_benth_unknownFFG[["sum"]])
 
 ####################################################################
 ## Calculate the 95% CI's using the percentile method.
