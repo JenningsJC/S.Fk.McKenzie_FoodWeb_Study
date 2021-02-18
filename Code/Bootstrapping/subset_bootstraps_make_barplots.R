@@ -34,7 +34,8 @@ scrapers <- subset.data.frame(taxa_traits, Feeding.Group == "SC")
 shredders <- subset.data.frame(taxa_traits, Feeding.Group == "SH")
 omnivores <- subset.data.frame(taxa_traits, Feeding.Group == "OM")
 parasites <- subset.data.frame(taxa_traits, Feeding.Group == "PA")
-
+macrophyte_herbivores <- subset.data.frame(taxa_traits, Feeding.Group == "MH")
+unknowns <- subset.data.frame(taxa_traits, Feeding.Group == "UN")
 
 ##############################################################
 ## Read-in bootdistro_means for each Treatment/sample site
@@ -45,7 +46,8 @@ bootdistr_annual_mean_disturbed_benth <-
     "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_benth.csv"
   )
 
-bootdistr_annual_mean_disturbed_wood <- read.csv(
+bootdistr_annual_mean_disturbed_wood <- 
+  read.csv(
   "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bootdistr_annual_mean_disturbed_wood.csv"
 )
 
@@ -77,14 +79,17 @@ bootdistr_annual_mean_relicchan_wood <-
 ###########################################################################
 ## create a vector of names for each functional feeding group
 
-piercer_herbivore_taxa <- piercer_herbivores$Taxon
-collector_gatherer_taxa <- collector_gatherers$Taxon
-collector_filterer_taxa <- collector_filterers$Taxon
-predator_taxa <- predators$Taxon
-scraper_taxa <- scrapers$Taxon
-shredder_taxa <- shredders$Taxon
-omnivore_taxa <- omnivores$Taxon
-parasite_taxa <- parasites$Taxon
+piercer_herbivore_taxa <- as.vector(piercer_herbivores$Taxon)
+
+collector_gatherer_taxa <- as.vectorcollector_gatherers$Taxon
+collector_filterer_taxa <- as.vectorcollector_filterers$Taxon
+predator_taxa <- as.vectorpredators$Taxon
+scraper_taxa <- as.vectorscrapers$Taxon
+shredder_taxa <- as.vectorshredders$Taxon
+omnivore_taxa <- as.vectoromnivores$Taxon
+parasite_taxa <- as.vectorparasites$Taxon
+macrophyte_herbivore_taxa <- as.vectormacrophyte_herbivores$Taxon
+unknown_taxa <- as.vectorunknowns$Taxon
 
 ###########################################################################
 # subsample the bootstrap distributions by feeding groups
@@ -122,6 +127,10 @@ disturb_benth_parasites <-
   bootdistr_annual_mean_disturbed_benth %>% 
   select(one_of(parasite_taxa))
 
+disturb_benth_macrophyte_herbivores <-
+  bootdistr_annual_mean_disturbed_benth %>% 
+  select(one_of(macrophyte_herbivore_taxa))
+
 
 ############################################################################
 ## Sum across taxa columns, for all 10k rows. Results are
@@ -153,6 +162,9 @@ total_means_disturbed_benth_shredders <-
 total_means_disturbed_benth_parasites <-
   disturb_benth_parasites %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_parasites)]))
 
+total_means_disturbed_benth_macrophyte_herbivores <-
+  disturb_benth_macrophyte_herbivores %>% mutate(sum = rowSums(.[1:ncol(disturb_benth_macrophyte_herbivores)]))
+
 ##################################################################
 # calculate the means of the distributions of annual mean biomasses
 # for each feeding group
@@ -180,6 +192,9 @@ disturb_benth_shredders_mean <-
 
 disturb_benth_parasites_mean <-
   mean(total_means_disturbed_benth_parasites[["sum"]])
+
+disturb_benth_macrophyte_herbivores_mean <-
+  mean(total_means_disturbed_benth_macrophyte_herbivores[["sum"]])
 
 ####################################################################
 ## Calculate the 95% CI's using the percentile method.
