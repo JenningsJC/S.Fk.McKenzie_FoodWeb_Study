@@ -27,6 +27,6 @@ Max_mins <- left_join(max_temps, min_temps, by = "date" )
 ##########################################
 write.csv(
   Max_mins,
-  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/max_min_daily_water_temp_south_fork_mckenzie_2019_2020csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/max_min_daily_water_temp_south_fork_mckenzie_2019_2020.csv",
   row.names = F
 )
