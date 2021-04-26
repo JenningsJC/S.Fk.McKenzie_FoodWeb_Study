@@ -1,0 +1,660 @@
+Waterbody,Treatment,Substrate,Date,Taxon,Stage,Insect,Origin,Higher.classification,Order,Family,Common.name,Length,Abundance,Biomass
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Nemata,U,non-insect,Aquatic,Nemata,miscellaneous non-insect,x,round worms,5,96,23.94298216
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Nemata,U,non-insect,Aquatic,Nemata,miscellaneous non-insect,x,round worms,7,96,30.71234575
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Nemata,U,non-insect,Aquatic,Nemata,miscellaneous non-insect,x,round worms,10,96,39.98899031
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Sperchon,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,48,2.544
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Trombidiformes,U,non-insect,Aquatic,Arachnida: Acari,Trombidiformes,x,mites,0.5,480,4.5159414
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Torrenticola,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,144,1.35478242
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Torrenticola,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,48,2.544
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Lebertia,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,96,5.088
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Ostracoda,U,non-insect,Aquatic,Crustacea: Ostracoda,x,x,seed shrimp,1,96,0.648288
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Juga,U,non-insect,Aquatic,Mollusca: Gastropoda,x,Pleuroceridae,snails,1,48,0.9984
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,3,192,32.81256362
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,2,48,6.076767772
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,6,48,13.70068774
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Oribatida,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,48,0.45159414
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,960,5.088
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,2784,108.2446245
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,2640,329.3088511
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,624,177.984808
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,336,182.0345856
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Acentrella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,96,0.92352
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Ephemerella tibialis,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,48,47.4634922
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Ephemerella tibialis,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,8,96,358.9626276
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Drunella grandis/spinifera,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2.5,96,4.344074493
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Drunella grandis/spinifera,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,48,0.370911753
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Attenella margarita,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,48,3.1596191
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Attenella margarita,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,96,18.70186576
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Attenella margarita,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,48,20.19254219
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Epeorus albertae group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,3,48,10.68210711
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Epeorus albertae group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,5,48,43.6142476
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Serratella micheneri,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,48,3.549682132
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Serratella micheneri,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,96,50.48174373
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,2400,12.72
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,2928,113.8434844
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,1056,131.7235405
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,192,54.7645563
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,144,78.0148224
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,3.5,96,13.05376705
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,4,48,9.342696309
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Matriella teresa,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,48,25.24087186
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,48,59.76008522
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Ampumixis dispar,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,4,48,19.22222569
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Ampumixis dispar,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,4.5,48,26.98185377
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Cleptelmis addenda,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,2,96,5.225986822
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Isoperla,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,1.5,48,2.859825545
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,2.5,288,39.87465764
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,3.5,192,70.03390182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,5,48,48.88899104
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,7,48,128.7993553
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Capniidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Capniidae,stoneflies,2,48,1.388916593
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Capniidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Capniidae,stoneflies,3,48,3.924840136
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Suwalliini,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,7,48,62.54630453
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Skwala,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,2.5,240,58.02549004
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,7,96,464.7864946
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Malenka,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,2,144,5.470101276
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Malenka,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,2.5,144,10.13119847
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Malenka,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,3,432,50.28988927
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Malenka,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,4,96,24.73710976
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,3,288,32.97669373
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,6,48,41.77049556
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,2,48,1.678080676
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,2.5,144,23.71791388
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,1.5,48,0.723172817
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,10,48,186.2083145
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,13,96,802.4672433
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Rhyacophila brunnea/vemna group,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,6,48,40.42886349
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,2,144,2.321634264
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,3,192,10.49405467
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,4,48,6.238409324
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,5,48,12.2143375
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Brachycentrus americanus,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,1,48,0.12
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Brachycentrus occidentalis,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,6,48,57.32657575
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Clinocera,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,4,96,17.68111834
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Clinocera,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,5,48,15.60316238
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Chelifera/Metachela,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,6,48,24.82036025
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,1.5,48,0.249657471
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,3,48,1.531581339
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,4,96,6.503314178
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,5,48,5.830667068
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,3,96,3.063162677
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,4,192,13.00662836
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,6,96,18.79167793
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,7,48,14.06485675
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Pagastia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,5,48,5.830667068
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,192,2.120162909
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,48,1.531581339
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Eukiefferiella pseudomontana group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,48,1.531581339
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Eukiefferiella claripennis group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,432,4.770366545
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,336,10.72106937
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,144,9.754971266
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Rheocricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,96,3.063162677
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Rheocricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,144,9.754971266
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Rheocricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,48,5.830667068
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Stempellinella,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Corynoneura,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Thienemanniella,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,384,4.240325817
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,144,4.594744016
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Parametriocnemus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,48,5.830667068
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,3,192,6.126325354
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,4,432,29.2649138
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,5,96,11.66133414
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Tanytarsus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,2,144,1.590122182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Tanytarsus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,3,48,1.531581339
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Dicosmoecus gilvipes,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Limnephilidae,caddisflies,31,0.8,75.73799891
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hydropsyche,P,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,11,1.6,8.203379651
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,19,1.6,76.08285383
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,22,0.8,58.01764277
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,40,0.8,343.3486585
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-07-15,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,32,0.8,193.3685726
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Lebertia,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,76.8,4.0704
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Lebertia,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,25.6,0.240850208
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Polycelis,U,non-insect,Aquatic,Turbellaria,miscellaneous non-insect,Planariidae,flat worms,3,25.6,2.272232137
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Polycelis,U,non-insect,Aquatic,Turbellaria,miscellaneous non-insect,Planariidae,flat worms,4,25.6,4.239551145
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Polycelis,U,non-insect,Aquatic,Turbellaria,miscellaneous non-insect,Planariidae,flat worms,6,25.6,10.21141034
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Nemata,U,non-insect,Aquatic,Nemata,miscellaneous non-insect,x,round worms,7,102.4,32.75983547
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Atractides,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,128,6.784
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Oribatida,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,51.2,0.481700416
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Sperchonopsis,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,25.6,0.240850208
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Ostracoda,U,non-insect,Aquatic,Crustacea: Ostracoda,x,x,seed shrimp,1,25.6,0.1728768
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Torrenticola,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,76.8,4.0704
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Torrenticola,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,25.6,0.240850208
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,2,102.4,12.96377125
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,4,25.6,5.412944379
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Sperchon,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,25.6,0.240850208
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Chydoridae,U,non-insect,Aquatic,Crustacea: Cladocera,x,Chydoridae,water fleas,1,51.2,0.3457536
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Ampumixis dispar,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,6,51.2,65.88690853
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Zaitzevia,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,3,25.6,4.478203009
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1.5,51.2,0.870579027
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,102.4,3.981411475
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2.5,128,9.45286301
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,76.8,9.579893851
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3.5,25.6,4.974065071
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,76.8,0.82944
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,4,25.6,12.5816308
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,1459.2,7.73376
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,3276.8,127.4051672
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,768,95.79893851
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,281.6,80.32134924
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,102.4,55.47720704
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,76.8,9.579893851
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,25.6,7.30194084
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3.5,25.6,4.974065071
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,153.6,43.81164504
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,179.2,97.08511232
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Ironodes,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,25.6,0.27648
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,307.2,2.97984
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,102.4,6.290925895
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,8,25.6,51.69387626
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,12,51.2,338.6196205
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Glossosoma,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Glossosomatidae,caddisflies,1.5,25.6,0.696517066
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Glossosoma,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Glossosomatidae,caddisflies,3,25.6,5.412257976
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Lepidostoma,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,1,25.6,0.20224
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,3,25.6,6.54305791
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,2,563.2,19.68947994
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,3,204.8,23.45009332
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,4,102.4,27.20729233
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,2,25.6,0.41273498
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,3,25.6,1.399207289
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,4,51.2,6.654303279
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,5,25.6,6.514313335
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,3,102.4,23.96443772
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,4,76.8,41.14595338
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Perlodidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,1.5,25.6,1.52524029
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Perlodidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,2.5,25.6,6.189385604
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Skwala,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,3,25.6,10.20381362
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Skwala,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,4,76.8,67.36988214
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Skwala,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,5,25.6,41.40681143
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Sweltsa,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,3,25.6,3.317658038
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Sweltsa,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,4,51.2,14.52762878
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Sweltsa,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,5,25.6,13.33974764
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Isoperla,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,1.5,51.2,3.050480581
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Malenka,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,3,25.6,2.980141586
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Malenka,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,3.5,76.8,13.68564233
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Zapada cinctipes,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,1.5,25.6,0.439331203
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Zapada cinctipes,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,2,51.2,1.944924898
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,1.5,25.6,0.133150651
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Clinocera,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,3,25.6,2.26664987
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Clinocera,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,4,25.6,4.714964889
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Antocha,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,1,25.6,0.07424
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Antocha,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,3,25.6,1.41188735
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Antocha,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,4,76.8,9.159716975
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,2,25.6,0.282688388
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,2.5,51.2,1.01379809
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,3.5,51.2,2.445504905
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,3,358.4,11.43580733
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,4,51.2,3.468434228
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,5,25.6,3.109689103
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,7,25.6,7.501256932
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Zavrelimyia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,4,25.6,1.734217114
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diamesa,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,3,230.4,7.351590425
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diamesa,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,5,25.6,3.109689103
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diamesa,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,6,25.6,5.011114114
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Diamesa,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,7,25.6,7.501256932
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Rheocricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,51.2,1.633686761
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Rheocricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,51.2,3.468434228
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Cricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,25.6,0.816843381
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Cricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,51.2,3.468434228
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Cricotopus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,25.6,3.109689103
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,179.2,1.978818715
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,256,8.168433806
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,76.8,5.202651342
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,76.8,9.329067308
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Polypedilum,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae,midges,2,25.6,0.282688388
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Polypedilum,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae,midges,3,51.2,1.633686761
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Polypedilum,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae,midges,4,25.6,1.734217114
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Polypedilum,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae,midges,5,51.2,6.219378206
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Pagastia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,4,25.6,1.734217114
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,25.6,0.282688388
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,25.6,0.282688388
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Parametriocnemus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,25.6,3.109689103
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,2,332.8,3.674949042
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,3,1177.6,37.57479551
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,4,256,17.34217114
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,5,230.4,27.98720193
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Narpus concolor,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,9,0.8,3.308155317
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Juga,U,non-insect,Aquatic,Mollusca: Gastropoda,x,Pleuroceridae,snails,22,1.6,388.7980164
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Dicosmoecus gilvipes,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Limnephilidae,caddisflies,25,0.8,40.30027631
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Dicosmoecus gilvipes,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Limnephilidae,caddisflies,29,0.8,62.28210841
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,20,0.8,44.09512104
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,23,0.8,65.93858474
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,26,0.8,93.84982138
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,34,0.8,226.0113507
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,47,0.8,519.9274963
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-08-09,Rhyacophila brunnea/vemna group,P,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,10,0.8,2.391801763
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Torrenticola,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,192,1.80637656
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,7,96,30.71234575
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Lebertia,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,48,0.45159414
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ostracoda,U,non-insect,Aquatic,Crustacea: Ostracoda,x,x,seed shrimp,1,192,1.296576
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Trombidiformes,U,non-insect,Aquatic,Arachnida: Acari,Trombidiformes,x,mites,0.5,48,0.45159414
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Heterlimnius corpulentus,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,6,48,61.76897675
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ampumixis dispar,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,5,48,36.54328623
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,336,3.6288
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,2,48,1.451796228
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,3,96,8.62813201
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,2.5,48,2.643662183
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,48,0.2544
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1.5,96,1.632335675
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,48,5.987433657
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ironodes,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1.5,48,1.583508213
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ironodes,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,4,48,23.59055775
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Caudatella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,48,3.1596191
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,1.5,48,2.308339837
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,2,48,4.617448941
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Lepidostoma (Neodinarthrum),L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,2,48,2.378465121
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Glossosoma,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Glossosomatidae,caddisflies,6,48,78.8545011
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,2,96,3.356161353
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,3,1344,153.8912374
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,4,1152,306.0820387
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,5,1056,539.0238511
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,6,480,417.7049556
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,3,432,23.611623
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,4,96,12.47681865
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,2,672,10.83429323
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,3,912,49.84675968
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,4,672,87.33773053
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,5,864,219.858075
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,6,816,359.5287041
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,7,480,336.4042172
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,8,48,50.28925291
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,10,48,581.8167869
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,16,48,1391.675117
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,2.5,48,6.645776274
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Sweltsa,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,5,144,75.03608048
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Sweltsa,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,6,48,41.0996951
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Acentrella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,48,3.10633863
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,432,2.2896
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,2208,85.84918492
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,2448,305.3591165
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,912,260.1316424
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,768,416.0790528
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,6,48,43.92400697
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Baetis alius,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,96,52.0098816
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,144,1.3968
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,288,8.224229953
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,288,17.69322908
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2.5,336,37.39600892
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,48,8.681342149
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4.5,48,25.55747213
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Clinocera,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,5,48,15.60316238
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Wiedemannia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,3,48,4.249968506
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Chelifera/Metachela,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,2,48,1.513761189
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Chelifera/Metachela,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,3,48,4.249968506
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Neoplasta,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,2.5,48,2.671715803
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2.5,48,0.95043571
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,96,1.060081454
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,288,9.189488031
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,2.5,96,1.900871419
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,3.5,48,2.292660848
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,96,1.060081454
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,384,12.25265071
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,48,3.251657089
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Polypedilum,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae,midges,4,144,9.754971266
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,3,144,4.594744016
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,4,48,3.251657089
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,240,7.657906693
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,144,9.754971266
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,3,288,9.189488031
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,4,192,13.00662836
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,5,480,58.30667068
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Micropsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,6,96,18.79167793
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,288,3.180244363
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,768,24.50530142
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,768,52.02651342
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,480,58.30667068
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Eukiefferiella claripennis group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,288,9.189488031
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Eukiefferiella brehmi group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Synorthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,48,1.531581339
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Nilotanypus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,3,48,1.531581339
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,29,0.8,150.1015047
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,30,0.8,163.7826847
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,33,0.8,209.3010295
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-09-19,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,29,0.8,128.5194971
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Nemata,U,non-insect,Aquatic,Nemata,miscellaneous non-insect,x,round worms,10,96,39.98899031
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Sperchon,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,0.5,48,0.45159414
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Sperchon,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,48,2.544
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ostracoda,U,non-insect,Aquatic,Crustacea: Ostracoda,x,x,seed shrimp,1,336,2.269008
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,3,48,8.203140906
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,5,48,11.97149108
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Sphaeriidae,U,non-insect,Aquatic,Mollusca: Bivalvia,x,Sphaeriidae,pea clams,1.5,48,2.13602775
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Lebertia,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,144,7.632
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Trombidiformes,U,non-insect,Aquatic,Arachnida: Acari,Trombidiformes,x,mites,0.5,144,1.35478242
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,96,40.38508437
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3.5,96,28.25104679
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,48,36.68784425
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,144,1.5552
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1.5,336,11.08455749
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Rhithrogena,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,7,48,110.1704175
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,3,144,12.94219801
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,4,144,28.02808893
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,2,48,1.451796228
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,2.5,48,2.643662183
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,1.5,48,0.670378716
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2.5,192,22.96285675
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,144,28.05279864
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,192,12.6384764
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,672,20.48456316
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,96,0.9888
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1.5,240,4.080839189
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,96,3.732573257
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Baetis,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,48,1.866286629
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Rhyacophila brunnea/vemna group,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,12,48,225.5516052
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,2.5,96,15.81194259
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,3,96,24.53646716
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Lepidostoma (Neodinarthrum),L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,2.5,96,8.590954271
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Lepidostoma (Neodinarthrum),L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,3,192,27.84982841
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,3,96,10.99223124
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,4,528,140.2876011
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,5,288,147.0065048
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,6,48,41.77049556
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,7,288,393.4659767
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,8,144,290.778054
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,2,432,6.964902792
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,3,240,13.11756834
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,4,48,6.238409324
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Wiedemannia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,5,48,15.60316238
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ampumixis dispar,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,6,48,61.76897675
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,8,96,378.3576333
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,6,48,82.6368743
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,2,48,9.254147693
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,8,48,327.6700777
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,10,48,581.8167869
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Isoperla,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,2,48,6.293924904
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Isoperla,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,4,48,42.10617634
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Sweltsa,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,5,96,50.02405366
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Zapada cinctipes,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,4.5,48,17.12388204
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Perlodidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,2.5,240,58.02549004
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Caudatella columbiella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,96,0.9888
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,2352,12.4656
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,5184,201.5589559
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,2496,311.3465502
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,336,95.83797352
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,336,182.0345856
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,6,384,351.3920558
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,48,0.5184
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1.5,336,11.08455749
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,624,6.0528
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,1296,79.61953086
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,1296,234.396238
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,432,168.0897526
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,240,169.176524
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,48,54.98316701
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,7,96,165.7826387
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,288,2.225470517
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,48,1.003595311
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,96,0.1824
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Antocha,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,4,48,5.72482311
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Antocha,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,5,48,10.41304672
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,144,4.594744016
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,2.5,48,0.95043571
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,3,96,3.063162677
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,3.5,48,2.292660848
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,192,2.120162909
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,240,16.25828544
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,192,23.32266827
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,6,48,9.395838963
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,384,4.240325817
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,3,96,3.063162677
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,4,96,6.503314178
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,5,48,5.830667068
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,48,3.251657089
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Diamesa,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,6,48,9.395838963
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Eukiefferiella brehmi group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Eukiefferiella pseudomontana group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,48,0.530040727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Cladotanytarsus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,2,144,1.590122182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,23,0.8,35.50287038
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,40,0.8,0.929573183
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,24,1.6,149.0676284
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,30,0.8,141.6958967
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,46,0.8,491.9385969
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,35,0.8,243.5129575
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-11-20,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,51,0.8,641.5242244
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ostracoda,U,non-insect,Aquatic,Crustacea: Ostracoda,x,x,seed shrimp,1,36,0.243108
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Atractides,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,12,0.636
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Sperchon,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,12,0.636
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella columbiella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,72,0.7416
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella columbiella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,96,2.926366166
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ironodes,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,8,12,39.7845844
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,12,14.9400213
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,36,0.3888
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1.5,84,2.771139373
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,2,12,0.362949057
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,2.5,12,0.660915546
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,3.5,48,6.526883523
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,4,12,2.335674077
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1.5,48,1.583508213
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,2,48,3.49704806
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,36,0.3888
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,24,4.67546644
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3.5,12,3.531380849
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,48,20.19254219
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,12,14.9400213
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2.5,72,8.611071283
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,72,2.194774625
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1.5,24,0.408083919
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,20,12,353.7959402
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Rhyacophila brunnea/vemna group,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,18,12,154.1318011
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,3,48,5.496115621
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,4,84,22.31848199
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,5,432,220.5097573
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,7,180,245.9162354
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,8,108,218.0835405
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,12,24,158.7279471
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,6,12,10.44262389
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,1.5,12,0.577084959
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,3,48,12.26823358
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,5,24,21.00910381
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Lepidostoma (Neodinarthrum),L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,2.5,24,2.147738568
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Lepidostoma (Neodinarthrum),L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,3.5,24,5.236903635
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Lepidostoma (Neodinarthrum),L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,4.5,12,5.095282717
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,2,48,0.773878088
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,3,60,3.279392084
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,4,24,3.119204662
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,5,12,3.053584376
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,6,24,10.57437365
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Cleptelmis addenda,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,5,12,9.135821557
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,3.5,24,8.754237727
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,4,24,12.85811043
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,6,12,20.65921857
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,8,12,47.29470416
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Perlodidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,3,12,4.783037632
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Perlodidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,4,24,21.05308817
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Perlodidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,2.5,36,8.703823506
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Perlodidae,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,1.5,12,0.714956386
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Zapada cinctipes,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Nemouridae,stoneflies,7,12,14.5054117
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,72,0.6984
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,36,2.211653635
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,204,36.89570413
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,120,46.69159795
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,228,160.7176978
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,72,82.47475051
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,7,24,41.44565968
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,8,12,29.57206252
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,48,0.370911753
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,36,0.752696483
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,384,2.0352
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,852,33.12658766
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,408,50.89318608
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,288,82.14683445
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,168,91.0172928
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,6,60,54.90500872
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Wiedemannia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,4,12,2.210139792
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Wiedemannia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,6,12,6.205090062
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Antocha,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,6,12,4.244267482
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoplasta,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,2.5,12,0.667928951
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoplasta,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,4,12,2.210139792
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoplasta,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,4.5,12,2.983005581
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Neoplasta,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,5,12,3.900790596
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2.5,36,0.712826782
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,36,1.148686004
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,2.5,12,0.237608927
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,3,24,0.765790669
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,288,3.180244363
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,24,0.765790669
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,2,24,0.265020364
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,3,36,1.148686004
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,4,36,2.438742817
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,5,12,1.457666767
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,7,12,3.516214187
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,36,0.397530545
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,228,7.275011358
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,108,7.31622845
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Potthastia longimana group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,7,12,3.516214187
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Eukiefferiella brehmi group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,12,0.132510182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Eukiefferiella brehmi group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,36,1.148686004
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Eukiefferiella brehmi group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,12,0.812914272
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,12,0.132510182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,24,0.765790669
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,96,6.503314178
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,60,7.288333835
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,6,12,2.348959741
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Pagastia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Diamesinae,midges,5,12,1.457666767
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Eukiefferiella pseudomontana group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,12,0.132510182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Cladotanytarsus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae: Tanytarsini,midges,2,12,0.132510182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Phaenopsectra,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Chironominae,midges,2,12,0.132510182
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,21,0.8,27.20579837
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,27,0.8,56.75683804
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Tipula,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,31,0.8,23.11152942
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Skwala,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,13,2.4,53.32120864
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,45,1.6,929.7812647
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,29,0.8,128.5194971
+South Fork McKenzie River,Phase 3 monthly,Benthic,2019-12-15,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,27,0.8,104.6216244
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Lebertia,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,95.984,5.087152
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Sphaeriidae,U,non-insect,Aquatic,Mollusca: Bivalvia,x,Sphaeriidae,pea clams,1.5,27.424,1.220383854
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Sphaeriidae,U,non-insect,Aquatic,Mollusca: Bivalvia,x,Sphaeriidae,pea clams,2,27.424,2.488683703
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Menetus,U,non-insect,Aquatic,Mollusca: Gastropoda,x,Planorbidae,snails,1.5,13.712,0.97436271
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Polycelis,U,non-insect,Aquatic,Turbellaria,miscellaneous non-insect,Planariidae,flat worms,5,13.712,3.683677712
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,5,27.424,6.839711903
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,2,13.712,1.735929994
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,25,13.712,11.25241178
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Oligochaeta,U,non-insect,Aquatic,Annelida: Oligochaeta,miscellaneous non-insect,x,segmented worms,10,27.424,11.42352156
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Juga,U,non-insect,Aquatic,Mollusca: Gastropoda,x,Pleuroceridae,snails,1.5,13.712,0.97436271
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Trombidiformes,U,non-insect,Aquatic,Arachnida: Acari,Trombidiformes,x,mites,0.5,13.712,0.129005393
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Sperchonopsis,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,13.712,0.726736
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Sperchon,U,non-insect,Aquatic,Arachnida: Acari,x,x,mites,1,27.424,1.453472
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ostracoda,U,non-insect,Aquatic,Crustacea: Ostracoda,x,x,seed shrimp,1,13.712,0.092597136
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,41.136,0.4442688
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1.5,205.68,6.785332694
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,2,68.56,4.994950313
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,2.5,82.272,11.08160318
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cinygmula,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,3,27.424,6.103043862
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,2.5,27.424,1.510412327
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,3,27.424,2.464769711
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,4,54.848,10.67558765
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Neoleptophlebia/Paraleptophlebia,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Leptophlebiidae,mayflies,5,13.712,4.859953278
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ironodes,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,8,13.712,45.46051845
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1,246.816,2.6656128
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,1.5,95.984,3.166488591
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Epeorus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Heptageniidae,mayflies,2,82.272,5.993940376
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,13.712,5.768336218
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,27.424,20.96098835
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,27.424,34.14292869
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,7,13.712,25.78816168
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,13.712,0.0726736
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Diphetor hageni,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1.5,41.136,0.699455837
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella columbiella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,95.984,0.9886352
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella columbiella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,27.424,1.805195712
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella columbiella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2.5,13.712,1.639930686
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella columbiella,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,68.56,2.08991317
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ameletus,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ameletidae,mayflies,2,13.712,0.634829586
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,3,123.408,14.13051326
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,4,370.224,98.36711519
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,5,150.832,76.9905734
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,6,13.712,11.93243823
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,7,109.696,149.8668187
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hydropsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,8,54.848,110.7541299
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Glossosoma,P,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Glossosomatidae,caddisflies,6,13.712,22.52610248
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Rhyacophila nevadensis group,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,6,13.712,11.54917867
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Rhyacophila brunnea/vemna group,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,9,13.712,31.56875267
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Brachycentrus americanus,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,4,27.424,8.108926409
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Brachycentrus americanus,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,5,13.712,8.741672625
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Brachycentrus americanus,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,6,13.712,16.37629181
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,2,27.424,2.638102495
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,1,13.712,0.2481872
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,1.5,13.712,0.659415747
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,2.5,68.56,11.29236233
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,3,109.696,28.03700314
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,3.5,164.544,60.97679762
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,4,68.56,35.05209361
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,5,27.424,24.00640262
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Micrasema,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Brachycentridae,caddisflies,6,27.424,37.25236835
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Simulium,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Simuliidae,black flies,3,13.712,0.749450404
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Heterlimnius corpulentus,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,5,13.712,10.43919877
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ampumixis dispar,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,5,68.56,52.19599383
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cleptelmis addenda,L,insect,Aquatic,Arthropoda: Insecta,Coleoptera,Elmidae,riffle beetles,2.5,13.712,1.419063434
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,11,13.712,135.1778516
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,6,13.712,23.60660042
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,5,13.712,13.96595511
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,4,13.712,7.346267093
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Paraperla,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Chloroperlidae,stoneflies,3.5,13.712,2.704304022
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cultus,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,2.5,27.424,6.630379328
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cultus,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlodidae,stoneflies,4,27.424,24.05666208
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2.5,41.136,1.86143592
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3.5,27.424,3.975207789
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,13.712,3.154873684
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,27.424,13.65590907
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,68.56,0.52978562
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,27.424,2.331975281
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,54.848,1.146774908
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella flavilinea,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,68.56,0.130264
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,27.424,0.2660128
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,41.136,2.527182887
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,68.56,12.39985037
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,164.544,64.0235191
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,13.712,15.70685804
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Ephemerella excrucians group,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,13.712,9.66561874
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hydroptila,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydroptilidae,caddisflies,3.5,13.712,2.690902793
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Lepidostoma (Neodinarthrum),L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,4,41.136,12.78515706
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Lepidostoma cascadense,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Lepidostomatidae,caddisflies,4,13.712,4.261719021
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1,27.424,0.2824672
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,1.5,68.56,2.08991317
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2,95.984,6.318184994
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,2.5,109.696,13.11944549
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3,41.136,8.013749479
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,4,233.104,98.0617157
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,5,95.984,73.36345922
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,6,13.712,17.07146434
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella edmundsi,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,3.5,27.424,8.070382366
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,1,479.92,2.543576
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,2,685.6,26.65679401
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,3,329.088,41.04984515
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,4,150.832,43.02212269
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,5,54.848,29.71497902
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Baetis tricaudatus complex,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Baetidae,mayflies,6,13.712,12.54762466
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Wiedemannia,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,4,13.712,2.525453069
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Antocha,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Tipulidae,crane flies,4,13.712,1.635391135
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Neoplasta,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,3,13.712,1.214074336
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Neoplasta,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Empididae,dance flies,4,27.424,5.050906138
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,13.712,0.437521736
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3.5,27.424,1.309873564
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,13.712,0.928890042
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Cricotopus (Nostococladius),L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,6,13.712,2.684077997
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Chironomidae,P,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae,midges,2.5,13.712,0.271507801
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,3,27.424,0.875043471
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,4,13.712,0.928890042
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Thienemannimyia complex,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Tanypodinae,midges,6,13.712,2.684077997
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,82.272,0.908489806
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Eukiefferiella devonica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,82.272,2.625130414
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,2,82.272,0.908489806
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,27.424,0.875043471
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Orthocladius,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,13.712,0.928890042
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Parametriocnemus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,5,27.424,3.331254451
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Parametriocnemus,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,6,27.424,5.368155994
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,3,41.136,1.312565207
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Tvetenia bavarica group,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Chironomidae: Orthocladiinae,midges,4,27.424,1.857780083
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Caudatella hystrix,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,10,1.6,7.815507917
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Rhyacophila brunnea/vemna group,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,16,0.8,7.6726032
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Rhyacophila brunnea/vemna group,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Rhyacophilidae,caddisflies,18,0.8,10.27545341
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,38,0.8,300.8972311
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Pteronarcys californica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Pteronarcyidae,stoneflies,55,0.8,779.0910176
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Drunella grandis/spinifera,L,insect,Aquatic,Arthropoda: Insecta,Ephemeroptera,Ephemerellidae,mayflies,12,0.8,8.237789671
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,18,0.8,17.32906651
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Arctopsyche,L,insect,Aquatic,Arthropoda: Insecta,Trichoptera,Hydropsychidae,caddisflies,23,0.8,35.50287038
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Bibiocephala,L,insect,Aquatic,Arthropoda: Insecta,Diptera,Blephariceridae,net-winged midges,12,0.8,19.1350434
+South Fork McKenzie River,Phase 3 monthly,Benthic,2020-02-17,Hesperoperla pacifica,L,insect,Aquatic,Arthropoda: Insecta,Plecoptera,Perlidae,stoneflies,25,2.4,251.4871049
