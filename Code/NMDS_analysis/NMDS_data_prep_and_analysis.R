@@ -15,6 +15,24 @@ library(tidyr)
 library(purrr)
 library(tibble)
 
+#####################################
+## Load biomass files
+#####################################
+
+phase3_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/NMDS_data/biomass_phase3_2020.csv")
+phase3_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/NMDS_data/biomass_phase3_2020.csv")
+phase3_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/NMDS_data/biomass_phase3_2020.csv")
+phase3_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/NMDS_data/biomass_phase3_2020.csv")
+phase3_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/NMDS_data/biomass_phase3_2020.csv")
+
+
+
+
+
+
+
+
+
 set.seed(2)
 community_matrix=matrix(
   sample(1:100,300,replace=T),nrow=10,
