@@ -47,9 +47,24 @@ colnames(fulljoin_phase3_4)[3] = "Phase_4"
 # join phase 3 & 4 with pretreat main channel biomass
 fulljoin_ph3_4_main_ch <- full_join(fulljoin_phase3_4, pretreat_main_channel_biomass, by = "taxon" )
 
+#rename 'annual.B' column to 'pretreat main chan'
+colnames(fulljoin_ph3_4_main_ch)[4] = "Pretreat_main_ch"
+
+# join phase 3, 4, pretreat main channe,and side channel biomass
+ph3_4_main_ch_side_ch <- full_join(fulljoin_ph3_4_main_ch, side_channel_biomass, by = "taxon" )
+
+#rename 'annual.B' column to 'Side chan'
+colnames(ph3_4_main_ch_side_ch)[5] = "Side_chan"
+
+# join phase 3, 4, pretreat main chan side chan & wetted forest biomass
+ph3_4_main_ch_side_ch_forest <- full_join(ph3_4_main_ch_side_ch, wetted_forest_biomass, by = "taxon" )
+
+#rename 'annual.B' column to 'Side chan'
+colnames(ph3_4_main_ch_side_ch_forest)[6] = "Wetted_forest"
+
 
 # replace NA's with zeroes
-DF1[is.na(DF1)] = 0
+ph3_4_main_ch_side_ch_forest[is.na(ph3_4_main_ch_side_ch_forest)] = 0
 
 
 
