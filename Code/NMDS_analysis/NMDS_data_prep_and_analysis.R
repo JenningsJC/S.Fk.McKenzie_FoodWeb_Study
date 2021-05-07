@@ -30,12 +30,8 @@ wetted_forest_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/bio
 ## and fill in the NA's with zeroes
 ######################################
 
-phase3_wider <- phase3_biomass %>%
-  pivot_wider(names_from = taxon, values_from = annual.B, values_fill = 0)
 
-phase4_wider <- 
 
-merge_test <- merge(phase3_biomass, phase4_biomass)
 
 # fulljoin phase 3 and 4 by taxon
 fulljoin_phase3_4 <- full_join(phase3_biomass,phase4_biomass, by = "taxon")
@@ -66,12 +62,38 @@ colnames(ph3_4_main_ch_side_ch_forest)[6] = "Wetted_forest"
 # replace NA's with zeroes
 ph3_4_main_ch_side_ch_forest[is.na(ph3_4_main_ch_side_ch_forest)] = 0
 
+# transpose to make taxa into columns and reaches into rows
+combo_biomass_transposed <- (t(ph3_4_main_ch_side_ch_forest[-1]))
+
+colnames(combo_biomass_transposed) <- ph3_4_main_ch_side_ch_forest[, 1]
+
+#############################################
+# Write matrix of biomass means to csv file
+#############################################
+write.csv(
+  combo_biomass_transposed,
+  "~/S.Fk.McKenzie_FoodWeb_Study/Code/NMDS_analysis/matrix_of_combined_biomass_means.csv",
+  row.names = T
+)
+
+write.csv(
+  ph3_4_main_ch_side_ch_forest,
+  "~/S.Fk.McKenzie_FoodWeb_Study/Code/NMDS_analysis/biomass_ph3_4_main_ch_side_ch_forest.csv",
+  row.names = F
+)
 
 
-set.seed(2)
-community_matrix=matrix(
-  sample(1:100,300,replace=T),nrow=10,
-  dimnames=list(paste("community",1:10,sep=""),paste("sp",1:30,sep="")))
 
-example_NMDS=metaMDS(community_matrix, # Our community-by-species matrix
-                     k=2) # The number of reduced dimensions
+################################################
+### NMDS with combined biomass matrix
+###
+################################################
+
+biomass_NMDS=metaMDS(combo_biomass_transposed, zerodist = "add", maxit = 100
+                    , try = 200, trymax = 100,
+                     k=2) # k = The number of reduced dimensions, trymax = more iterations than default
+
+
+
+stressplot(biomass_NMDS)
+
