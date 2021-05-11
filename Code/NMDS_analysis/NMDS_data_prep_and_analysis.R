@@ -14,6 +14,8 @@ library(dplyr)
 library(tidyr)
 library(purrr)
 library(tibble)
+library(rlang)
+library(bestNormalize)
 
 #####################################
 ## Load biomass files
@@ -25,13 +27,48 @@ pretreat_main_channel_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDer
 side_channel_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/biomass_side_channel_2020.csv")
 wetted_forest_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/biomass_wetted_forest_2020.csv")
 
+########################################
+# Square-root transform each reach
+########################################
+
+### Phase 3 ###
+# Add a column of square root transformed data
+phase3_biomass$sqrt.B <- sqrt(phase3_biomass$annual.B)
+
+# Remove untransformed column
+phase3_biomass_sqrt <- phase3_biomass[-2]
+
+### Phase 4 ###
+# Add a column of square root transformed data
+phase4_biomass$sqrt.B <- sqrt(phase4_biomass$annual.B)
+
+# Remove untransformed column
+phase4_biomass_sqrt <- phase4_biomass[-2]
+
+### Pre-treatment Main Channel ###
+# Add a column of square root transformed data
+pretreat_main_channel_biomass$sqrt.B <- sqrt(pretreat_main_channel_biomass$annual_B)
+
+# Remove untransformed column
+pretreat_main_channel_biomass_sqrt <- pretreat_main_channel_biomass[-2]
+
+### Side Channel ###
+# Add a column of square root transformed data
+side_channel_biomass$sqrt.B <- sqrt(side_channel_biomass$annual.B)
+
+# Remove untransformed column
+side_channel_biomass_sqrt <- side_channel_biomass[-2]
+
+### Wetted Forest ###
+# Add a column of square root transformed data 
+wetted_forest_biomass$sqrt.B <- sqrt(wetted_forest_biomass$annual.B)
+
+wetted_forest_biomass_sqrt <- wetted_forest_biomass[-2]
+
 #####################################
 ## Merge biomass data objects by taxa 
 ## and fill in the NA's with zeroes
 ######################################
-
-
-
 
 # fulljoin phase 3 and 4 by taxon
 fulljoin_phase3_4 <- full_join(phase3_biomass,phase4_biomass, by = "taxon")
