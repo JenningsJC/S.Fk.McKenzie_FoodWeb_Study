@@ -105,11 +105,12 @@ combo_biomass_transposed <- (t(ph3_4_main_ch_side_ch_forest[-1]))
 colnames(combo_biomass_transposed) <- ph3_4_main_ch_side_ch_forest[, 1]
 
 #############################################
-# Write matrix of biomass means to csv file
+# Write matrix of square root transformed biomass
+# to a csv file
 #############################################
 write.csv(
   combo_biomass_transposed,
-  "~/S.Fk.McKenzie_FoodWeb_Study/Code/NMDS_analysis/matrix_of_combined_biomass_means.csv",
+  "~/S.Fk.McKenzie_FoodWeb_Study/Code/NMDS_analysis/combined_sqrt_biomass.csv",
   row.names = T
 )
 
@@ -119,6 +120,15 @@ write.csv(
   row.names = F
 )
 
+################################################
+## Convert square root transformed biomass 
+## matrix into Curtis-Bray distance matrix
+##
+################################################
+
+biomass_dist_matrix <- vegdist(combo_biomass_transposed, method = "bray")
+
+biomass_dist_matrix <- as.matrix(biomass_dist_matrix, labels = T)
 
 
 ################################################
@@ -126,9 +136,14 @@ write.csv(
 ###
 ################################################
 
-biomass_NMDS=metaMDS(combo_biomass_transposed, zerodist = "add", maxit = 100
-                    , try = 200, trymax = 100,
-                     k=2) # k = The number of reduced dimensions, trymax = more iterations than default
+
+biomass_NMD <-
+  metaMDS(biomass_dist_matrix,
+          distance = "bray",
+          k = 2,
+          maxit = 999, 
+          trymax = 500,
+          wascores = TRUE)
 
 
 
