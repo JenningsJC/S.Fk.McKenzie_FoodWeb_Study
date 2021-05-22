@@ -58,14 +58,33 @@ ph3_4_main_ch_side_ch_forest <- full_join(ph3_4_main_ch_side_ch, wetted_forest_b
 #rename 'annual.B' column to 'Side chan'
 colnames(ph3_4_main_ch_side_ch_forest)[6] = "Wetted_forest"
 
-
 # replace NA's with zeroes
-# ph3_4_main_ch_side_ch_forest[is.na(ph3_4_main_ch_side_ch_forest)] = 0
+ ph3_4_main_ch_side_ch_forest[is.na(ph3_4_main_ch_side_ch_forest)] = 0
 
 # transpose to make taxa into columns and reaches into rows
 combo_biomass_transposed <- (t(ph3_4_main_ch_side_ch_forest[-1]))
 
 colnames(combo_biomass_transposed) <- ph3_4_main_ch_side_ch_forest[, 1]
+
+########
+########### prepping data for PcA
+taxa_list <- colnames(combo_biomass_transposed)
+colnames(combo_biomass_transposed) <- NULL
+
+######## PcA analysis of untransformed data
+PCA_results <- prcomp(combo_biomass_transposed)
+biplot(PCA_results) 
+
+####### PcA analysis of raw proportions
+PCA_results2 <- prcomp(combo_biomass_props)
+biplot(PCA_results2)
+
+####### PcA analysis of proportions of sqrt data
+PCA_results3 <- prcomp(combo_biomass_sqrt_props)
+biplot(PCA_results3)
+
+
+
 
 #############################################
 # Write matrix of square root transformed biomass
@@ -82,26 +101,26 @@ write.csv(
   "~/S.Fk.McKenzie_FoodWeb_Study/Code/NMDS_analysis/biomass_ph3_4_main_ch_side_ch_forest.csv",
   row.names = F
 )
-
+ph3_4_main_ch_side_ch_forest <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/Code/NMDS_analysis/biomass_ph3_4_main_ch_side_ch_forest.csv")
 ###############################################
 ## Transform & Standardize biomass data
 ##############################################
 
-##combo_biomass_norm <- decostand(combo_biomass_transposed, 'total', na.rm = T)
+combo_biomass_log<- decostand(combo_biomass_transposed, "log")
 
 # square root transform the data
 combo_biomass_sqrt<- sqrt(combo_biomass_transposed)
 
-# replace NA's with zeroes
-combo_biomass_sqrt[is.na(combo_biomass_sqrt)] = 0
 
-#Wisconsin double-standardization
-combo_biomass_wisc <- wisconsin(combo_biomass_sqrt)
 
+# Divide each value in each row by the row total (total biomass)
+# so that each taxa biomass value becomes a proportion of total B
+combo_biomass_sqrt_props <- decostand(combo_biomass_sqrt, "total")
+combo_biomass_props <- decostand(combo_biomass_transposed, "total")
 ################################################
 ## Convert into Curtis-Bray distance matrix
 ################################################
-biomass_dist_matrix <- vegdist(combo_biomass_wisc, method = "bray")
+biomass_dist_matrix <- vegdist(combo_biomass_props, method = "bray")
 
 biomass_dist_matrix <- as.matrix(biomass_dist_matrix, labels = T)
 
@@ -116,16 +135,17 @@ biomass_dist_matrix <- as.matrix(biomass_dist_matrix, labels = T)
     biomass_dist_matrix,
     distance = "bray",
     k = 3,
-    maxit = 999,
-    trymax = 500,
-    wascores = TRUE
+    maxit = 10000,
+    trymax = 5000,
+    wascores = TRUE,
+    
   )
 
 ####
 
 
 
-bioNMS <- monoMDS(biomass_dist_matrix, k = 2, model = "global",  threshold = 0.8, maxit = 1000, weakties = TRUE, stress = 1, scaling = TRUE, pc = TRUE, smin = 1e-4, sfgrmin = 1e-7,  sratmax=0.99999) 
+bioNMS <- monoMDS(biomass_dist_matrix, k = 2, model = "global",  threshold = 0.7, maxit = 1000, weakties = TRUE, stress = 1, scaling = TRUE, pc = TRUE, smin = 1e-4, sfgrmin = 1e-7,  sratmax=0.99999) 
 goodness(bioNMS)
 stressplot(bioNMS)
-
+bioNMS
