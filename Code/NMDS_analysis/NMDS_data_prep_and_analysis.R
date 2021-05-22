@@ -9,6 +9,7 @@
 rm(list = ls())
 
 install.packages("vegan")
+install.packages("factoextra")
 library(vegan)
 library(dplyr)
 library(tidyr)
@@ -16,6 +17,7 @@ library(purrr)
 library(tibble)
 library(rlang)
 library(bestNormalize)
+library(factoextra)
 
 #####################################
 ## Load biomass files
@@ -82,6 +84,8 @@ biplot(PCA_results2)
 ####### PcA analysis of proportions of sqrt data
 PCA_results3 <- prcomp(combo_biomass_sqrt_props)
 biplot(PCA_results3)
+
+library("factoextra")
 
 
 
