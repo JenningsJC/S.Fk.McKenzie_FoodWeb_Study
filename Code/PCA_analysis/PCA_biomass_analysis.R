@@ -104,10 +104,33 @@ biplot(PCA_results3)
 
 ####### PCA of proportions of log standardized data
 PCA_results4 <- prcomp(combo_biomass_log_props)
-biplot(PCA_results4)
+biplot(PCA_results4,)
 
 
 
 ####### extract eigenvalues to select the most important components for plotting
-eig.val <- get_eigenvalue(PCA_results3)
+eig.val3 <- get_eigenvalue(PCA_results3)
+eig.val4 <- get_eigenvalue(PCA_results4)
 
+####### Graph Individuals (Reaches) so they are grouped together
+
+fviz_pca_ind(PCA_results4,
+             col.ind = "cos2", # Color by the quality of representation
+             gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+             repel = TRUE     # Avoid text overlapping
+)
+
+####### Graph the highest contributing Variables 
+
+fviz_pca_var(PCA_results4,
+             col.var = "contrib", # Color by contributions to the PC
+             gradient.cols = c("#00AFBB", "#E7B800", "#FC4E07"),
+             repel = TRUE     # Avoid text overlapping
+)
+
+####### Graph PCA biplot
+
+fviz_pca_biplot(PCA_results4, repel = TRUE,
+                col.var = "#2E9FDF", # Variables color
+                col.ind = "#696969"  # Individuals color
+)
