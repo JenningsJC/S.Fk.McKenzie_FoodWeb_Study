@@ -10,6 +10,7 @@ rm(list = ls())
 
 install.packages("vegan")
 install.packages("factoextra")
+install.packages("ecodist")
 library(vegan)
 library(dplyr)
 library(tidyr)
@@ -18,7 +19,7 @@ library(tibble)
 library(rlang)
 library(bestNormalize)
 library(factoextra)
-
+library(ecodist)
 #####################################
 ## Load biomass files
 #####################################
@@ -85,8 +86,9 @@ biplot(PCA_results2)
 PCA_results3 <- prcomp(combo_biomass_sqrt_props)
 biplot(PCA_results3)
 
-library("factoextra")
 
+####### extract eigenvalues to select the most important components for plotting
+eig.val <- get_eigenvalue(PCA_results3)
 
 
 
@@ -124,7 +126,7 @@ combo_biomass_props <- decostand(combo_biomass_transposed, "total")
 ################################################
 ## Convert into Curtis-Bray distance matrix
 ################################################
-biomass_dist_matrix <- vegdist(combo_biomass_props, method = "bray")
+biomass_dist_matrix <- vegdist(combo_biomass_sqrt_props, method = "bray")
 
 biomass_dist_matrix <- as.matrix(biomass_dist_matrix, labels = T)
 
