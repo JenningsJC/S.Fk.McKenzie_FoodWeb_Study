@@ -18,6 +18,7 @@ library(rlang)
 library(bestNormalize)
 library(factoextra)
 library(ecodist)
+
 #####################################
 ## Load biomass files
 #####################################
@@ -77,14 +78,15 @@ combo_biomass_sqrt<- sqrt(combo_biomass_transposed)
 
 
 
-# Divide each value in each row by the row total (total biomass)
+# Divide each value in each row by the row total (total biomass),
 # so that each taxa biomass value becomes a proportion of total B
-combo_biomass_sqrt_props <- decostand(combo_biomass_sqrt, "total")
+
 combo_biomass_props <- decostand(combo_biomass_transposed, "total")
+combo_biomass_sqrt_props <- decostand(combo_biomass_sqrt, "total")
+combo_biomass_log_props <- decostand(combo_biomass_log, "total")
 
-biomass_matrix <- as.matrix(combo_biomass_, labels = T)
 
-########### prepping data for PcA
+########### stripping column names from data for PcA
 #taxa_list <- colnames(combo_biomass_transposed)
 #colnames(combo_biomass_transposed) <- NULL
 
@@ -99,6 +101,11 @@ biplot(PCA_results2)
 ####### PcA analysis of proportions of sqrt data
 PCA_results3 <- prcomp(combo_biomass_sqrt_props)
 biplot(PCA_results3)
+
+####### PCA of proportions of log standardized data
+PCA_results4 <- prcomp(combo_biomass_log_props)
+biplot(PCA_results4)
+
 
 
 ####### extract eigenvalues to select the most important components for plotting
