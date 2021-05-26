@@ -132,5 +132,6 @@ fviz_pca_var(PCA_results4,
 
 fviz_pca_biplot(PCA_results4, repel = TRUE,
                 col.var = "#2E9FDF", # Variables color
-                col.ind = "#696969"  # Individuals color
+                col.ind = "#696969", # Individuals color
+                select.var = list(contrib = 30)
 )
