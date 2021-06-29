@@ -9,6 +9,7 @@ rm(list = ls())
 install.packages("vegan")
 install.packages("factoextra")
 install.packages("ecodist")
+
 library(vegan)
 library(dplyr)
 library(tidyr)
@@ -44,19 +45,19 @@ colnames(fulljoin_phase3_4)[3] = "Phase_4"
 # join phase 3 & 4 with pretreat main channel production
 fulljoin_ph3_4_main_ch <- full_join(fulljoin_phase3_4, pretreat_main_channel_production, by = "taxon" )
 
-#rename 'annual.B' column to 'pretreat main chan'
+#rename 'annual_P' column to 'pretreat main chan'
 colnames(fulljoin_ph3_4_main_ch)[4] = "Pretreat_main_ch"
 
 # join phase 3, 4, pretreat main channel,and side channel production
 ph3_4_main_ch_side_ch <- full_join(fulljoin_ph3_4_main_ch, side_channel_production, by = "taxon" )
 
-#rename 'annual.B' column to 'Side chan'
+#rename 'annual_P' column to 'Side chan'
 colnames(ph3_4_main_ch_side_ch)[5] = "Side_chan"
 
 # join phase 3, 4, pretreat main chan side chan & wetted forest production
 ph3_4_main_ch_side_ch_forest <- full_join(ph3_4_main_ch_side_ch, wetted_forest_production, by = "taxon" )
 
-#rename 'annual.B' column to 'Side chan'
+#rename 'annual_P' column to 'Side chan'
 colnames(ph3_4_main_ch_side_ch_forest)[6] = "Wetted_forest"
 
 # replace NA's with zeroes
@@ -71,13 +72,14 @@ colnames(combo_production_transposed) <- ph3_4_main_ch_side_ch_forest[, 1]
 ## Transform & Standardize production data
 ##############################################
 
+# log transform the data
 combo_production_log<- decostand(combo_production_transposed, "log")
 
 # square root transform the data
 combo_production_sqrt<- sqrt(combo_production_transposed)
 
 
-
+# Standardize
 # Divide each value in each row by the row total (total production),
 # so that each taxa production value becomes a proportion of total B
 
