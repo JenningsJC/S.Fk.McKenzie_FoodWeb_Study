@@ -17,6 +17,7 @@ library(rlang)
 library(bestNormalize)
 library(factoextra)
 library(ecodist)
+
 #####################################
 ## Load biomass file
 #####################################
@@ -28,8 +29,10 @@ seasonal_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/seasonal
 ## Transform & Standardize biomass data
 ##############################################
 
+seasonal_biomass2 <- column_to_rownames(seasonal_biomass, var = "X")
+
 # log transform using decostand
-seasonal_biomass_log<- decostand(seasonal_biomass, "log")
+seasonal_biomass_log<- decostand(seasonal_biomass[,-1], "log", na.rm = T)
 
 # Standardize by proportion of row totals:
 # Divide each value in each row by the row total (total biomass)
@@ -45,7 +48,7 @@ biomass_dist_matrix <- as.matrix(biomass_dist_matrix, labels = T)
 
 
 ################################################
-### NMDS with combined biomass matrix
+### NMDS with biomass matrix
 ###
 ################################################
 
@@ -53,14 +56,18 @@ biomass_dist_matrix <- as.matrix(biomass_dist_matrix, labels = T)
   metaMDS(
     biomass_dist_matrix,
     distance = "bray",
-    k = 3,
-    maxit = 10000,
-    trymax = 5000,
+    k = 2,
+    trymax = 500,
     wascores = TRUE,
     
   )
 
-####
+## Stressplot results to see how well represented the variables are by the
+## new, reduced variables
+stressplot(biomass_NMDS)
+
+## biplot results
+plot(biomass_NMDS)
 
 
 
