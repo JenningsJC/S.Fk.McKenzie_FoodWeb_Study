@@ -64,11 +64,10 @@ stressplot(biomass_NMDS)
 
 ## create a blank plot
 
-ordiplot(biomass_NMDS, type = "n", main = "Reaches")
+ordiplot(biomass_NMDS, type = "n", xlim = c(-0.6,0.6), ylim = c(-0.6,0.6), main = "Reaches")
 
 ## add sites/reaches to the plot
-ordilabel(biomass_NMDS, display = "sites", font = 3, fill = "orange",
-          col = "black", scaling = scl)
+orditorp(biomass_NMDS, display = "sites", cex=1, air=0.07)
 
 ######################################
 ## Graph biplot of intrinsic species
@@ -76,12 +75,24 @@ ordilabel(biomass_NMDS, display = "sites", font = 3, fill = "orange",
 ## distibution of the reaches
 ######################################
 
+
+## find vectors of Intrinsic Variables and p-values
+intrinsics <- envfit(biomass_NMDS, seasonal_biomass_logged_transformed, permutations = 999)
+
 ## create a blank plot
 
 ordiplot(biomass_NMDS, type = "n", main = "Intrinsic Species")
 
-## find vectors of variables and p-values
-intrinsics <- envfit(biomass_NMDS, seasonal_biomass_logged_transformed, permutations = 999)
+## plot the sites as points,
+## then the intrinsic variables by selecting desired p-value
+orditorp(biomass_NMDS, display = "sites", labels = F, cex = 1)
+
+plot(intrinsics, p.max = 0.01, col = "black", cex = 0.7) # change the significance level of species shown with p.max
+
+
+
+
+
 
 ## add species to the plot
 ordilabel(biomass_NMDS, display = "species", font = 2, priority = priSpp,
