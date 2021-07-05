@@ -23,7 +23,7 @@ library(ecodist)
 #####################################
 
 seasonal_biomass <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/seasonal_mean_biomass_benth_all_reaches.csv")
-
+seasonal_biomass_site_variables <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/seasonal_biomass_site_variables.csv")
 
 ###############################################
 ## Transform & Standardize biomass data
@@ -81,11 +81,11 @@ orditorp(biomass_NMDS,
          air = 0.1)
 
 
-######################################
-## Graph biplot of intrinsic species
+##########################################################
+## Graph biplot of intrinsic species using vegan package
 ## intrinsic = drives the pattern of
 ## distibution of the reaches
-######################################
+##########################################################
 
 
 ## find vectors of Intrinsic Variables and p-values
@@ -112,6 +112,66 @@ plot(intrinsics,
      p.max = 0.001,
      col = "black",
      cex = 0.6) # change the significance level of species shown with p.max
+
+
+
+###############################################################
+## Graph NMDS scores using ggplot2
+##
+##
+###############################################################
+
+##################################################
+## find species vectors (intrinsic variables) and p-values
+intrinsic_species <-
+  envfit(biomass_NMDS,
+         seasonal_biomass_logged_transformed,
+         permutations = 999)
+
+####################################################
+## Create dataframes of site scores to use with ggplot2
+## save NMDS results into dataframe
+site_scores <-
+  as.data.frame(scores(biomass_NMDS, display = "sites"))
+
+#######################################################
+## add Site grouping variables for Season and Treatment
+site_scores <-
+  cbind(site_scores, seasonal_biomass_site_variables)
+
+head(site_scores)
+
+##########################################################
+## Create dataframes of species scores to use with ggplot2
+## Save NMDS results into dataframe
+
+## save species intrinsic values into dataframe
+species_scores <- as.data.frame(scores(intrinsic_species, display = "vectors"))
+
+species_scores <- cbind(species_scores, Species = rownames(species_scores)) #add species names to dataframe
+species_scores <- cbind(species_scores, pval = intrinsic_species$vectors$pvals) #add pvalues to dataframe so you can select species which are significant
+
+##  subset the variables that most influence the spread
+significant_species_scores <- subset(species_scores, pval<=0.01) #subset data to show species significant at 0.05
+
+head(species_scores)
+
+#######################################################
+## Create ggplot plot
+##
+
+#set up the plot
+NMDS_plot_seasonal <- ggplot(site_scores, aes(x=NMDS1, y=NMDS2))+ 
+  geom_point(aes(NMDS1, NMDS2, colour = factor(site_scores$Season), shape = factor(site_scores$Treatment)), size = 2)+ #adds site points to plot, shape determined by Treatment, colour determined by Season
+  coord_fixed()+
+  theme_classic()+ 
+  theme(panel.background = element_rect(fill = NA, colour = "black", size = 1, linetype = "solid"))+
+  labs(colour = "Season", shape = "Treatment")+ # add legend labels for Management and Landuse
+  theme(legend.position = "right", legend.text = element_text(size = 12), legend.title = element_text(size = 12), axis.text = element_text(size = 10)) # add legend at right of plot
+
+NMDS_plot_seasonal + labs(title = "Basic ordination plot") #displays plot
+
+
 
 
 
