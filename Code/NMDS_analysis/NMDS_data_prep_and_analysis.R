@@ -134,6 +134,9 @@ intrinsic_species <-
 site_scores <-
   as.data.frame(scores(biomass_NMDS, display = "sites"))
 
+# add site names
+site_scores <- cbind(site_scores, Site = rownames(site_scores))
+
 #######################################################
 ## add Site grouping variables for Season and Treatment
 site_scores <-
@@ -169,7 +172,34 @@ NMDS_plot_seasonal <- ggplot(site_scores, aes(x=NMDS1, y=NMDS2))+
   labs(colour = "Season", shape = "Treatment")+ # add legend labels for Management and Landuse
   theme(legend.position = "right", legend.text = element_text(size = 12), legend.title = element_text(size = 12), axis.text = element_text(size = 10)) # add legend at right of plot
 
-NMDS_plot_seasonal + labs(title = "Basic ordination plot") #displays plot
+NMDS_plot_seasonal +
+  labs(subtitle = "stress = 0.131") +
+  ggrepel::geom_text_repel(
+    data = site_scores,
+    aes(x = NMDS1, y = NMDS2, label = Site),
+    cex = 3,
+    direction = "both",
+    segment.size = 0.25
+  )+
+  geom_segment(
+    data = significant_species_scores,
+    aes(
+      x = 0,
+      xend = NMDS1,
+      y = 0,
+      yend = NMDS2
+    ),
+    arrow = arrow(length = unit(0.25, "cm")),
+    colour = "grey10",
+    lwd = 0.3
+  ) + #add vector arrows of significant species
+  ggrepel::geom_text_repel(
+    data = significant_species_scores,
+    aes(x = NMDS1, y = NMDS2, label = Species),
+    cex = 3,
+    direction = "both",
+    segment.size = 0.25
+  )
 
 
 
