@@ -155,12 +155,12 @@ species_scores <- cbind(species_scores, Species = rownames(species_scores)) #add
 species_scores <- cbind(species_scores, pval = intrinsic_species$vectors$pvals) #add pvalues to dataframe so you can select species which are significant
 
 ##  subset the variables that most influence the spread
-significant_species_scores <- subset(species_scores, pval<=0.01) #subset data to show species significant at 0.05
+significant_species_scores <- subset(species_scores, pval<=0.001) #subset data to show species significant at 0.05
 
 head(species_scores)
 
 #######################################################
-## Create ggplot plot
+## Create plot with ggplot2
 ##
 
 #set up the plot
