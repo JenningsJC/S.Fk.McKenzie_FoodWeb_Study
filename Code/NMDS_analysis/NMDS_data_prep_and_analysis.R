@@ -59,59 +59,38 @@ biomass_NMDS <-
 ## variables are by the new, reduced variables
 stressplot(biomass_NMDS)
 
-###################################
-## Graph biplot of reaches
-###################################
-
-## create a blank plot
-
-ordiplot(
-  biomass_NMDS,
-  type = "n",
-  xlim = c(-0.6, 0.6),
-  ylim = c(-0.6, 0.6),
-  main = "Reaches"
-)
-
-
-## add sites/reaches to the plot
-orditorp(biomass_NMDS,
-         display = "sites",
-         cex = 1,
-         air = 0.1)
-
-
+## USE GGPLOT2!
 ##########################################################
 ## Graph biplot of intrinsic species using vegan package
 ## intrinsic = drives the pattern of
 ## distibution of the reaches
 ##########################################################
-
-
+##
+##
 ## find vectors of Intrinsic Variables and p-values
-intrinsics <-
-  envfit(biomass_NMDS,
-         seasonal_biomass_logged_transformed,
-         permutations = 999)
-
+##intrinsics <-
+##envfit(biomass_NMDS,
+##         seasonal_biomass_logged_transformed,
+##         permutations = 999)
+##
 ## create a blank plot
 
-ordiplot(biomass_NMDS, type = "n", main = "Intrinsic Taxa p<0.001")
+## ordiplot(biomass_NMDS, type = "n", main = "Intrinsic Taxa p<0.001")
 
 ## plot the sites as points
 #orditorp(biomass_NMDS, display = "sites", labels = F, cex = 2)
-orditorp(biomass_NMDS,
-         display = "sites",
-         cex = 1,
-         air = 0.07)
-
+## orditorp(biomass_NMDS,
+##         display = "sites",
+##         cex = 1,
+##         air = 0.07)
+##
 ## then the intrinsic variables by selecting desired p-value
-
-
-plot(intrinsics,
-     p.max = 0.001,
-     col = "black",
-     cex = 0.6) # change the significance level of species shown with p.max
+##
+##
+##plot(intrinsics,
+##     p.max = 0.001,
+##     col = "black",
+##     cex = 0.6) # change the significance level of species shown with p.max
 
 
 
