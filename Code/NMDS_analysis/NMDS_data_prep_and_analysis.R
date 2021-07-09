@@ -144,11 +144,11 @@ head(species_scores)
 
 #set up the plot
 NMDS_plot_seasonal <- ggplot(site_scores, aes(x=NMDS1, y=NMDS2))+ 
-  geom_point(aes(NMDS1, NMDS2, colour = factor(site_scores$Season), shape = factor(site_scores$Treatment)), size = 2)+ #adds site points to plot, shape determined by Treatment, colour determined by Season
+  geom_point(aes(NMDS1, NMDS2, colour = factor(site_scores$Treatment), shape = factor(site_scores$Season)), size = 4)+ #adds site points to plot, shape determined by Treatment, colour determined by Season
   coord_fixed()+
   theme_classic()+ 
   theme(panel.background = element_rect(fill = NA, colour = "black", size = 1, linetype = "solid"))+
-  labs(colour = "Season", shape = "Treatment")+ # add legend labels for Management and Landuse
+  labs(colour = "Treatment", shape = "Season")+ # add legend labels for Treatment and Season
   theme(legend.position = "right", legend.text = element_text(size = 12), legend.title = element_text(size = 12), axis.text = element_text(size = 10)) # add legend at right of plot
 
 NMDS_plot_seasonal +
