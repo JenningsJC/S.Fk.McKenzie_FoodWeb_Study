@@ -8,6 +8,7 @@ rm(list = ls())
 install.packages("vegan")
 install.packages("factoextra")
 install.packages("ecodist")
+install.packages("extrafont")
 library(vegan)
 library(dplyr)
 library(tidyr)
@@ -17,6 +18,7 @@ library(rlang)
 library(bestNormalize)
 library(factoextra)
 library(ecodist)
+library(extrafont)
 
 #####################################
 ## Load biomass file
@@ -59,39 +61,6 @@ biomass_NMDS <-
 ## variables are by the new, reduced variables
 stressplot(biomass_NMDS)
 
-## USE GGPLOT2!
-##########################################################
-## Graph biplot of intrinsic species using vegan package
-## intrinsic = drives the pattern of
-## distibution of the reaches
-##########################################################
-##
-##
-## find vectors of Intrinsic Variables and p-values
-##intrinsics <-
-##envfit(biomass_NMDS,
-##         seasonal_biomass_logged_transformed,
-##         permutations = 999)
-##
-## create a blank plot
-
-## ordiplot(biomass_NMDS, type = "n", main = "Intrinsic Taxa p<0.001")
-
-## plot the sites as points
-#orditorp(biomass_NMDS, display = "sites", labels = F, cex = 2)
-## orditorp(biomass_NMDS,
-##         display = "sites",
-##         cex = 1,
-##         air = 0.07)
-##
-## then the intrinsic variables by selecting desired p-value
-##
-##
-##plot(intrinsics,
-##     p.max = 0.001,
-##     col = "black",
-##     cex = 0.6) # change the significance level of species shown with p.max
-
 
 
 ###############################################################
@@ -123,6 +92,11 @@ site_scores <-
 
 head(site_scores)
 
+##write.csv(site_scores,"~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/site scores.csv",
+##          row.names = F
+##)
+site_scores <- read.csv("~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/site scores.csv")
+
 ##########################################################
 ## Create dataframes of species scores to use with ggplot2
 ## Save NMDS results into dataframe
@@ -138,50 +112,74 @@ significant_species_scores <- subset(species_scores, pval<=0.001) #subset data t
 
 head(species_scores)
 
+write.csv(significant_species_scores,"~/S.Fk.McKenzie_FoodWeb_Study/DataDerived/intrinsic_species_scores_NMDS.csv",
+          row.names = T
+)
+
 #######################################################
 ## Create plot with ggplot2
 ##
 
+#Get new fonts
+install.packages("extrafont")
+library(extrafont)
+
+font_import()
+y
+
+loadfonts(device="win")  #Register fonts for Windows bitmap output
+
+fonts()  #See list of available fonts
+
+
 #set up the plot
-NMDS_plot_seasonal <- ggplot(site_scores, aes(x=NMDS1, y=NMDS2))+ 
-  geom_point(aes(NMDS1, NMDS2, colour = factor(site_scores$Treatment), shape = factor(site_scores$Season)), size = 4)+ #adds site points to plot, shape determined by Treatment, colour determined by Season
+NMDS_plot_seasonal <- ggplot(site_scores, aes(x=NMDS1, y=NMDS2))+
+  labs(x = "Axis 1")+
+  labs(y = "Axis 2")+
+  geom_point(aes(NMDS1, NMDS2, colour = factor(site_scores$Treatment), shape = factor(site_scores$Season)), size = 5)+ #adds site points to plot, shape determined by Treatment, colour determined by Season
+  scale_color_manual(values=c("#F5793A", "#85C0F9"))+
+  scale_shape_manual(values = c(15,16,17,18))+
+  geom_label(x = -0.35, y = 0.4, label = "Stress = 0.131", label.size = 0.4)+ # add stress value
   coord_fixed()+
   theme_classic()+ 
   theme(panel.background = element_rect(fill = NA, colour = "black", size = 1, linetype = "solid"))+
   labs(colour = "Treatment", shape = "Season")+ # add legend labels for Treatment and Season
-  theme(legend.position = "right", legend.text = element_text(size = 12), legend.title = element_text(size = 12), axis.text = element_text(size = 10)) # add legend at right of plot
-
-NMDS_plot_seasonal +
-  labs(subtitle = "stress = 0.131") +
+  theme(legend.position = "right", legend.text = element_text(size = 12), legend.title = element_text(size = 12), axis.text = element_text(size = 12))+ # add legend at right of plot
+  theme(axis.ticks.x = element_blank(),axis.text.x = element_blank())+
+  theme(axis.ticks.y = element_blank(),axis.text.y = element_blank())+
+  theme(text=element_text(family="Times New Roman", face="bold", size=12))+
   ggrepel::geom_text_repel(
     data = site_scores,
     aes(x = NMDS1, y = NMDS2, label = Site),
-    cex = 3,
-    direction = "both",
-    segment.size = 0.25
-  )+
-  geom_segment(
-    data = significant_species_scores,
-    aes(
-      x = 0,
-      xend = NMDS1,
-      y = 0,
-      yend = NMDS2
-    ),
-    arrow = arrow(length = unit(0.25, "cm")),
-    colour = "grey10",
-    lwd = 0.3
-  ) + #add vector arrows of significant species
-  ggrepel::geom_text_repel(
-    data = significant_species_scores,
-    aes(x = NMDS1, y = NMDS2, label = Species),
-    cex = 3,
+    cex = 4,
     direction = "both",
     segment.size = 0.25
   )
+NMDS_plot_seasonal
+## Write the plot to file
+ggsave("~/S.Fk.McKenzie_FoodWeb_Study/Figures/bp35.jpg", NMDS_plot_seasonal, width=35, height=20, 
+       device = "jpeg", units = "cm")
 
 
 
+############################################################
+##   Conduct Analysis of Similarity (ANOSIM) on the monthly 
+##   biomass data using ANOSIM in the Vegan package
+##
+##
+############################################################
+
+# create a data frame with biomass data and factor columns "Treatment" and "Season"
+biomass_factors <- cbind(seasonal_biomass_logged_transformed,seasonal_biomass_site_variables)
+
+
+anosim1 <- anosim(seasonal_biomass_logged_transformed, biomass_factors$Treatment, distance = "bray", permutations = 9999)
+
+anosim1
+
+anosim2 <- anosim(seasonal_biomass_logged_transformed, biomass_factors$Season, distance = "bray", permutations = 9999)
+
+anosim2
 
 
 ##################################
